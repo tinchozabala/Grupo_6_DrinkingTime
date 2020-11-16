@@ -18,5 +18,5 @@ app.get ("/detalle-del-producto", function(req, res){
 })
 
 app.get ("/registrate", function(req, res){
-    res.sendFile (__dirname + "/views/register.html")
+    res.sendFile (__dirname + "/views/.html")
 })
