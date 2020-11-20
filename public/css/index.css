@@ -26,21 +26,15 @@
 }
 
 .button-loggin-carrito {
-    width: 14%;
+    width: 5%;
     align-items: center;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     color: white;    
 }
 
-.button-login{
-
-
-}
-
-.button-carrito{
-
-
+.button-loggin-carrito i{
+    margin: 5px;
 }
 
 .barra-de-busqueda{
@@ -49,6 +43,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 5px;
 }
 
 .barra-de-busqueda button{
@@ -56,7 +51,7 @@
 }
 
 .barra{
-    width: 90%;
+    width: 100%;
     padding: 2px;
      
 }
@@ -64,22 +59,62 @@
     padding: 3px;
 }
 
-.promociones{
-    position: relative;
-   
+.sections-container{
+    height: 70vh;
 }
-.sections-container img{
+
+.promociones{
+    height: 25%;
+    display: flex;
+    object-fit: cover;
+}
+
+.promociones img{
     width: 100%;
     filter: grayscale(1);
+}
+
+.promociones:hover img{
+    filter: grayscale(0);
+}
+
+.cervezas{
+    height: 20%;
+    display: flex;
+    
+    
+}
+
+.cervezas img{
+    width: 100%;
+    filter: grayscale(1);
+    object-fit: cover;
+}
+
+
+
+.cervezas:hover img{
+    filter: grayscale(0);
+}
+
+.vinos-espumantes{
+    display: flex;
+    object-fit: cover;
+    height: 20%;
 
 }
-.sections-container:hover img{
-    width: 100%;
-    filter: grayscale(0);
 
+.vinos-espumantes img{
+    width: 100%;    
+    filter: grayscale(1);
+}
+
+.vinos-espumantes:hover img{
+    filter: grayscale(0);
 }
 
 footer {
+    height: 10vh;
     background-color:#800020;
     padding: 10px;
     display: flex;
@@ -92,5 +127,6 @@ footer div{
     display: flex;
     justify-content: space-between;
     color: white;
+    align-items: center;
 
 }
