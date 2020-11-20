@@ -1,14 +1,33 @@
+*{  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
 .header-container{
-    width: 30px;
-    background-color: aqua;
-
-
+   background-color: salmon;
+   height: 15vh;
+   
 }
 
-.title {
-    background-color: red;
+.header-container-logo{
+    padding: 10px;
+    width: 100%;
+    height: 60%;
+    background-color: indigo;
 }
 
+
+.logo{ 
+    width: 120px;
+    height: 45px;
+    display: inline-block;
+}
+
+.button-loggin-carrito {
+    display: inline-block;
+    width:30%
+}
 
 .button-login{
 
@@ -21,7 +40,10 @@
 }
 
 .barra-de-busqueda{
+    background-color: grey;
+    height: 40%;
+}
 
-
-
+.barra{
+     
 }
