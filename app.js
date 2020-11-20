@@ -1,6 +1,10 @@
 const express = require ("express");
 const app = express(); 
 
+app.listen(5000, function() {
+    console.log("El archivo esta corriendo en el puerto 5000");
+})
+
 app.get ("/", function(req, res){
     res.sendFile (__dirname + "/views/index.html")
 })
@@ -19,4 +23,9 @@ app.get ("/detalle-del-producto", function(req, res){
 
 app.get ("/registrate", function(req, res){
     res.sendFile (__dirname + "/views/.html")
+})
+
+
+app.get('*', function(req, res){
+    res.sendFile (__dirname + '/public' + req.url)
 })
