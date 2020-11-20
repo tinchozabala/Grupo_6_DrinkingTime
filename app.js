@@ -22,10 +22,10 @@ app.get ("/detalle-del-producto", function(req, res){
 })
 
 app.get ("/registrate", function(req, res){
-    res.sendFile (__dirname + "/views/.html")
+    res.sendFile (__dirname + "/views/register.html")
 })
 
 
 app.get('*', function(req, res){
-    res.sendFile (__dirname + '/public' + req.url)
+    res.sendFile (__dirname + '/public/' + req.url)
 })
