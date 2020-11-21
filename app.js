@@ -13,6 +13,14 @@ app.get ("/inicia-sesion", function(req, res){
     res.sendFile (__dirname + "/views/login.html")
 })
 
+app.post ("/", function(req, res){
+    res.redirect ("/")
+})
+
+app.post ("*", function(req, res){
+    res.redirect("/")
+})
+
 app.get ("/carrito-de-compras", function(req, res){
     res.sendFile (__dirname + "/views/productCart.html")
 })

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/index.css">
+    <title>Inicia-sesion</title>
+</head>
+
+
+<body>
+
+    <main>
+        <header class="header-container">
+            <div class="header-container-logo">
+
+                <a href="/"> <img src="/images/cervezas/andes-ipa.jpg" class="logo" alt=""> </a>
+                
+                <div class="button-loggin-carrito">
+                   <a href="/inicia-sesion"> <i class="fas fa-sign-out-alt"></i> </a>
+                    <a href="/carrito-de-compras"> <i class="fas fa-box-open"></i> </a>
+                </div>   
+            </div>
+
+            <div class="barra-de-busqueda">
+                <input type="search" class="barra" placeholder="Encontrá tu bebida" >
+                <button><i class="fas fa-glass-cheers"></i></button>
+            </div>
+        </header>
+        
+
+        <section>
+            <form action="/" method="POST">
+                <label for="usuario"></label>
+                <input placeholder="Nombre de usuario" type="text" id="usuario" name="usuario">
+                <br>
+                <label for="contraseña"></label>
+                <input type="password" placeholder="Elegí tu contraseña" name="contraseña" id="contraseña">
+                <br>
+                <input type="submit" value="Inicia sesion">
+                <br> 
+                <a href="/registrate"> <p>¿Olvidaste tu contraseña?</p></a>
+                <a href="/registrate"> <p>Crear usuario</p></a>
+            </form>
+
+        </section>
+
+
+
+
+        <footer>
+            <div>
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fas fa-map-marked-alt"></i>
+                <i class="far fa-envelope"></i>
+
+            </div>
+
+
+        </footer>
+
+
+
+
+
+
+    </main>
+    
+</body>
+</html>
