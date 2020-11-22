@@ -10,18 +10,17 @@
 }
 
 .header-container-logo{
-    padding: 5px;
-    width: 100%;
+    box-sizing: border-box;
     height: 60%;
-    background-color:#f39f18;
+    background-color: white;
     display: flex;
     justify-content: space-between;
+    padding: 8px 12px
 }
 
 
 .logo{ 
-    width: 120px;
-    height: 45px;
+    width: 80px;
     display: inline-block;
 }
 
@@ -38,12 +37,13 @@
 }
 
 .barra-de-busqueda{
-    background-color:#800020;
+    background-color: #ff9100;
     height: 40%;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 5px;
+    
 }
 
 .barra-de-busqueda button{
@@ -66,12 +66,13 @@
 .promociones{
     height: 25%;
     display: flex;
-    object-fit: cover;
+    
 }
 
 .promociones img{
     width: 100%;
     filter: grayscale(1);
+    object-fit: cover;
 }
 
 .promociones:hover img{
@@ -81,8 +82,6 @@
 .cervezas{
     height: 20%;
     display: flex;
-    
-    
 }
 
 .cervezas img{
@@ -99,7 +98,6 @@
 
 .vinos-espumantes{
     display: flex;
-    object-fit: cover;
     height: 20%;
 
 }
@@ -107,9 +105,44 @@
 .vinos-espumantes img{
     width: 100%;    
     filter: grayscale(1);
+    object-fit: cover;
 }
 
 .vinos-espumantes:hover img{
+    filter: grayscale(0);
+}
+
+
+.aperitivos{
+    display: flex;
+    height: 20%;
+
+}
+
+.aperitivos img{
+    width: 100%;    
+    filter: grayscale(1);
+    object-fit: cover;
+}
+
+.aperitivos:hover img{
+    filter: grayscale(0);
+}
+
+
+.espirituosas {
+    display: flex;
+    height: 15%;
+
+}
+
+.espirituosas img{
+    width: 100%;    
+    filter: grayscale(1);
+    object-fit: cover;
+}
+
+.espirituosas:hover img{
     filter: grayscale(0);
 }
 
