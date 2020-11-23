@@ -43,12 +43,12 @@ h2{
     align-items: center;
     display: flex;
     justify-content: flex-end;
-    color: white;    
+      
 }
 
 .button-loggin-carrito i{
     margin: 5px;
-    color: white;
+    color:#f39f18;
 }
 
 .barra-de-busqueda{
