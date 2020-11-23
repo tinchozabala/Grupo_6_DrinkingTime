@@ -1,0 +1,170 @@
+*{  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+.header-container{
+   background-color: salmon;
+   height: 15vh;
+}
+
+.header-container-logo{
+    padding: 5px;
+    width: 100%;
+    height: 60%;
+    background-color:#f39f18;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.logo{ 
+    width: 120px;
+    height: 45px;
+    display: inline-block;
+}
+
+.button-loggin-carrito {
+    width: 5%;
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    color: white;    
+}
+
+.button-loggin-carrito i{
+    margin: 5px;
+    color: white;
+}
+
+.barra-de-busqueda{
+    background-color:#800020;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.barra-de-busqueda button{
+    margin-left: 2px;
+}
+
+.barra{
+    width: 100%;
+    padding: 2px;
+     
+}
+.fa-glass-cheers{
+    padding: 3px;
+}
+
+.nav-bar{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #f39f18;
+    height: 5vh;
+    padding: 2px;
+    
+}
+
+.nav-button{
+    background-color:#800020;
+    padding: 5px;
+    border: none;
+
+}
+
+.nav-bar button i{
+    color:white;
+}
+
+.nav-bar li{
+    display: none;
+    list-style: none;
+}
+
+.nav-bar li a {
+    color:#800020;
+    text-decoration: none;
+}
+
+.section-cart {
+    width: 100%;
+    height: 60vh;
+    padding: 5px;
+}
+
+.section-cart .producto {
+    width: 100%;
+    display: flex;
+    border: black 1px solid;
+    height: 15%;
+    justify-content: space-around;
+    padding: 10px;
+    align-items: center;
+    margin: 5px 0;
+    background-color: lightgrey;
+    
+}
+
+.section-cart .producto .descripcion{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 20px;
+    padding-right: 50px;
+    
+}
+
+.section-cart .producto .descripcion input{
+    
+    ;
+    
+}
+
+
+
+
+
+.section-cart div img{
+    width: 60px;
+    height: 40px;
+    
+}
+
+.section-cart div span{
+    
+    
+}
+
+
+
+.section-cart div input {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+
+footer {
+    height: 10vh;
+    background-color:#800020;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+footer div{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    align-items: center;
+
+}

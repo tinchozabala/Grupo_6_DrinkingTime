@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/productCart.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title>DRINKING TIME</title>
@@ -13,11 +13,11 @@
         <header class="header-container">
             <div class="header-container-logo">
 
-                <img src="/images/cervezas/andes-ipa.jpg" class="logo" alt="">
+               <a href="/"> <img src="/images/cervezas/andes-ipa.jpg" class="logo" alt=""> </a>
                 
                 <div class="button-loggin-carrito">
-                    <i class="fas fa-sign-out-alt"></i>
-                    <i class="fas fa-box-open"></i>
+                    <a href="/inicia-sesion"> <i class="fas fa-sign-out-alt"></i> </a>
+                    <a href="/carrito-de-compras"> <i class="fas fa-box-open"></i> </a>
                 </div>   
             </div>
             <div class="barra-de-busqueda">
@@ -26,10 +26,57 @@
             </div>
 
         </header>
+        <nav class="nav-bar">
+            <button class="nav-button"><i class="fas fa-bars"></i></button>
+            <li><a href="">PROMOCIONES</a></li>
+            <li><a href="">CERVEZAS</a></li>
+            <li><a href="">VINOS</a></li>
+            <li><a href="">ESPUMANTES</a></li>
+            <li><a href="">APERITIVOS</a></li>
+            <li><a href="">ESPIRITUOSAS</a></li>
+        </nav>
+        
+        <section class="section-cart">
+            <div class="producto">
+                <img src="/images/cervezas/Imerial.jpg" alt="">
+                <div class="descripcion">  
+                    <span>
+                        <h4>Pack cerveza imperial</h4>
+                        <p>Cerveza rubia x 6</p>
+                    </span>
+                    <input type="number">
+                </div>
+                <p>$450</p>
+            </div>
+            <div class="producto">
+                <img src="/images/aperitivos/chivas.png" alt="">
+                <div class="descripcion">  
+                    <span>
+                        <h4>Wiskhy Chivas Regal</h4>
+                        <p>Wiskhy 1 litro</p>
+                    </span>
+                    <input type="number">
+                </div>
+                <p>$1500</p>
+            </div>
+            <div class="producto">
+                <img src="/images/vinos/vino-rutino4.webp" alt="">
+                <div class="descripcion">  
+                    <span>
+                        <h4>Vino Rutini Malbec</h4>
+                        <p>Caja x 6 unidades</p>
+                    </span>
+                    <input type="number">
+                </div>
+                <p>$3200</p>
+            </div>
+            
+             
+        </section>
 
         <footer>
             <div>
-                <abbr title="Facebook"><i class="fab fa-facebook-square"></i></abbr>
+                <i class="fab fa-facebook-square"></i>
                 <i class="fab fa-instagram"></i>
                 <i class="fas fa-map-marked-alt"></i>
                 <i class="far fa-envelope"></i>
