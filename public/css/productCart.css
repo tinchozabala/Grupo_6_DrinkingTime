@@ -145,6 +145,24 @@
     
 }
 
+.total {
+    background-color: lightslategray;
+    font-size: 15px;
+    border: 1px solid black;
+}
+
+.total div{
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.total button {
+    width: 60px;
+    height: 30px;
+    
+}
+
 
 
 
