@@ -1,8 +1,22 @@
 *{  box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: 'Anton', sans-serif
 }
 
+.sections-titles{
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+}
+
+
+h2{
+    -webkit-text-stroke: 0.3px black;
+    color: cornsilk;
+    font-size: 180%;
+    opacity: 0.7;
+   } 
 
 .header-container{
    background-color: salmon;
@@ -64,52 +78,47 @@
     height: 70vh;
 }
 
+
 .promociones{
-    height: 25%;
+    height: 18%;
     display: flex;
-    
-}
-
-.promociones img{
-    width: 100%;
-    filter: grayscale(1);
+    background-image: url("/images/banners/banner-promociones.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(5);
     object-fit: cover;
+    text-align: center;
 }
 
-.promociones:hover img{
+.promociones:hover {
     filter: grayscale(0);
 }
 
 .cervezas{
-    height: 20%;
+    height: 23%;
     display: flex;
-}
-
-.cervezas img{
-    width: 100%;
-    filter: grayscale(1);
+    background-image: url("/images/banners/banner-cervezas.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(5);
     object-fit: cover;
 }
 
-
-
-.cervezas:hover img{
+.cervezas:hover {
     filter: grayscale(0);
 }
 
 .vinos-espumantes{
     display: flex;
-    height: 20%;
-
-}
-
-.vinos-espumantes img{
-    width: 100%;    
-    filter: grayscale(1);
+    height: 15%;
+    background-image: url("/images/banners/banner-vinos.jpg");
+    background-size: cover;
+    background-position: center;    
+    filter: grayscale(5);
     object-fit: cover;
 }
 
-.vinos-espumantes:hover img{
+.vinos-espumantes:hover {
     filter: grayscale(0);
 }
 
@@ -117,33 +126,29 @@
 .aperitivos{
     display: flex;
     height: 20%;
-
-}
-
-.aperitivos img{
-    width: 100%;    
-    filter: grayscale(1);
+    background-image: url("/images/banners/banner-aperitivos.jpg");
+    background-size: cover;
+    background-position: center;   
+    filter: grayscale(5);
     object-fit: cover;
 }
 
-.aperitivos:hover img{
+.aperitivos:hover{
     filter: grayscale(0);
 }
 
 
 .espirituosas {
     display: flex;
-    height: 15%;
-
-}
-
-.espirituosas img{
-    width: 100%;    
-    filter: grayscale(1);
+    height: 24%;
+    background-image: url("/images/banners/banner-espirituosas.jpg");
+    background-size: cover;
+    background-position: center;   
+    filter: grayscale(5);
     object-fit: cover;
 }
 
-.espirituosas:hover img{
+.espirituosas:hover {
     filter: grayscale(0);
 }
 
