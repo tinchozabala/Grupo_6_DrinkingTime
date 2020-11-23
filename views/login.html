@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/login.css">
     <title>Inicia-sesion</title>
 </head>
 
 
 <body>
-
     <main>
         <header class="header-container">
             <div class="header-container-logo">
@@ -27,19 +27,21 @@
                 <input type="search" class="barra" placeholder="Encontrá tu bebida" >
                 <button><i class="fas fa-glass-cheers"></i></button>
             </div>
-            
         </header>
 
-
-        <section>
+        <h1 class="container-log">Inicia Sesion</h1>
+        <section class="log-container">
             <form action="/" method="POST">
                 <label for="usuario"></label>
                 <input placeholder="Nombre de usuario" type="text" id="usuario" name="usuario">
                 <br>
+                <br>
                 <label for="contraseña"></label>
-                <input type="password" placeholder="Elegí tu contraseña" name="contraseña" id="contraseña">
+                <input type="password" placeholder="Ingresa tu contraseña" name="contraseña" id="contraseña">
+                <br>
                 <br>
                 <input type="submit" value="Inicia sesion">
+                <br>
                 <br> 
                 <a href="/registrate"> <p>¿Olvidaste tu contraseña?</p></a>
                 <a href="/registrate"> <p>Crear usuario</p></a>
@@ -49,24 +51,14 @@
 
 
 
-
         <footer>
-            <div>
-                <i class="fab fa-facebook-square"></i>
-                <i class="fab fa-instagram"></i>
-                <i class="fas fa-map-marked-alt"></i>
-                <i class="far fa-envelope"></i>
-
+            <div class="footer-iconos">
+                <a href=""><i class="fab fa-facebook-square"></i> </a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+                <a href=""><i class="fas fa-map-marked-alt"></i></a>
+                <a href=""><i class="far fa-envelope"></i></a>
             </div>
-
-
         </footer>
-
-
-
-
-
-
     </main>
     
 </body>

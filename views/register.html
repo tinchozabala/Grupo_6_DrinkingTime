@@ -1,1 +1,80 @@
-Estamos trabajando para vos
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/register.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <title>Inicia-sesion</title>
+</head>
+
+<body>
+    <main>
+        <header class="header-container">
+            <div class="header-container-logo">
+
+                <a href="/"> <img src="/images/cervezas/andes-ipa.jpg" class="logo" alt=""> </a>
+                
+                <div class="button-loggin-carrito">
+                   <a href="/inicia-sesion"> <i class="fas fa-sign-out-alt"></i> </a>
+                    <a href="/carrito-de-compras"> <i class="fas fa-box-open"></i> </a>
+                </div>   
+            </div>
+
+            <div class="barra-de-busqueda">
+                <input type="search" class="barra" placeholder="Encontrá tu bebida" >
+                <button><i class="fas fa-glass-cheers"></i></button>
+            </div>
+        </header>
+
+        <section class="container-titulo">
+            <h1>Ingresá tus datos</h1>
+            <h2>Información Personal</h2>
+        </section> 
+
+
+        <section class="container-formulario">
+            <form action="/" method="POST">
+                <label for="email"></label>
+                <input placeholder="Ingrese su email" type="email" name="email" id="email">
+                <br>
+                <br>
+
+                <label for="Contraseña"></label>
+                <input type="password" placeholder="Ingrese su contraseña" name="contraseña" id="contraseña">
+                <br>
+                <br>
+
+                <label for="Confirme contraseña"></label>
+                <input type="password" placeholder="Confirme contraseña">
+                <br>
+                <br>
+
+                <label for="Nombre y apellido"></label>
+                <input placeholder="Nombre y apellido" type="text">
+                <br>
+                <br>
+
+                <p>Fecha de Nacimiento</p>
+                <label for="Nacimiento"></label>
+                <input type="date" placeholder="Nacimiento" name="Nacimiento" id="Nacimiento">
+                <br>
+                <br>
+
+                <div>
+                    <button type="submit">Registrarse</button>
+                </div>
+
+        </section>
+
+        <footer>
+            <div class="footer-iconos">
+                <a href=""><i class="fab fa-facebook-square"></i> </a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+                <a href=""><i class="fas fa-map-marked-alt"></i></a>
+                <a href=""><i class="far fa-envelope"></i></a>
+            </div>
+        </footer>
+    </main>
+</body>
