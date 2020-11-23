@@ -149,12 +149,32 @@
     background-color: lightslategray;
     font-size: 15px;
     border: 1px solid black;
+    
+    
 }
 
-.total div{
-    padding: 5px;
+.total .sub-total{
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+
+.total .sub-total div{
     display: flex;
     justify-content: space-between;
+}
+
+.total .total-final{
+    border-bottom: 1px solid black;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.total .boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 0;
 }
 
 .total button {
