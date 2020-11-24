@@ -1,13 +1,17 @@
 *{  box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Work Sans', sans-serif;;
+}
+
+a{
+    text-decoration: none;
 }
 
 .sections-titles{
     width: 100%;
     text-align: center;
-    padding-top: 20px;
+    margin: auto;
 }
 
 
@@ -18,12 +22,14 @@ h2{
     font-weight: 900;
     width: 100%;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    text-decoration: none;
 }
    } 
 
 .header-container{
-   background-color: salmon;
+   background-color: white;
    height: 20vh;
+  
 }
 
 .header-container-logo{
@@ -32,7 +38,9 @@ h2{
     background-color: white;
     display: flex;
     justify-content: space-between;
-    padding: 6px 12px 4px 4px
+    align-items: center;
+    padding: 6px 12px 4px 4px;
+    
 }
 
 
@@ -45,23 +53,32 @@ h2{
     width: 5%;
     align-items: center;
     display: flex;
-    justify-content: flex-end;
-      
+    justify-content: flex-end;    
+}
+
+.button-loggin-carrito .fas{
+    margin-left: 10px;
 }
 
 .button-loggin-carrito i{
     margin: 5px;
-    color:#f39f18;
+    color:#800020;
+    font-size: 30px;
 }
 
+
 .barra-de-busqueda{
-    background-color: #ff9100;
+    background-color: #800020;
     height: 40%;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 5px;
     
+}
+
+.barra-de-busqueda .barra{
+    border: none;
 }
 
 .barra-de-busqueda button{
@@ -91,6 +108,7 @@ h2{
     filter: grayscale(5);
     object-fit: cover;
     text-align: center;
+    
 }
 
 .promociones:hover {
@@ -168,7 +186,10 @@ footer div{
     width: 30%;
     display: flex;
     justify-content: space-between;
-    color: white;
     align-items: center;
+}
 
+footer .footer-iconos i{
+    color: white;
+    font-size: 20px;
 }

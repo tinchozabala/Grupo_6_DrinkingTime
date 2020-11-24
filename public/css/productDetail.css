@@ -19,7 +19,11 @@
 
 .photo-product{
     box-sizing: content-box;
-    width: 100%;
+    width: 280px;
+    height: 250px;
+    display: block;
+    margin: auto;
+    
 }
 
 .name-info-product-detail-container{

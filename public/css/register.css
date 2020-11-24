@@ -1,7 +1,12 @@
+.principal{
+    height: 70vh;
+}
+
 .container-titulo{
     text-align: center;
     color: #800020;
     font-size: 90%;
+    
 }
 
 .container-formulario{
@@ -13,4 +18,6 @@
     text-align: center;
     margin-top: 5%;
     margin-bottom: 5%;
+    
+    
 }

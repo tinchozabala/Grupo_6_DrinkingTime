@@ -1,7 +1,12 @@
+.principal{
+    height: 70vh;
+    padding-top: 30px;
+}
+
 .container-log{
     text-align: center;
     color:#800020;
-    height: 8vh;
+    
 }
 
 .log-container {
@@ -9,9 +14,9 @@
     flex-wrap: wrap;
     position: relative;
     margin-bottom: 5%;
-    margin-top: 5%;
+    margin-top: 10%;
     justify-content: center;
     text-align: center;
-    height: 55vh;
+    
 
 }
