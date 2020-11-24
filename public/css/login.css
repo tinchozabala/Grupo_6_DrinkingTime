@@ -1,6 +1,7 @@
 .container-log{
     text-align: center;
     color:#800020;
+    height: 8vh;
 }
 
 .log-container {
@@ -11,4 +12,6 @@
     margin-top: 5%;
     justify-content: center;
     text-align: center;
+    height: 55vh;
+
 }
