@@ -1,11 +1,10 @@
-*{
 
-}
 
 
 .product-detail-container{
     height: 70vh;
     padding: 5px;
+    margin-bottom: 5px;
 }
 
 .photo-product-detail-container{
@@ -48,6 +47,14 @@
     height: 10%;
     padding: 10px 10px ;
     text-align: center;
+}
+
+.add-to-cart-prodcuto-detail-container button{
+    height: 40px;
+    width: 100px;
+    font-weight: bold;
+    padding: 2px;
+    margin: auto;
 }
 
 footer{

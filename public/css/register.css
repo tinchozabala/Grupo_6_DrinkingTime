@@ -21,3 +21,12 @@
     
     
 }
+
+.container-formulario input{
+    height: 25px;
+}
+
+.container-formulario button {
+    width: 90px;
+    height: 30px;
+}

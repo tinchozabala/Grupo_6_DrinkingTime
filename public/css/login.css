@@ -20,3 +20,12 @@
     
 
 }
+
+.log-container input{
+    height: 25px;
+    text-align: center;
+}
+
+.log-container .ingresar{
+    width: 90px;
+}
