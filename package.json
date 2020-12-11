@@ -1,26 +1,16 @@
 {
-  "name": "Grupo_6_DrinkingTime",
-  "version": "1.0.0",
-  "description": "1.- El sitio se encarga de la venta de....\r 2.- Apunta a la venta de .... para .....\r 3.- Oferta.......\r 4.- Grupo del proyecto:\r \tFacundo Ferrero, 33 años, Argentino. Trabajo como administrador y no tengo ningun conocimiento previo sobre programacion.\r \tCamilo Rojas\r \tMartin Zabala\r \tOctavio Lopez\r 5.- Nos hemos inspirado en los siguientes sitios:\r \t1\r \t2\r \t3\r \t4\r \t5",
-  "main": "app.js",
-  "dependencies": {
-    "express": "^4.17.1",
-    "nodemon": "^2.0.6"
-  },
-  "devDependencies": {},
+  "name": "express",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
+    "start": "node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tinchozabala/Grupo_6_DrinkingTime.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/tinchozabala/Grupo_6_DrinkingTime/issues"
-  },
-  "homepage": "https://github.com/tinchozabala/Grupo_6_DrinkingTime#readme"
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1"
+  }
 }

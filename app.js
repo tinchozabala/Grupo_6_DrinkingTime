@@ -1,39 +1,49 @@
-const express = require ("express");
-const app = express(); 
+var createError = require('http-errors');
+var express = require('express');
+var path = require('path');
+var cookieParser = require('cookie-parser');
+var logger = require('morgan');
 
-app.listen(5000, function() {
-    console.log("El archivo esta corriendo en el puerto 5000");
-})
+var indexRouter = require('./routes/index');
+var usersRouter = require('./routes/users');
+var loginRouter = require('./routes/login');
+var productCartRouter = require ('./routes/productCart');
+var productDetailRouter = require('./routes/productDetail');
+var registerRouter = require('./routes/register');
 
-app.get ("/", function(req, res){
-    res.sendFile (__dirname + "/views/index.html")
-})
+var app = express();
 
-app.get ("/inicia-sesion", function(req, res){
-    res.sendFile (__dirname + "/views/login.html")
-})
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 
-app.post ("/", function(req, res){
-    res.redirect ("/")
-})
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.post ("*", function(req, res){
-    res.redirect("/")
-})
+app.use('/', indexRouter);
+app.use('/login', loginRouter);
+app.use('/productCart', productCartRouter);
+app.use('/productDetail', productDetailRouter);
+app.use('/register', registerRouter);
+app.use('/users', usersRouter);
 
-app.get ("/carrito-de-compras", function(req, res){
-    res.sendFile (__dirname + "/views/productCart.html")
-})
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+  next(createError(404));
+});
 
-app.get ("/detalle-del-producto", function(req, res){
-    res.sendFile (__dirname + "/views/productDetail.html")
-})
+// error handler
+app.use(function(err, req, res, next) {
+  // set locals, only providing error in development
+  res.locals.message = err.message;
+  res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-app.get ("/registrate", function(req, res){
-    res.sendFile (__dirname + "/views/register.html")
-})
+  // render the error page
+  res.status(err.status || 500);
+  res.render('error');
+});
 
-
-app.get('*', function(req, res){
-    res.sendFile (__dirname + '/public/' + req.url)
-})
+module.exports = app;
