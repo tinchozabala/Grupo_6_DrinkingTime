@@ -206,8 +206,6 @@ footer .footer-iconos i{
 @media(min-width: 1024px){
     .nav-bar {
         display: flex;
-        
-        
     }
 
     .nav-bar ul{
