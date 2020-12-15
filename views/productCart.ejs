@@ -6,77 +6,76 @@
 
 <body>
     <main>
-        <%- include("./partials/header.ejs") %>  
-        <div class="principal">   
-            <section class="section-cart">
-                <div class="producto">
-                    <img src="/images/cervezas/Imerial.jpg" alt="">
-                    <div class="descripcion">  
-                        <span>
-                            <h4>Pack cerveza imperial</h4>
-                            <p>Cerveza rubia x 6</p>
-                        </span>
-                        <input type="number">
-                    </div>
-                    <p>$450</p>
-                </div>
-                <div class="producto">
-                    <img src="/images/aperitivos/chivas.png" alt="">
-                    <div class="descripcion">  
-                        <span>
-                            <h4>Wiskhy Chivas Regal</h4>
-                            <p>Wiskhy 1 litro</p>
-                        </span>
-                        <input type="number">
-                    </div>
-                    <p>$1500</p>
-                </div>
-                <div class="producto">
-                    <img src="/images/vinos/vino-rutino4.webp" alt="">
-                    <div class="descripcion">  
-                        <span>
-                            <h4>Vino Rutini Malbec</h4>
-                            <p>Caja x 6 unidades</p>
-                        </span>
-                        <input type="number">
-                    </div>
-                    <p>$3200</p>
-                </div>
-                
-                
-            </section>
-            <section class="total">
-                <div class="sub-total">
-                    <div>
-                        <p>Total de compra</p>
-                        <p>$5150</p>
-                    </div>
-                    <div>
-                        <p>Envio</p>
+        <%- include("./partials/header.ejs") %>
+
+            <div class="principal">   
+                <section class="section-cart">
+                    <div class="producto">
+                        <img src="/images/cervezas/Imerial.jpg" alt="">
+                        <div class="descripcion">  
+                            <span>
+                                <h4>Pack cerveza imperial</h4>
+                                <p>Cerveza rubia x 6</p>
+                            </span>
+                            <input type="number">
+                        </div>
                         <p>$450</p>
                     </div>
-                    <div>
-                        <p>Sub total</p>
-                        <p>$5600</p>
+                    <div class="producto">
+                        <img src="/images/aperitivos/chivas.png" alt="">
+                        <div class="descripcion">  
+                            <span>
+                                <h4>Wiskhy Chivas Regal</h4>
+                                <p>Wiskhy 1 litro</p>
+                            </span>
+                            <input type="number">
+                        </div>
+                        <p>$1500</p>
                     </div>
-                    <div>
-                        <P>Descuento -10%</P>
-                        <p>-$560</p>
+                    <div class="producto">
+                        <img src="/images/vinos/vino-rutino4.webp" alt="">
+                        <div class="descripcion">  
+                            <span>
+                                <h4>Vino Rutini Malbec</h4>
+                                <p>Caja x 6 unidades</p>
+                            </span>
+                            <input type="number">
+                        </div>
+                        <p>$3200</p>
                     </div>
+                </section>
+                <section class="total">
+                    <div class="sub-total">
+                        <div>
+                            <p>Total de compra</p>
+                            <p>$5150</p>
+                        </div>
+                        <div>
+                            <p>Envio</p>
+                            <p>$450</p>
+                        </div>
+                        <div>
+                            <p>Sub total</p>
+                            <p>$5600</p>
+                        </div>
+                        <div>
+                            <P>Descuento -10%</P>
+                            <p>-$560</p>
+                        </div>
+                    </div>
+                    <div class="total-final">
+                        <strong>
+                            <p>Total a pagar</p>
+                        </strong>
+                        <strong>
+                            <p>$5140</p>
+                        </strong>                
                 </div>
-                <div class="total-final">
-                    <strong>
-                        <p>Total a pagar</p>
-                    </strong>
-                    <strong>
-                        <p>$5140</p>
-                    </strong>                
+                    <div class="boton">
+                        <button>IR A PAGAR</button>
+                    </div>
+                </section>
             </div>
-                <div class="boton">
-                    <button>IR A PAGAR</button>
-                </div>
-            </section>
-        </div>
         <%- include("./partials/footer.ejs") %>
     </main>
 
