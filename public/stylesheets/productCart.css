@@ -111,11 +111,34 @@
         width: 70%;
     }
 
-    .principal .total{
-        width: 25%;
-        height: 50%;
-        margin-top: 10px;
+    .principal .total .total-final{
+        flex-grow: 0.25;
+        align-items: flex-end;
+        font-size: x-large;
+        
     }
+
+    .principal .total{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 25%;
+        height: 95%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .principal .total .boton{
+      flex-grow: 2;
+      align-items: flex-end;
+    }
+
+    .principal .total .boton button{
+        width: 85%;
+        height: 50px;
+        font-size: x-large;
+        
+      }
 
     .section-cart{
         margin-left: 20px;
