@@ -221,6 +221,10 @@ footer .footer-iconos i{
         font-weight: bolder;
     }
 
+    .nav-bar ul li a{
+        color: #800020;
+    }
+
     .button-loggin-carrito .fa-bars{
         display: none;
     }
