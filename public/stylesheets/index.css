@@ -1,4 +1,4 @@
-*{  box-sizing: border-box;
+    *{  box-sizing: border-box;
     padding: 0;
     margin: 0;
     font-family: 'Work Sans', sans-serif;;
@@ -228,5 +228,39 @@ footer .footer-iconos i{
     .button-loggin-carrito .fa-bars{
         display: none;
     }
+
+    .sections-container{
+        display: flex;
+        justify-content: space-around;
+        align-items: stretch;
+        align-content: stretch;
+    }
+
+    .promociones{
+        flex-grow: 5;
+        height: 100%;
+    }
+
+    .cervezas{
+        flex-grow: 2;
+        height: 100%;
+
+    }
+
+    .vinos-espumantes{
+        flex-grow: 2;
+        height: 100%;
+    }
+
+    .aperitivos{
+        flex-grow: 2;
+        height: 100%;
+    }
+
+    .espirituosas{
+        flex-grow: 2;
+        height: 100%;
+    }
+
 
 }
