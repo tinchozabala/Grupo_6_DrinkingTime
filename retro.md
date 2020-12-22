@@ -4,3 +4,15 @@ Por otra parte resaltamos nuestros encuentros virtuales que suelen darse lunes y
 En cuanto a nuestros puntos fuertes, la agilidad del equipo es destacable, y la predisposicion de los 4 para querer hacer tambien es una de las aristas principales que debemos mantener. 
 Por ultimo, con el breve primer sprint que tuvimos, no encontramos algo realmente destacable que debamos dejar de hacer ya que consideramos que el proyecto esta encaminado correctamente. 
 
+Retrospectiva sprint-2:
+En vista de lo trabajado en el sprint-2, consideramos que debemos darle mayor utilidad al trello para el seguimiento del proyecto propiamentedicho. 
+Continuando sobre esta linea, resaltamos la comunicacion que hay, consignando encuentros esporadicos luego de las clases para facilitar la distribucion de tareas.
+Como plato principal, vemos que la constancia de los 4 es destacable, estando siempre predispuestos a ayudar al resto ante las dificultades, y teniendo la proactividad de siempre intentar retocar y mejorar cada aspecto de nuestro e-commerce.
+Para finalizar, coincidimos en que algunas tareas son dejadas para ultimo minuto, mas alla de estar todos al tanto y con la intencion de ayudar, creemos que esto debe ser nuestra flaqueza mas grande y que debemos dejar de hacer. 
+
+Retrospectiva sprint-3:
+Observando lo hecho en el sprint 3, continuamos con la dificultad de trabajar remotamente sin poder juntarnos.
+Uno de los pilares a mejorar debería ser el trabajo en simultáneo a la vez que nos comunicamos vía discord.
+Mantuvimos la comunicación constante para la división de tareas.
+Hacer menos trabajo individual promoviendo el grupal. 
+Por último, debemos mejorar los tiempos para no dejar a último momento las cosas.  

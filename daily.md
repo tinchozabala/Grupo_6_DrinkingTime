@@ -1,5 +1,5 @@
 10/12
-el dia de hoy nos encontramos via zoom los 4 integrantes.
+El dia de hoy nos encontramos via zoom los 4 integrantes.
 Comenzamos intentado hacer lo visto en clase (express generator y ejs), luego de casi 2 horas de trabajo y con algunos errores en el camino, optamos por esperar a tener la clase grabada en playground para usar de guia ya que sentimos que en algunos puntos estabamos intentando solucionar errores a ciegas. 
 De todos modos el encuentro fue totalmente productivo, hicimos la retro y hablamos del proyecto en general para la entrega del miercoles. 
 Acordamos por ultimo un nuevo encuentro virtual.
@@ -7,3 +7,6 @@ Acordamos por ultimo un nuevo encuentro virtual.
 14/12
 Nos encontramos via Discord los 4 integrantes una vez finalizada la clase del dia de hoy.
 Todos pulleamos lo hecho por los demas, y realizamos una pequeña charla donde dividimos las tareas para la entrega del miercoles. 
+
+21/12 
+El grupo se conecto vía discord luego de finalizar la clase, analizamos las devoluciones hechas por los profesores del sprint anterior, comentamos que nos parecía conveniente pulir esos puntos débiles antes de comenzar con las nuevas tareas y por último analizamos las nuevas consignas para el siguiente sprint. Acordamos un nuevo encuentro luego de la siguiente clase. 

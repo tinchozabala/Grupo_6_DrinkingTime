@@ -1,5 +1,0 @@
-Retrospectiva sprint 2:
-En vista de lo trabajado en el sprint-2, consideramos que debemos darle mayor utilidad al trello para el seguimiento del proyecto propiamentedicho. 
-Continuando sobre esta linea, resaltamos la comunicacion que hay, consignando encuentros esporadicos luego de las clases para facilitar la distribucion de tareas.
-Como plato principal, vemos que la constancia de los 4 es destacable, estando siempre predispuestos a ayudar al resto ante las dificultades, y teniendo la proactividad de siempre intentar retocar y mejorar cada aspecto de nuestro e-commerce.
-Para finalizar, coincidimos en que algunas tareas son dejadas para ultimo minuto, mas alla de estar todos al tanto y con la intencion de ayudar, creemos que esto debe ser nuestra flaqueza mas grande y que debemos dejar de hacer. 
