@@ -1,5 +1,4 @@
 .principal{
-    height: 73vh;
     padding-top: 30px;
 }
 
@@ -14,7 +13,7 @@
     flex-wrap: wrap;
     position: relative;
     margin-bottom: 5%;
-    margin-top: 10%;
+    margin-top: 5%;
     justify-content: center;
     text-align: center;
     

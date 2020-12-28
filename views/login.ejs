@@ -11,18 +11,27 @@
             <h1 class="container-log">Inicia Sesion</h1>
             <section class="log-container">
                 <form action="/" method="POST">
+                    <p>Ingresa tu usuario</p>
                     <label for="usuario"></label>
-                    <input placeholder="Nombre de usuario" type="text" id="usuario" name="usuario">
+                    <input type="text" id="usuario" name="usuario">
                     <br>
                     <br>
+                    <p>Ingresa tu contraseña</p>
                     <label for="contraseña"></label>
-                    <input type="password" placeholder="Ingresa tu contraseña" name="contraseña" id="contraseña">
+                    <input type="password" name="contraseña" id="contraseña">
                     <br>
                     <br>
                     <input type="submit" value="Inicia sesion" class="ingresar">
                     <br>
-                    <br> 
-                    <a href="/registrate"> <p>¿Olvidaste tu contraseña?</p></a>
+                    <br>
+                    <p>o</p>
+                    <br>
+                     
+                    <p>¿Olvidaste tu contraseña?</p>
+                    <label for="email"></label>
+                    <input type="email" name="email" id="email">
+                    <br>
+                    <input type="submit" value="Recuperar" class="ingresar">
                     <a href="/register"> <p>Crear usuario</p></a>
                 </form>
             
