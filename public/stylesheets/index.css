@@ -101,6 +101,8 @@ h2{
 }
 .fa-glass-cheers{
     padding: 3px;
+    background-color: white;
+    border:none;
 }
 
 .sections-container{
