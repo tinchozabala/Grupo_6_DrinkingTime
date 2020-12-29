@@ -1,7 +1,7 @@
 
 
 .product-detail-container{
-    height: 70vh;
+    height: 69vh;
     padding: 5px;
     margin-bottom: 5px;
 }
@@ -43,11 +43,13 @@
 }
 
 .add-to-cart-prodcuto-detail-container button{
-    height: 40px;
-    width: 100px;
-    font-weight: bold;
-    padding: 2px;
-    margin: auto;
+    border:none;
+    border-radius: 5px;
+    background-color:  rgba(80, 00, 20,0.5 );
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+
 }
 
 footer{

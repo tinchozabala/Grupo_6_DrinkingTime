@@ -1,12 +1,11 @@
 .principal{
-    height: 73vh;
+    height: 72vh;
+    padding-top: 30px;
 }
 
 .container-titulo{
     text-align: center;
     color: #800020;
-    font-size: 90%;
-    
 }
 
 .container-formulario{
@@ -29,4 +28,13 @@
 .container-formulario button {
     width: 90px;
     height: 30px;
+}
+
+.register-button{
+    border:none;
+    border-radius: 5px;
+    background-color:  rgba(80, 00, 20,0.5 );
+    margin-top: 5px;
+    margin-bottom: 5px;
+
 }
