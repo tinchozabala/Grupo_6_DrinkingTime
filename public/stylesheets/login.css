@@ -1,5 +1,5 @@
 .principal{
-    height: 73vh;
+    height: 72vh;
     padding-top: 30px;
 }
 
@@ -14,7 +14,7 @@
     flex-wrap: wrap;
     position: relative;
     margin-bottom: 5%;
-    margin-top: 10%;
+    margin-top: 5%;
     justify-content: center;
     text-align: center;
     
@@ -28,4 +28,13 @@
 
 .log-container .ingresar{
     width: 90px;
+}
+
+.ingresar{
+    border:none;
+    border-radius: 5px;
+    background-color:  rgba(80, 00, 20,0.5 );
+    margin-top: 5px;
+    margin-bottom: 5px;
+
 }

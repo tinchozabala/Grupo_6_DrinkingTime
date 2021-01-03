@@ -18,7 +18,7 @@
 }
 
 .principal-container-right-title{
-    font-size: 20px;
+    font-size: 20px;            
     margin-bottom: 15px;
 }
 
@@ -32,6 +32,7 @@ input{
     border-radius: 5px;
     font-size: 15px;
     margin: 5px;
+    width: 95%;  
 
 }
 
@@ -58,6 +59,6 @@ li {
     font-weight: 550;
     font-size: 18px;
     margin-top: 25px;
-    background-color:  rgba(80, 00, 20,0.5 );
+                
 }
 

@@ -1,15 +1,13 @@
 .products-details-container{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    height: 73vh;
+    justify-content: space-around;
+    height: 72vh;
     padding: 10px 20px;
-
     overflow-y: scroll;
 }
 
 .product-container{
-   border-bottom: 1px solid grey;
    padding: 5px;
    height: 30%;
    margin-bottom: 15px;
@@ -49,12 +47,13 @@
 }
 
 .product-container-addcart{
-    color: white;
-    background-color: #800020;
+    color: black;
+    background-color: rgba(80, 00, 20,0.5);
     margin-top: 10px;
     border: none;
     opacity: 0.8;
-    border-radius: 4px;
+    border-radius: 5px;
+    padding: 2px 3px;
 
 }
 

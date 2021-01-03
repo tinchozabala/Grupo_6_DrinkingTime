@@ -10,3 +10,6 @@ Todos pulleamos lo hecho por los demas, y realizamos una pequeña charla donde d
 
 21/12 
 El grupo se conecto vía discord luego de finalizar la clase, analizamos las devoluciones hechas por los profesores del sprint anterior, comentamos que nos parecía conveniente pulir esos puntos débiles antes de comenzar con las nuevas tareas y por último analizamos las nuevas consignas para el siguiente sprint. Acordamos un nuevo encuentro luego de la siguiente clase. 
+
+28/12 
+Nos encontramos en Discord para modificar algunas cosas del proyecto que habíamos hecho antes pero necesitaban algún arreglo.
