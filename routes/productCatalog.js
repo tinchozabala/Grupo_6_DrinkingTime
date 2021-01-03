@@ -1,9 +1,7 @@
 var express = require('express');
 var router = express.Router();
-
+const productosControlador = require ('../controllers/controller')
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('productCatalog')
-});
+router.get('/', productosControlador.products);
 
 module.exports = router;
