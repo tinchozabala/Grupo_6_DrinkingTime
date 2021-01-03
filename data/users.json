@@ -1,0 +1,16 @@
+const usuarios = {
+
+    id: 0,
+
+    name: "name",
+
+    lastName: "lastName",
+
+    email: "email",
+
+    password: "password",
+
+    image: .jpg,
+
+    category: "category",
+}

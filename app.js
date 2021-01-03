@@ -56,4 +56,26 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+app.get ("/products", (req,res) => {
+  res.render ("../views/productCatalog")
+});
+app.get ("/products/create", (req,res) => {
+  res.render ("../views/create")
+});
+app.get ("/products/:id", (req,res) => {
+  res.render ("../views/productDetail")
+});
+app.post ("/products", (req,res) => {
+  res.render ("../views/productCatalog")
+});
+app.get ("/products/:id/edit", (req,res) => {
+  res.render ("../views/edit")
+});
+app.put ("/products/:id", (req,res) => {
+  res.render ("../views/edit")
+});
+app.delete ("/products/:id", (req,res) => {
+  res.render ("../views/edit")
+});
+
 module.exports = app;

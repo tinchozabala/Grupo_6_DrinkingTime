@@ -1,0 +1,15 @@
+const productos = [
+    {
+    id: 0,
+
+    name: "name",
+
+    description: "description",
+
+    image: .jpg,
+
+    category: "category",
+
+    price: 0,
+}
+]
