@@ -9,13 +9,13 @@
 
 4.- Grupo del proyecto:
 
-**Facundo Ferrero**, 33 años, Argentino. Trabajo como administrador y no tengo conocimientos en programacion. 
+**Facundo Ferrero**, 33 años, Argentino. Trabajo como administrador y no tengo conocimientos en programación. 
 
-**Octavio Lopez**, 23 anos, Argentino. Sin experiencia en programacion.
+**Octavio Lopez**, 23 años, Argentino. Sin experiencia en programación.
 
-**Martin Zabala**, 25 anos, Argentino. Sin experiencia en programacion.
+**Martin Zabala**, 25 años, Argentino. Sin experiencia en programación.
 
-**Camilo Rojas**, 25 anos, Colombiano. Sin experiencia en programacion.
+**Camilo Rojas**, 25 años, Colombiano. Sin experiencia en programación.
 
 
 5.- Nos hemos inspirado en los siguientes sitios:

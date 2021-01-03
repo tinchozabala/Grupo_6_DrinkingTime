@@ -13,3 +13,9 @@ El grupo se conecto vía discord luego de finalizar la clase, analizamos las dev
 
 28/12 
 Nos encontramos en Discord para modificar algunas cosas del proyecto que habíamos hecho antes pero necesitaban algún arreglo.
+
+03/01 
+En el día de la fecha nos reunimos para dividir algunas de las tareas de este sprint y comenzar a hacerlas. 
+
+04/01
+Nos volvemos a reunir luego de la clase para continuar con el sprint luego de resolver algunas dudas.
