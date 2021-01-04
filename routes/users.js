@@ -1,9 +1,14 @@
 var express = require('express');
 var router = express.Router();
+var usersController = require('../controllers/usersController');
+//const { route } = require('./index.js');
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+// HOME INDEX
+router.get('/', usersController.index ) ;
+// LOGIN 
+router.get('/login', usersController.login ) ;
+// REGISTER
+router.get('/register', usersController.register) ;
 
 module.exports = router;
