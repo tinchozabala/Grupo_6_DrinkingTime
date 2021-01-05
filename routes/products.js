@@ -12,9 +12,11 @@ router.get('/create', productsController.create)
 // 3. /products/ :id (GET) Detalle de un producto particular
 router.get('/:id', productsController.productDetail)
 // 4. /products (POST) Acción de creación (a donde se envía el formulario)
+
 // 5. /products/ :id /edit (GET) Formulario de edición de productos
 router.get('/:id/edit', productsController.edit)
-// 6. /products/ :id (PUT) Acción de edición (a donde se envía el formulario): 
+// 6. /products/ :id (PUT) Acción de edición (a donde se envía el formulario):
+ 
 // 7. /products/ :id (DELETE) Acción de borrado
 
 
