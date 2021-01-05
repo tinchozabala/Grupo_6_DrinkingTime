@@ -4,27 +4,19 @@ var productsController = require('../controllers/productsController.js');
 //const { route } = require('./index.js');
 
 
-router.get('/cart', productsController.cart)
+router.get('/cart', productsController.cart);
 // 1. /products (GET) Listado de productos
 router.get('/', productsController.catalog);
 // 2. /products/create (GET) Formulario de creación de productos
-router.get('/create', productsController.create)
+router.get('/create', productsController.create);
 // 3. /products/ :id (GET) Detalle de un producto particular
-router.get('/:id', productsController.productDetail)
+router.get('/:id', productsController.productDetail);
 // 4. /products (POST) Acción de creación (a donde se envía el formulario)
 
 // 5. /products/ :id /edit (GET) Formulario de edición de productos
-router.get('/:id/edit', productsController.edit)
-// 6. /products/ :id (PUT) Acción de edición (a donde se envía el formulario):
- 
+router.get('/:id/edit', productsController.edit);
+// 6. /products/ :id (PUT) Acción de edición (a donde se envía el formulario): 
 // 7. /products/ :id (DELETE) Acción de borrado
-
-
-
-
-
-
-
 
 
 //primero detalle de producto
