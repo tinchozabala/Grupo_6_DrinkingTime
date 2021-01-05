@@ -1,15 +1,13 @@
-const productos = [
-    {
-    id: 0,
+{
+    "id": 0,
 
-    name: "name",
+    "name": "name",
 
-    description: "description",
+    "description": "description",
 
-    image: .jpg,
+    "image": ".jpg",
 
-    category: "category",
+    "category": "category",
 
-    price: 0,
+    "price": 0
 }
-]
