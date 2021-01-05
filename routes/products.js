@@ -18,13 +18,6 @@ router.get('/:id/edit', productsController.edit)
 // 7. /products/ :id (DELETE) Acción de borrado
 
 
-
-
-
-
-
-
-
 //primero detalle de producto
 //router.get('/', productsController.productDetail);
 
