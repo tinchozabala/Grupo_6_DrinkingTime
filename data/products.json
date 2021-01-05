@@ -1,5 +1,5 @@
 {
-    "id": 0,
+    "id": "0",
 
     "name": "name",
 
@@ -9,5 +9,20 @@
 
     "category": "category",
 
-    "price": 0
+    "price": "0"
+},
+{
+    "id": "1",
+
+    "name": "IPA ANDINA - ANDES six pack",
+
+    "description": "Cerveza Andes - variedad Ipa, por 6 unidades.",
+
+    "image": "/images/cervezas/andes-ipa.jpg",
+
+    "category": "Cervezas",
+
+    "price": "$560"  
 }
+
+module.exports = products.json
