@@ -3,10 +3,11 @@ var router = express.Router();
 var productsController = require('../controllers/productsController.js');
 //const { route } = require('./index.js');
 
-
-router.get('/cart', productsController.cart);
 // 1. /products (GET) Listado de productos
 router.get('/', productsController.catalog);
+
+router.get('/cart', productsController.cart);
+
 // 2. /products/create (GET) Formulario de creación de productos
 router.get('/create', productsController.create);
 // 3. /products/ :id (GET) Detalle de un producto particular
