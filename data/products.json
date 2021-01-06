@@ -23,6 +23,110 @@
     "category": "Cervezas",
 
     "price": "$560"  
-}
+},
+{
+    "id": "2",
+
+    "name": "ANDES NEGRA",
+
+    "description": "Cerveza Andes - variedad Negra, por 6 unidades.",
+
+    "image": "/images/cervezas/andes-negra.jpg",
+
+    "category": "Cervezas",
+
+    "price": "$580"  
+},
+{
+    "id": "3",
+
+    "name": "PATAGONIA 24.7",
+
+    "description": "Cerveza Patagonia - variedad 24.7, por 6 unidades.",
+
+    "image": "/images/cervezas/patagonia247.jpg",
+
+    "category": "Cervezas",
+
+    "price": "$800"  
+},
+{
+    "id": "4",
+
+    "name": "CAMPARI",
+
+    "description": "Campari, por 6 unidades.",
+
+    "image": "/images/cervezas/campari-435197_p.jpg",
+
+    "category": "Aperitivos",
+
+    "price": "$1200"  
+},
+{
+    "id": "5",
+
+    "name": "CAMPARI",
+
+    "description": "Campari, por 6 unidades.",
+
+    "image": "/images/cervezas/campari-435197_p.jpg",
+
+    "category": "Aperitivos",
+
+    "price": "$1200"  
+},
+{
+    "id": "6",
+
+    "name": "ABSOLUT",
+
+    "description": "Absolut original, por 6 unidades.",
+
+    "image": "/images/cervezas/absolut.png",
+
+    "category": "Espirituosas",
+
+    "price": "$2750"  
+},
+{
+    "id": "7",
+
+    "name": "BEEFEATER",
+
+    "description": "Gin Beefeater, por 6 unidades.",
+
+    "image": "/images/cervezas/beefeater.png",
+
+    "category": "Espirituosas",
+
+    "price": "$3250"  
+},
+{
+    "id": "8",
+
+    "name": "TRUMPETER",
+
+    "description": "Trumpeter - variedad Malbec, por 6 unidades.",
+
+    "image": "/images/cervezas/vino-trumpete5.webp",
+
+    "category": "Vinos",
+
+    "price": "$2890"  
+},
+{
+    "id": "9",
+
+    "name": "RUTINI",
+
+    "description": "Rutini - variedad Malbec, por 6 unidades.",
+
+    "image": "/images/cervezas/vino-rutini.webp",
+
+    "category": "Vinos",
+
+    "price": "$2650"  
+},
 
 module.exports = products.json
