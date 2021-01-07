@@ -1,16 +1,16 @@
-const usuarios = {
+{
 
-    id: 0,
+    "id": 0,
 
-    name: "name",
+    "name": "name",
 
-    lastName: "lastName",
+    "lastName": "lastName",
 
-    email: "email",
+    "email": "email",
 
-    password: "password",
+    "password": "password",
 
-    image: .jpg,
+    "image": ".jpg",
 
-    category: "category",
+    "category": "category"
 }
