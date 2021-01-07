@@ -54,15 +54,15 @@
     {
         "id": "5",
 
-        "name": "CAMPARI",
+        "name": "CHIVAS",
 
-        "description": "Campari, por 6 unidades.",
+        "description": "Chivas Regal 12 anos",
 
-        "image": "/images/aperitivos/campari-435197_p.jpg",
+        "image": "/images/espirituosas/chivas.jpeg",
 
-        "category": "Aperitivos",
+        "category": "Promociones",
 
-        "price": "$1200"  
+        "price": "$1800"  
     },
     {
         "id": "6",
@@ -71,7 +71,7 @@
 
         "description": "Absolut original, por 6 unidades.",
 
-        "image": "/images/espirituosas/absolut.png",
+        "image": "/images/espirituosas/absolut.jpeg",
 
         "category": "Espirituosas",
 
@@ -84,7 +84,7 @@
 
         "description": "Gin Beefeater, por 6 unidades.",
 
-        "image": "/images/espirituosas/beefeater.png",
+        "image": "/images/espirituosas/beefeter.jpeg",
 
         "category": "Espirituosas",
 
@@ -106,11 +106,11 @@
     {
         "id": "9",
 
-        "name": "RUTINI",
+        "name": "NOEMIA",
 
-        "description": "Rutini - variedad Malbec, por 6 unidades.",
+        "description": "Noemia - variedad Malbec, por 6 unidades.",
 
-        "image": "/images/vinos/vino-rutini.webp",
+        "image": "/images/vinos/vino-noemia3.jpg",
 
         "category": "Vinos",
 

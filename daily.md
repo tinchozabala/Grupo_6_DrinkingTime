@@ -24,3 +24,10 @@ Nos volvemos a reunir luego de la clase para continuar con el sprint luego de re
 Hola Chicos, ahi estuve trabajando sobre lo de las rutas y modularizando cada caso. 
 Como en este momento solo tenemos dos recursos el de los usuarios y el de los productos elimine todas las rutas que habiamaos creado para cada pagina y modularice en los dos recursos (rutas) users y product, ya cree el controlador de los dos y genere las funciones mas basicas las que van con get, es decir las que solicitaba primero de las 7 interaciones, Punto 1 2 y 3. 
 Voy a generar una rama alternativa porque no quiero pisar lo que adelantaron ya que se que hice muchisimas modificaciones, mañana nos podemos juntar para seguir con lo que queda pendiente. 
+
+06/01
+Le dimos los ultimos ajustes a las rutas.
+Motorizamos las vistas, para que aparezcan los productos que le interesan al usuario.
+Agregamos los ultimos controladores.
+
+
