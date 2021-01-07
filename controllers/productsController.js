@@ -23,6 +23,9 @@ const productsController ={
     cart :  (req, res, next) => {
       res.render('productCart')
       },   
+    delete: (req, res, next) => {
+      
+      },
 }
 
 
