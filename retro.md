@@ -1,4 +1,5 @@
-Retrospectiva sprint-1:
+
+# Retrospectiva sprint-1:
 
 
 En un breve vistazo a lo hecho hasta ahora podemos observar como principal punto para comenzar a trabajar, encuentros presenciales donde contemos con al menos 2 PC lo cual nos ayudara a congeniar mejor y alimentar la quimica grupal. 
@@ -12,7 +13,7 @@ Por ultimo, con el breve primer sprint que tuvimos, no encontramos algo realment
 
 
 
-Retrospectiva sprint-2:
+# Retrospectiva sprint-2:
 
 
 En vista de lo trabajado en el sprint-2, consideramos que debemos darle mayor utilidad al trello para el seguimiento del proyecto propiamentedicho. 
@@ -22,7 +23,8 @@ Continuando sobre esta linea, resaltamos la comunicacion que hay, consignando en
 Como plato principal, vemos que la constancia de los 4 es destacable, estando siempre predispuestos a ayudar al resto ante las dificultades, y teniendo la proactividad de siempre intentar retocar y mejorar cada aspecto de nuestro e-commerce.
 Para finalizar, coincidimos en que algunas tareas son dejadas para ultimo minuto, mas alla de estar todos al tanto y con la intencion de ayudar, creemos que esto debe ser nuestra flaqueza mas grande y que debemos dejar de hacer. 
 
-Retrospectiva sprint-3:
+
+# Retrospectiva sprint-3:
 
 
 
@@ -35,7 +37,7 @@ Por último, debemos mejorar los tiempos para no dejar a último momento las cos
 
 
 
-Retrospectiva Sprint-4
+# Retrospectiva Sprint-4
 
 
 Buenos días, para hacer un análisis mas profundo en el ultimo sprint, coincidimos en que debemos optimizar los tiempos de trabajo para esto se propuso que durante cada Sprint uno de los integrantes del equipo lidere el proyecto, para poder hacer las tareas de división de trabajo y seguimiento de tareas, además de acompañar con las tareas.  
