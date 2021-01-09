@@ -10,5 +10,7 @@ router.get('/', usersController.index ) ;
 router.get('/login', usersController.login ) ;
 // REGISTER
 router.get('/register', usersController.register) ;
-
+//BUSQUEDA
+router.get('/search', usersController.search);
+ 
 module.exports = router;

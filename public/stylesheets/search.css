@@ -8,11 +8,9 @@
 }
 
 .product-container{
-   padding: 7px;
+   padding: 5px;
    height: 30%;
    margin-bottom: 15px;
-   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-   border-radius: 5px;
 }
 
 .product-container-left{   
@@ -20,13 +18,11 @@
     width: 38%;
     vertical-align: top;
     margin: auto;
-    box-sizing:border-box;
     
 }
 
 .product-container-image{
    max-width: 100px;
-   align-items: center;
 }
 
 
@@ -80,12 +76,11 @@
 @media(min-width: 1024px){
 
     .product-container{
-        padding: 5px;
+        padding: 20px;
     }   
 
  .product-container-image{
         max-width: 120px;
-    
      }
 
      .product-container-title{

@@ -94,9 +94,15 @@ h2{
     margin-left: 2px;
 }
 
-.barra{
+.search-form {
     width: 100%;
-    padding: 2px;
+}
+
+.barra{
+    margin: auto;
+    width: 88%;
+    padding: 5px;
+
      
 }
 .fa-glass-cheers{

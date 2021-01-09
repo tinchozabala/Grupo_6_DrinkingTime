@@ -1,13 +1,15 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require ('fs')
+const path = require ('path')
 
-let products = fs.readFileSync(path.resolve(__dirname, '../data/products.json'), 'utf-8')
+let products = fs.readFileSync(path.resolve(__dirname, '../data/products.json'), {encoding : 'utf8'})
+products = JSON.parse(products)
 
-console.log(products);
+
+
 
 const productsController ={
     catalog : function(req, res, next) {
-      res.render('catalog')
+      return res.render('catalog', {products})
       },
     create : (req, res, next) => {
       res.render('create')
@@ -21,19 +23,13 @@ const productsController ={
     cart :  (req, res, next) => {
       res.render('productCart')
       },   
+    delete: (req,res) => {
+      res.render ("edit")
+    },    
+    productCreate: (req,res) => {
+        res.render ("catalog")
+      }
 }
-
-
-
-module.exports = productsController
-
-
-
-
-
-
-
-
 
 
 
