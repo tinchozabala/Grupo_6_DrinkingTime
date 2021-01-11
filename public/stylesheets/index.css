@@ -95,12 +95,12 @@ h2{
 }
 
 .search-form {
-    width: 100%;
+    width: 90%;
 }
 
 .barra{
     margin: auto;
-    width: 88%;
+    width: 85%;
     padding: 5px;
 
      
@@ -211,6 +211,21 @@ footer .footer-iconos i{
     font-size: 20px;
 }
 
+@media(min-width: 768px){
+    .search-form{
+        margin: auto;
+        width: 60%;
+    }
+
+    .barra-de-busqueda .barra{
+        width: 90%;
+    }
+    .barra-de-busqueda{
+        padding-left: 0px;
+    }
+
+}
+
 @media(min-width: 1024px){
     .nav-bar {
         display: flex;
@@ -227,6 +242,18 @@ footer .footer-iconos i{
     .nav-bar ul li{
         margin: 10px;
         font-weight: bolder;
+    }
+
+    .search-form{
+        margin: auto;
+        width: 50%;
+        padding-left: 60px;
+    }
+    
+
+    .barra-de-busqueda .barra{
+        width: 90%;
+        padding-left: 10px;
     }
 
     .nav-bar ul li a{
