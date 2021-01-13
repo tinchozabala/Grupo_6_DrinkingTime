@@ -10,11 +10,11 @@
             <% products.forEach (producto =>{ %>
                 <div class="product-container">
                      <div class="product-container-left">
-                        <img src="<%=producto.image%>" alt="" class="product-container-image">
+                        <img src="<%=producto.imagen%>" alt="" class="product-container-image">
                     </div>
                     <div class="product-container-right">
-                        <h4 class="product-container-title"><%= producto.name %></h4>
-                        <p class="product-container-price"><%= producto.price %></p>
+                        <h4 class="product-container-title"><%= producto.nombre %></h4>
+                        <p class="product-container-price"><%= producto.precio %></p>
                             <a class="product-container-addcart" href="/products/productDetail"> Leer mas </a>
                     </div>
                 </div>

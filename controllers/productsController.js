@@ -26,8 +26,18 @@ const productsController ={
     delete: (req,res) => {
       res.render ("edit")
     },    
-    productCreate: (req,res) => {
-        res.render ("catalog")
+    productCreate: (req,res) => { 
+      let productos = {
+        nombre: req.body.nombre,
+        descripcion: req.body.descripcion,
+        imagen: req.body.imagen,
+        categoria: req.body.categoria,
+        marca: req.body.marca,
+        precio: req.body.precio
+
+        //GUARDAR
+      }
+      res.redirect ("catalog")
       }
 }
 
