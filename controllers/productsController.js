@@ -4,9 +4,6 @@ const path = require ('path')
 let products = fs.readFileSync(path.resolve(__dirname, '../data/products.json'), {encoding : 'utf8'})
 products = JSON.parse(products)
 
-
-
-
 const productsController ={
     catalog : function(req, res, next) {
       return res.render('catalog', {products})
@@ -30,7 +27,6 @@ const productsController ={
         res.render ("catalog")
       }
 }
-
 
 
 module.exports = productsController
