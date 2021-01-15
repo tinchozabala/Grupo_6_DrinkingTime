@@ -1,29 +1,52 @@
 .principal{
     height: 70vh;
     padding-top: 30px;
-}
-
-.container-log{
-    text-align: center;
-    color:#800020;
-    
+    background-image: url('/images/banners/banner-aperitivos.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
 }
 
 .log-container {
+    width: 80%;
     display: flex;
     flex-wrap: wrap;
     position: relative;
     margin-bottom: 5%;
-    margin-top: 5%;
     justify-content: center;
     text-align: center;
-    
-
+    background-color: rgba(80, 00, 20,0.5);
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0);
 }
+
+
+.log-title{
+    margin-top: 10px;
+    text-align: center;
+    color:wheat;
+    width: 80%;
+    font-size: 30px;
+    font-weight: 500;
+    
+    
+    
+}
+
 
 .log-container input{
     height: 25px;
     text-align: center;
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+.formulario-login p{
+    color: white;
+    margin-bottom: 3px;
+
 }
 
 .log-container .ingresar{
@@ -33,8 +56,70 @@
 .ingresar{
     border:none;
     border-radius: 5px;
-    background-color:  rgba(80, 00, 20,0.5 );
+    background-color:  rgba(80, 00, 20,0.7 );
     margin-top: 5px;
     margin-bottom: 5px;
+    font-weight: 500;
+    color: white;
 
+}
+
+
+@media(min-width: 768px){
+    .log-container {
+        width: 60%;
+     }
+
+    .log-title{
+        font-size: 45px;
+    }
+    
+}
+
+@media(min-width: 1024px){
+    .principal{
+        padding-left: 10px;
+        
+    }
+
+    .log-container {
+        width: 40%;
+        height: 95%;
+        padding-top: 15px;
+     }
+     .log-title {
+         font-size: 50px;
+    
+     }
+}
+
+@media(min-width: 1440px){
+    .log-container {
+        width: 40%;
+     }
+
+     .log-title{
+         font-size: 65px;
+     }
+
+     
+.formulario-login p{
+    font-size: 24px;
+    color: white;
+    margin-bottom: 3px;
+}
+
+.ingresar{
+    font-size: 24PX;
+    padding: 3PX;
+    width: 40PX;
+}
+
+.log-container .ingresar {
+    width: 140px;
+    font-size: 20px;
+
+}
+}
+   
 }
