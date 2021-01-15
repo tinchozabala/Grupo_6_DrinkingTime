@@ -8,42 +8,38 @@
     <main>
         <%- include("./partials/header.ejs") %>
         <div class="principal">
-            <section class="container-titulo">
-                <h1>Ingresá tus datos <br>Informacion personal</h1>
-            </section> 
+
+            <section class="log-container">
+
+            
+                <h1 class="log-title">Ingresá tus datos </h1>
+        
 
 
-            <section class="container-formulario">
-                <form action="/" method="POST">
+                <form action="/" method="POST" class="formulario-login">
+
                     <label for="email"></label>
                     <input placeholder="Ingrese su email" type="email" name="email" id="email">
-                    <br>
-                    <br>
+                   
 
                     <label for="Contraseña"></label>
                     <input type="password" placeholder="Ingrese su contraseña" name="contraseña" id="contraseña">
-                    <br>
-                    <br>
+                    
 
                     <label for="Confirme contraseña"></label>
                     <input type="password" placeholder="Confirme contraseña">
-                    <br>
-                    <br>
+                    
 
                     <label for="Nombre y apellido"></label>
                     <input placeholder="Nombre y apellido" type="text">
-                    <br>
-                    <br>
+                    
 
                     <p>Fecha de Nacimiento</p>
                     <label for="Nacimiento"></label>
                     <input type="date" placeholder="Nacimiento" name="Nacimiento" id="Nacimiento">
                     <br>
-                    <br>
 
-                    <div>
-                        <button type="submit" class="register-button">Registrarse</button>
-                    </div>
+                    <input type="submit" value="Registrarse" class="ingresar">
 
             </section>
         </div>

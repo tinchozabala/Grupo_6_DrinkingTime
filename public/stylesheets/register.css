@@ -1,40 +1,125 @@
 .principal{
     height: 70vh;
     padding-top: 30px;
+    background-image: url('/images/banners/banner-espirituosas.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
 }
 
-.container-titulo{
-    text-align: center;
-    color: #800020;
-}
-
-.container-formulario{
+.log-container {
+    width: 80%;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
     position: relative;
-    justify-content: space-between;
-    text-align: center;
-    margin-top: 5%;
     margin-bottom: 5%;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(80, 00, 20,0.5);
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0);
+}
+
+
+.log-title{
+    margin-top: 10px;
+    text-align: center;
+    color:wheat;
+    width: 80%;
+    font-size: 30px;
+    font-weight: 600;
+    
     
     
 }
 
-.container-formulario input{
+
+.log-container input{
     height: 25px;
+    text-align: center;
+    width: 80%;
+    margin-bottom: 10px;
 }
 
-.container-formulario button {
+.formulario-login p{
+    color: white;
+    margin-bottom: 3px;
+
+}
+
+.log-container .ingresar{
     width: 90px;
-    height: 30px;
 }
 
-.register-button{
+.ingresar{
     border:none;
     border-radius: 5px;
-    background-color:  rgba(80, 00, 20,0.5 );
+    background-color:  rgba(80, 00, 20,0.7 );
     margin-top: 5px;
     margin-bottom: 5px;
+    font-weight: 500;
+    color: white;
 
+}
+
+
+@media(min-width: 768px){
+    .log-container {
+        width: 60%;
+     }
+
+    .log-title{
+        font-size: 45px;
+    }
+    
+}
+
+@media(min-width: 1024px){
+    .principal{
+        padding-left: 10px;
+        
+    }
+
+    .log-container {
+        width: 40%;
+        height: 95%;
+        padding-top: 15px;
+     }
+     .log-title {
+         font-size: 50px;
+    
+     }
+}
+
+@media(min-width: 1440px){
+    .log-container {
+        width: 40%;
+     }
+
+     .log-title{
+         font-size: 55px;
+     }
+
+     
+.formulario-login p{
+    font-size: 24px;
+    color: white;
+    margin-bottom: 3px;
+}
+
+.ingresar{
+    font-size: 24PX;
+    padding: 3PX;
+    width: 40PX;
+}
+
+.log-container .ingresar {
+    width: 140px;
+    font-size: 20px;
+
+}
+}
+   
 }
