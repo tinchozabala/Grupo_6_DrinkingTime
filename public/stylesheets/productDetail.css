@@ -1,15 +1,28 @@
 
 
-.product-detail-container{
+.principal{
     height: 69vh;
     padding: 5px;
     margin-bottom: 5px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding-top: 20px;
+    background-color: rgba(255, 245, 245, 0.95);
+    
+}
+.product-detail-container{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0);
+    background-color: white;
+    border-radius: 5px;
+    width: 80%;
+    height: 95%;
+   
 }
 
 .photo-product-detail-container{
     height: 65%;
     display: flex;
-    background-color: white;
     margin-bottom: 5px;
     padding: 10px 20px;
     border-bottom: 1px solid grey;
@@ -17,10 +30,10 @@
 
 .photo-product{
     box-sizing: content-box;
-    width: 250px;
-    height: 230px;
+    width: 90%;
     display: block;
     margin: auto;
+    overflow: hidden;
     
 }
 
@@ -38,8 +51,8 @@
 
 .add-to-cart-prodcuto-detail-container{
     height: 10%;
-    padding: 10px 10px ;
     text-align: center;
+    
 }
 
 .add-to-cart-prodcuto-detail-container button{
@@ -48,7 +61,8 @@
     background-color:  rgba(80, 00, 20,0.5 );
     margin-top: 5px;
     margin-bottom: 5px;
-    padding: 5px;
+    padding: 8px 12px;
+    font-weight: 600;
 
 }
 
@@ -59,22 +73,49 @@ footer{
 
 }
 
+@media(min-width: 425px){
+    .photo-product{
+        width: 75%;
+
+    }
+}
+
+@media(min-width: 768px){
+    .photo-product{
+        width: 40%;
+    }
+    .product-title{
+        font-size: 30px;
+    }
+
+    .add-to-cart-prodcuto-detail-container button p {
+        font-size: 20px;
+    }
+}
+
 @media(min-width: 1024px){
     .product-detail-container{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         padding: 45px 50px 10px 50px;
+        width: 90%;
+        justify-content: space-around;
     }
     
     .photo-product-detail-container{
-        width: 50%;
+        width: 40%;
+        height: 95%;
         padding: 0;
         border-bottom: white;
         
     }
+    .photo-product{
+        width: 95%;
+    }
 
     .name-info-product-detail-container{
+        width: 40%;
         height: 30%;
         display: flex;
         flex-direction: column;
@@ -88,9 +129,33 @@ footer{
 
     .add-to-cart-prodcuto-detail-container{
         position: relative;
-        margin-left: 70%;
         margin-bottom: 20%;       
     }
 
+    .product-title {
+        font-size: 45px;
+    }
 
+    .add-to-cart-prodcuto-detail-container button p {
+        font-size: 20px;
+    }
+
+}
+
+@media(min-width: 1440px) {
+
+    .photo-product{
+        width: 90%;
+    }
+
+    .product-title {
+        font-size: 60px;
+    }
+    .name-info-product-detail-container p {
+        font-size: 30px;
+    }
+
+    .add-to-cart-prodcuto-detail-container button p {
+        font-size: 30px;
+    }
 }
