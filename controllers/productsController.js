@@ -28,8 +28,20 @@ const productsController ={
         res.render('productDetail', {products : products[detalle]})
       },
     edit :  (req, res, next) => {
-      res.render('edit')
+      let edit = {
+        nombre: req.body.nombre,
+        descripcion: req.body.descripcion,
+        imagen: req.body.imagen,
+        categoria: req.body.categoria,
+        marca: req.body.marca,
+        precio: req.body.precio
+      }
+      let editJson = JSON.stringify (products);
+      res.redirect('products')
       }, 
+      productEdit : (req, res, next) => {
+        res.render ("edit")
+      },
     cart :  (req, res, next) => {
       res.render('productCart')
       },   
