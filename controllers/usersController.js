@@ -1,4 +1,25 @@
+const fs = require ('fs')
+const path = require ('path')
+const productsController = require('./productsController')
+
+let products = fs.readFileSync(path.resolve(__dirname, '../data/products.json'), {encoding : 'utf8'})
+let productsJSON = JSON.parse(products)
+
 const usersController = {
+    search :  (req, res, next) => {
+       
+        let laBusqueda = req.query.search;
+
+        let productsResults = [];
+
+        for (let i = 0 ; i < productsJSON.length; i ++) {
+            if (productsJSON[i].nombre.includes(laBusqueda)){
+                productsResults.push(products[i]);
+            }
+        }
+
+        res.render('search', {productsResults:productsResults})
+    },
     index : (req,res,next) => {
         res.render('index')
     },
@@ -7,10 +28,7 @@ const usersController = {
     },
     register : (req, res, next) => {
         res.render('register')
-    },
-    search : (req,res,next) =>{
-        res.render('search')
-    },
+    }
 } 
 
 module.exports = usersController

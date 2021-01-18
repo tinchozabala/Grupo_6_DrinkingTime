@@ -215,6 +215,12 @@ footer .footer-iconos i{
     font-size: 20px;
 }
 
+@media(max-width: 400px){
+    .logo{
+        width: 125px;
+    }
+}
+
 @media(min-width: 768px){
     .search-form{
         margin: auto;

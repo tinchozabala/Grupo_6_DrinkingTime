@@ -3,6 +3,8 @@ var router = express.Router();
 var productsController = require('../controllers/productsController.js');
 //const { route } = require('./index.js');
 
+
+
 // 1. /products (GET) Listado de productos
 router.get('/', productsController.catalog);
 
@@ -20,7 +22,6 @@ router.get('/:id/edit', productsController.edit);
 router.put('/:id/edit', productsController.edit)
 // 7. /products/ :id (DELETE) Acción de borrado
 router.delete('/:id/delete',productsController.delete)
-//Funciones del buscador
 
 
 
