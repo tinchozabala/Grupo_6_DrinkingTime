@@ -48,3 +48,4 @@ Debemos comenzar a hacer mas trabajo individual de esta manera cuando nos reunim
 
 
 Debemos continuar haciendo las reuniones cada dos o tres días, agregando la responsabilidad de las novedades. Continuar trabajando en el daily, ya que este archivo nos ayuda a hacer seguimiento sobre el trabajo que esta realizando cada uno. 
+ 

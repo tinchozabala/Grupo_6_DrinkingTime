@@ -15,9 +15,6 @@ var upload = multer ({ storage: storage });
 let products = fs.readFileSync(path.resolve(__dirname, '../data/products.json'), {encoding : 'utf8'})
 products = JSON.parse(products)
 
-
-
-
 const productsController ={
     catalog : function(req, res, next) {
       return res.render('catalog', {products})
@@ -52,7 +49,6 @@ const productsController ={
       res.redirect ("products")
       }
 }
-
 
 
 module.exports = productsController

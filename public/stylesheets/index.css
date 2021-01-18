@@ -78,7 +78,6 @@ h2{
 
 
 .barra-de-busqueda{
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     background-color: #800020;
     height: 40%;
     display: flex;

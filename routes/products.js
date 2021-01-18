@@ -13,8 +13,12 @@ router.get('/create', productsController.create);
 // 3. /products/ :id (GET) Detalle de un producto particular
 router.get('/:id', productsController.productDetail);
 // 4. /products (POST) Acción de creación (a donde se envía el formulario)
+<<<<<<< HEAD
 router.post ('/', productsController.productCreate);
 
+=======
+router.post ("/products", productsController.productCreate);
+>>>>>>> 60a1e67b7df66eecd4d748e2c755d8f1b65a90c2
 // 5. /products/ :id /edit (GET) Formulario de edición de productos
 router.get('/:id/edit', productsController.edit);
 // 6. /products/ :id (PUT) Acción de edición (a donde se envía el formulario): 

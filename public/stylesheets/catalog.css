@@ -5,6 +5,8 @@
     height: 70vh;
     padding: 10px 20px;
     overflow-y: scroll;
+    background-color: rgba(255, 245, 245, 0.95);
+    
 }
 
 .product-container{
@@ -13,6 +15,7 @@
    margin-bottom: 15px;
    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
    border-radius: 5px;
+   background-color: white;
 }
 
 .product-container-left{   
