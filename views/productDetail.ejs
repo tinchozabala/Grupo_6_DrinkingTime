@@ -12,14 +12,14 @@
             <div class="product-detail-container">
 
                 <div class="photo-product-detail-container">
-                    <img src="/images/cervezas/andes-ipa.jpg" alt="" class="photo-product">
+                    <img src="<%=products.imagen %>" alt="" class="photo-product">
                 </div>
                 <div class="name-info-product-detail-container">
-                    <h3 class="product-title">IPA ANDINA - ANDES six pack </h3>
+                    <h3 class="product-title"><%= products.nombre %></h3>
                 
-                    <p class="info-product">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p class="info-product"><%= products.descripcion %></p>
 
-                    <h4>$365.00</h4>
+                    <h4 class="price-product"><%= products.precio %></h4>
                     <div class="add-to-cart-prodcuto-detail-container">  
                         <a href="/products/cart">   
                         <button><p> Agregar al carrito </p></button> 

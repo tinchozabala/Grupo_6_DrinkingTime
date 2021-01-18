@@ -1,7 +1,7 @@
 
 
 .principal{
-    height: 69vh;
+    height: 71vh;
     padding: 5px;
     margin-bottom: 5px;
     display: flex;
@@ -24,13 +24,12 @@
     height: 65%;
     display: flex;
     margin-bottom: 5px;
-    padding: 10px 20px;
     border-bottom: 1px solid grey;
 }
 
 .photo-product{
     box-sizing: content-box;
-    width: 90%;
+    width: 70%;
     display: block;
     margin: auto;
     overflow: hidden;
@@ -47,22 +46,31 @@
 
 .product-title{
     font-size: 20px;
+    font-weight: 500;
+
 }
 
 .add-to-cart-prodcuto-detail-container{
     height: 10%;
     text-align: center;
-    
+}
+
+.price-product{
+    text-align: right;
+    font-size: 24px;
+    margin-right: 5px;
+
 }
 
 .add-to-cart-prodcuto-detail-container button{
     border:none;
     border-radius: 5px;
-    background-color:  rgba(80, 00, 20,0.5 );
+    background-color:  rgba(80, 00, 20,0.9 );
     margin-top: 5px;
     margin-bottom: 5px;
     padding: 8px 12px;
-    font-weight: 600;
+    font-weight: 500;
+    color: white;
 
 }
 
@@ -73,16 +81,17 @@ footer{
 
 }
 
-@media(min-width: 425px){
+
+@media(min-width: 380px){
     .photo-product{
-        width: 75%;
+        width: 42%;
 
     }
 }
 
-@media(min-width: 768px){
+@media(min-width: 610px){
     .photo-product{
-        width: 40%;
+        width: 32%;
     }
     .product-title{
         font-size: 30px;
@@ -93,12 +102,23 @@ footer{
     }
 }
 
+
+@media(min-width: 800px){
+    .product-detail-container{
+        width: 50%  ;
+    }
+    .photo-product{
+        width: 40%;
+
+    }
+}
+
 @media(min-width: 1024px){
     .product-detail-container{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        padding: 45px 50px 10px 50px;
+        padding: 0 0 0 0;
         width: 90%;
         justify-content: space-around;
     }
@@ -111,7 +131,7 @@ footer{
         
     }
     .photo-product{
-        width: 95%;
+        width: 80%;
     }
 
     .name-info-product-detail-container{
@@ -123,7 +143,9 @@ footer{
     }
 
     .name-info-product-detail-container h4{
-        align-self: flex-end;
+        text-align: right;
+        margin: 20px 0px 40px 0;
+        width: 80%;
     }
 
 
@@ -133,7 +155,9 @@ footer{
     }
 
     .product-title {
-        font-size: 45px;
+        font-size: 40px;
+        margin: 20px 0 20px 0;
+        
     }
 
     .add-to-cart-prodcuto-detail-container button p {
@@ -145,7 +169,7 @@ footer{
 @media(min-width: 1440px) {
 
     .photo-product{
-        width: 90%;
+        width: 80%;
     }
 
     .product-title {

@@ -23,7 +23,9 @@ const productsController ={
       res.render('create')
       },  
     productDetail : function(req, res, next) {
-        res.render('productDetail')
+        let detalle = req.params.id;
+
+        res.render('productDetail', {products : products[detalle]})
       },
     edit :  (req, res, next) => {
       res.render('edit')
