@@ -32,4 +32,14 @@ Agregamos los ultimos controladores.
 
 09/01
 Se trabajo sobre el formulario de busqueda de productos, y borde le los productos en el catalogo
-    
+
+11/01
+Nos juntamos para revisar las tareas que habian quedado pendientes del sprint 4 y repartir tareas    
+
+18/01
+Nos juntamos nuevamente para revisar el avance sobre las tareas asignadas el 11/01
+Encontramos que los formulario de busqueda y creacion de productos estan pendientes de terminarse. 
+Falta terminar de crear funcion y utilizacion del metodo multer. 
+
+Dividimos tareas sprint-5- 
+3 Dias para la entrega, objetivo principal de la semana entrega al dia con todas las funciones solicitadas. 

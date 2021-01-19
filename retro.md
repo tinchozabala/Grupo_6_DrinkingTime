@@ -49,3 +49,8 @@ Debemos comenzar a hacer mas trabajo individual de esta manera cuando nos reunim
 
 Debemos continuar haciendo las reuniones cada dos o tres días, agregando la responsabilidad de las novedades. Continuar trabajando en el daily, ya que este archivo nos ayuda a hacer seguimiento sobre el trabajo que esta realizando cada uno. 
  
+
+
+# Link a trello del equipo:
+
+https://trello.com/b/Gx8P88wi/drinking-time
