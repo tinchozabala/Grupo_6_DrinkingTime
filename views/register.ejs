@@ -16,7 +16,7 @@
         
 
 
-                <form action="/" method="POST" class="formulario-login">
+                <form action="/register" method="POST" class="formulario-login">
 
                     <label for="email"></label>
                     <input placeholder="Ingrese su email" type="email" name="email" id="email">
@@ -26,21 +26,21 @@
                     <input type="password" placeholder="Ingrese su contraseña" name="contraseña" id="contraseña">
                     
 
-                    <label for="Confirme contraseña"></label>
+                    <label for="confirm"></label>
                     <input type="password" placeholder="Confirme contraseña">
                     
 
-                    <label for="Nombre y apellido"></label>
+                    <label for="name"></label>
                     <input placeholder="Nombre y apellido" type="text">
                     
 
                     <p>Fecha de Nacimiento</p>
-                    <label for="Nacimiento"></label>
-                    <input type="date" placeholder="Nacimiento" name="Nacimiento" id="Nacimiento">
+                    <label for="nacimiento"></label>
+                    <input type="date" placeholder="Nacimiento" name="nacimiento" id="Nacimiento">
                     <br>
 
                     <input type="submit" value="Registrarse" class="ingresar">
-
+                </form>
             </section>
         </div>
         <%- include("./partials/footer.ejs") %>
