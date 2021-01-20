@@ -1,9 +1,9 @@
 const fs = require ('fs')
 const path = require ('path')
 const bcrypt = require("bcrypt");
-const productsController = require('./productsController')
+
 const usersFilePath = path.join(__dirname, '../data/users.json');
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+
 const { check, validationResult, body} = require("express-validator");
 
 
@@ -59,6 +59,12 @@ const usersController = {
 
             res.send('Gracias')
             }
+            users.push(usuario)
+            let usersJson = JSON.stringify(users);
+            fs.writeFileSync('./data/users.json', usersJson);
+            
+            res.redirect ('login')
+
         }
     
     
