@@ -31,16 +31,26 @@ const usersController = {
     login : (req,res,next) => {
         res.render('login') 
     },
+    processLogin : (req,res) => {
+        let errors = validationResult(req)
+        if (errors.isEmpty()){
+
+        } else {
+            res.render ("login", {errors : errors.errors})
+        }
+    },
+
     register : (req, res, next) => {
         res.render('register')
     },
-    createUser : (req, res) => {
+    createUser : (req, res, next) => {
         let errors = validationResult(req)
         if (errors.isEmpty()){
             users.push({
                 email : req.body.email,
                 password : bcrypt.hashSync(req.body.contraseña, 10),
                 confirmPass : bcrypt.hashSync(req.body.confirm, 10),
+                image : req.files[0].filename,
                 name : req.body.name,
                 Edad : req.body.nacimiento,
             })

@@ -1,19 +1,10 @@
 const fs = require ('fs')
-const multer = require('multer')
 const path = require ('path')
-var storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb (null, "/images")
-  },
-  filename: (req, file, cb) => {
-    cb (null, file.fieldname + "-" + Date.now() + path.extname(file.originalname))
-  }
-})
-var upload = multer ({ storage: storage });
 
-
-let products = fs.readFileSync(path.resolve(__dirname, '../data/products.json'), {encoding : 'utf8'})
+let products = fs.readFileSync(path.resolve(__dirname, '../data/products.json'), {encoding : 'utf-8'})
 products = JSON.parse(products)
+
+
 
 const productsController ={
     catalog : function(req, res, next) {
@@ -31,7 +22,7 @@ const productsController ={
       let edit = {
         nombre: req.body.nombre,
         descripcion: req.body.descripcion,
-        imagen: req.body.imagen,
+        imagen: req.files[0].filename,
         categoria: req.body.categoria,
         marca: req.body.marca,
         precio: req.body.precio
@@ -48,19 +39,19 @@ const productsController ={
     delete: (req,res) => {
       res.render ("edit")
     },    
-    productCreate: (req,res) => { 
+    productCreate: (req, res, next) => { 
       let productos = {
         nombre: req.body.nombre,
         descripcion: req.body.descripcion,
-        imagen: req.body.imagen,
+        imagen: req.files[0].filename,
         categoria: req.body.categoria,
         marca: req.body.marca,
         precio: req.body.precio
       }
       products.push(productos);
       let productosJson = JSON.stringify(products);
-      fs.writeFileSync ("./data/products.json", productosJson);
-      res.redirect ("products")
+      fs.writeFileSync ("../data/products.json", productosJson);
+      res.redirect ("products");
       }
 }
 
