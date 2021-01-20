@@ -30,13 +30,23 @@ const usersController = {
     login : (req,res,next) => {
         res.render('login') 
     },
-    processLogin : (req,res) => {
-        let errors = validationResult(req)
-        if (errors.isEmpty()){
+    processLogin: (req, res, next) => {
 
-        } else {
-            res.render ("login", {errors : errors.errors})
-        }
+        let errors = validationResult(req);
+        let usuarioLogeado;
+        if  (errors.isEmpty()){
+            for (let i = 0; i< usersJSON.length; i++) {
+                if (usersJSON[i].email == req.body.email){
+                    if (usersJSON[i].password == req.body.password) {
+                        usuarioLogeado = usersJSON[i];
+                        req.session.usuarioLogeado = usuarioLogeado
+                        return res.redirect('/')
+                    } else {
+                        return res.render('login',{errors:errors})
+                    }
+                }  
+            } 
+        } else {return res.redirect('/login')}
     },
 
     register : (req, res, next) => {
