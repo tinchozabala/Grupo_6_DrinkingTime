@@ -2,15 +2,14 @@
 
     "id": 0,
 
-    "name": "name",
-
-    "lastName": "lastName",
-
     "email": "email",
 
     "password": "password",
 
-    "image": ".jpg",
+    "confirmPass": "Confirmar password",
 
-    "category": "category"
+    "name": "nombre y apellido",
+
+    "edad": "fecha de nacimiento"
+    
 }
