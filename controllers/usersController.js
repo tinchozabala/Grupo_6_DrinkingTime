@@ -2,13 +2,12 @@ const fs = require ('fs')
 const path = require ('path')
 const bcrypt = require("bcrypt");
 
-const usersFilePath = path.join(__dirname, '../data/users.json');
+const usersFilePath = path.join(__dirname, '..', 'data', 'users.json');
+let users = fs.readFileSync(path.resolve(usersFilePath), {encoding : 'utf8'})
+users = JSON.parse(users)
 
 const { check, validationResult, body} = require("express-validator");
 
-
-let products = fs.readFileSync(path.resolve(__dirname, '../data/products.json'), {encoding : 'utf8'})
-let productsJSON = JSON.parse(products)
 
 const usersController = {
     search :  (req, res, next) => {
@@ -35,9 +34,9 @@ const usersController = {
         res.render('register')
     },
     createUser : (req, res) => {
-        
+        let validator = validationResult(req)
         let usuario = {
-            id : users.id.length + 1,
+            id : 1,
             email : req.body.email,
             password : bcrypt.hashSync(req.body.contraseña, 10),
             confirmPass : bcrypt.hashSync(req.body.confirm, 10),
@@ -45,10 +44,11 @@ const usersController = {
             Edad : req.body.nacimiento,
             }
             users.push(usuario)
-            let usersJson = JSON.stringify(users);
-            fs.writeFileSync('./data/users.json', usersJson);
+            let usersJson = JSON.stringify(users, null, 2);
+            fs.writeFileSync(usersFilePath, usersJson);
             
-            res.redirect ('login')
+            res.render ('register', {errors : validator.array()})
+            console.log(usuario);
 
         }
     
