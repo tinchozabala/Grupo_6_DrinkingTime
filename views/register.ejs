@@ -16,7 +16,7 @@
         
 
 
-                <form action="/register" method="POST" class="formulario-login">
+                <form action="/register" method="POST" enctype="multipart/form-data" class="formulario-login">
 
                     <label for="email"></label>
                     <input placeholder="Ingrese su email" type="email" name="email" id="email">
@@ -32,6 +32,9 @@
 
                     <label for="name"></label>
                     <input placeholder="Nombre y apellido" type="text">
+
+                    <label for="image">Avatar: <br></label>
+                        <input type="file" id="image" name="image">
                     
 
                     <p>Fecha de Nacimiento</p>

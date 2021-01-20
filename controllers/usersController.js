@@ -30,6 +30,15 @@ const usersController = {
     login : (req,res,next) => {
         res.render('login') 
     },
+    processLogin : (req,res) => {
+        let errors = validationResult(req)
+        if (errors.isEmpty()){
+
+        } else {
+            res.render ("login", {errors : errors.errors})
+        }
+    },
+
     register : (req, res, next) => {
         res.render('register')
     },
