@@ -12,11 +12,24 @@
             <section class="log-container">
                 
                 <h2 class="log-title">Iniciar sesión</h2>
-                    
+                
+                  
                 
             
                 <form class="formulario-login" action="/login" method="POST">
                         
+                    <% if (typeof errors != 'undefined') { %>
+                    
+                        <p style="color: bisque;"> Revisa tus datos</p>
+                        <ul>
+                            <%for (let i=0; i <  errors.length; i++) { %>
+                                <li>
+                                    <%= errors[i].msg %>
+                                </li>
+                                <% } %>
+                        </ul>
+                    <% } %>  
+
                     <p>Ingresa tu email</p>
                     
                     <label for="email"></label>
@@ -26,11 +39,12 @@
                     <label for="password"></label>
                     <input type="password" name="password" id="password">
                         
-                    <input type="submit" value="Inicia sesion" class="ingresar">
+                    <input type="submit" value="ingresar" class="ingresar">
                     
+                    <a href="/register" class="ingresar"> <p>Registrarse</p></a>
                 </form>
 
-                    <a href="/register" class="ingresar"> <p>Crear usuario</p></a>
+                    
                     
 
                     </div>

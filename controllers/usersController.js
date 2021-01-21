@@ -39,15 +39,17 @@ const usersController = {
         res.render('login') 
     },
     processLogin: (req, res) => {
+        let errors = validationResult(req);
+
         let persona = getUserByEmail(req.body.email);
         if (persona != undefined){
             if (bcrypt.compareSync(req.body.password, persona.password)){
                 res.redirect('/');
             } else {
-                res.render ('login')
+                res.render ('login',{errors:errors})
             };
         }else{
-            res.render('login')
+            res.render('login', {errors:errors})
         }
     },
     register : (req, res, next) => {

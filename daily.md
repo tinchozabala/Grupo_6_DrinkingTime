@@ -43,3 +43,6 @@ Falta terminar de crear funcion y utilizacion del metodo multer.
 
 Dividimos tareas sprint-5- 
 3 Dias para la entrega, objetivo principal de la semana entrega al dia con todas las funciones solicitadas. 
+
+21/01
+Hicimos la entrega del sprint-5 con algunos faltantes, encontramos que aun no tenemos listo el BREAD del sprint 4, seguimos trabajando sobre los formularios y las funciones del login. Registro de usuarios listo. Pendiente de revisar creacion de objeto null, en el archivo users.json.

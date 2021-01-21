@@ -14,7 +14,8 @@ var storage = multer.diskStorage({
   })
 var upload = multer ({ storage: storage });
 
-const registerMiddleware = require("../middlewares/registerMiddleware")
+const registerMiddleware = require("../middlewares/registerMiddleware");
+const { check } = require('express-validator');
 
 
 /* GET users listing. */
@@ -22,7 +23,10 @@ const registerMiddleware = require("../middlewares/registerMiddleware")
 router.get('/', usersController.index ) ;
 // LOGIN 
 router.get('/login', usersController.login ) ;
-router.post('/login', usersController.processLogin)
+router.post('/login', [
+  check('email').isEmail().withMessage('Email Invalido'),
+  check('password').isLength(8).withMessage('La contraseña debe tener un minimo de 8 caracteres')
+], usersController.processLogin)
 // REGISTER
 router.get('/register', usersController.register) ;
 router.post('/register',upload.any(), registerMiddleware, usersController.createUser)
