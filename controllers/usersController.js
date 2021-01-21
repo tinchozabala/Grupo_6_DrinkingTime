@@ -6,9 +6,13 @@ const usersFilePath = path.join(__dirname, '..', 'data', 'users.json');
 let users = fs.readFileSync(path.resolve(usersFilePath), {encoding : 'utf8'})
 users = JSON.parse(users)
 
+const productsFilePath = path.join(__dirname, '..', 'data', 'products.json');
+let products = fs.readFileSync(path.resolve(productsFilePath), {encoding : 'utf8'})
+products = JSON.parse(products)
 
 const { check, validationResult, body} = require("express-validator");
 
+console.log(users);
 
 const usersController = {
     search :  (req, res, next) => {
@@ -17,8 +21,8 @@ const usersController = {
 
         let productsResults = [];
 
-        for (let i = 0 ; i < productsJSON.length; i ++) {
-            if (productsJSON[i].nombre.includes(laBusqueda)){
+        for (let i = 0 ; i < products.length; i ++) {
+            if (products[i].nombre.includes(laBusqueda)){
                 productsResults.push(products[i]);
             }
         }
@@ -69,10 +73,8 @@ const usersController = {
             fs.writeFileSync(usersFilePath, usersJson);
             
             res.render ('register', {errors : validator.array()})
-
         }
-    
-    
+        
 } 
 
 module.exports = usersController
