@@ -22,12 +22,16 @@ const registerMiddleware = require("../middlewares/registerMiddleware")
 router.get('/', usersController.index ) ;
 // LOGIN 
 router.get('/login', usersController.login ) ;
-router.post("/login", usersController.processLogin)
+router.post('/login', usersController.processLogin)
 // REGISTER
 router.get('/register', usersController.register) ;
 router.post('/register',upload.any(), registerMiddleware, usersController.createUser)
 //BUSQUEDA
 router.get('/search', usersController.search);
+
+
+
+
 //SESSION
 router.get("/session", function (req, res){
     if (req.session.numeroVisitas == undefined){

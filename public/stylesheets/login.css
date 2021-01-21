@@ -24,15 +24,11 @@
 
 
 .log-title{
-    margin-top: 10px;
     text-align: center;
     color:wheat;
     width: 80%;
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 500;
-    
-    
-    
 }
 
 
@@ -64,10 +60,14 @@
 
 }
 
+a.ingresar {
+    height: 43px;
+    
+}
 
 @media(min-width: 768px){
     .log-container {
-        width: 60%;
+        width: 47%;
      }
 
     .log-title{
@@ -83,7 +83,7 @@
     }
 
     .log-container {
-        width: 40%;
+        width: 35%;
         height: 95%;
         padding-top: 15px;
      }
@@ -95,11 +95,11 @@
 
 @media(min-width: 1440px){
     .log-container {
-        width: 40%;
+        width: 25%;
      }
 
      .log-title{
-         font-size: 55px;
+         font-size: 40px;
      }
 
      

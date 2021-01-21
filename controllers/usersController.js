@@ -6,14 +6,17 @@ const usersFilePath = path.join(__dirname, '..', 'data', 'users.json');
 let users = fs.readFileSync(path.resolve(usersFilePath), {encoding : 'utf8'})
 users = JSON.parse(users)
 
+
 const productsFilePath = path.join(__dirname, '..', 'data', 'products.json');
 let products = fs.readFileSync(path.resolve(productsFilePath), {encoding : 'utf8'})
 products = JSON.parse(products)
 
 const { check, validationResult, body} = require("express-validator");
+const { LOADIPHLPAPI } = require('dns');
 
-console.log(users);
-
+function getUserByEmail(email) {
+    return users.find((user) => user.email == email)
+};
 const usersController = {
     search :  (req, res, next) => {
        
@@ -35,25 +38,18 @@ const usersController = {
     login : (req,res,next) => {
         res.render('login') 
     },
-    processLogin: (req, res, next) => {
-
-        let errors = validationResult(req);
-        let usuarioLogeado;
-        if  (errors.isEmpty()){
-            for (let i = 0; i< users.length; i++) {
-                if (users[i].email == req.body.email){
-                    if (bcrypt.compareSync(req.body.password, users[i].password)) {
-                        usuarioLogeado = users[i];
-                        req.session.usuarioLogeado = usuarioLogeado
-                        return res.redirect('index')
-                    } else {
-                        return res.render('login',{errors:errors})
-                    }
-                }  
-            } 
-        } else {return res.redirect('login')}
+    processLogin: (req, res) => {
+        let persona = getUserByEmail(req.body.email);
+        if (persona != undefined){
+            if (bcrypt.compareSync(req.body.password, persona.password)){
+                res.redirect('/');
+            } else {
+                res.render ('login')
+            };
+        }else{
+            res.render('login')
+        }
     },
-
     register : (req, res, next) => {
         res.render('register')
     },

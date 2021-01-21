@@ -24,7 +24,10 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride("_method"));
-app.use(session({secret: "secreto!"}));
+app.use(session({
+  secret: "secreto",
+  resave: false, 
+  saveUninitialized: true}));
 
 app.use('/products', productsRouter);
 app.use('/', usersRouter);
