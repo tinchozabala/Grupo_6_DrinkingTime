@@ -27,7 +27,7 @@ router.get('/create', productsController.create);
 // 3. /products/ :id (GET) Detalle de un producto particular
 router.get('/:id', productsController.productDetail);
 // 4. /products/create (POST) Acción de creación (a donde se envía el formulario) 
-router.post ("/create", upload.any(), productsController.productCreate);
+router.post ("/", upload.any(), productsController.productCreate);
 // 5. /products/ :id /edit (GET) Formulario de edición de productos
 router.get('/:id/edit', productsController.productEdit);
 // 6. /products/ :id (PUT) Acción de edición (a donde se envía el formulario): 

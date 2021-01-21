@@ -49,8 +49,9 @@ const productsController ={
         precio: req.body.precio
       }
       products.push(productos);
-      let productosJson = JSON.stringify(products);
-      fs.writeFileSync ("../data/products.json", productosJson);
+      console.log(productos);
+      let productsJson = JSON.stringify(products);
+      fs.writeFileSync("../data/products.json", productsJson);
       res.redirect ("products");
       }
 }
