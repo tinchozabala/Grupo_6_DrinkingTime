@@ -6,8 +6,13 @@ const usersFilePath = path.join(__dirname, '..', 'data', 'users.json');
 let users = fs.readFileSync(path.resolve(usersFilePath), {encoding : 'utf8'})
 users = JSON.parse(users)
 
+const productsFilePath = path.join(__dirname, '..', 'data', 'products.json');
+let products = fs.readFileSync(path.resolve(productsFilePath), {encoding : 'utf8'})
+products = JSON.parse(products)
+
 const { check, validationResult, body} = require("express-validator");
 
+console.log(users);
 
 const usersController = {
     search :  (req, res, next) => {
@@ -16,8 +21,8 @@ const usersController = {
 
         let productsResults = [];
 
-        for (let i = 0 ; i < productsJSON.length; i ++) {
-            if (productsJSON[i].nombre.includes(laBusqueda)){
+        for (let i = 0 ; i < products.length; i ++) {
+            if (products[i].nombre.includes(laBusqueda)){
                 productsResults.push(products[i]);
             }
         }
@@ -35,9 +40,9 @@ const usersController = {
         let errors = validationResult(req);
         let usuarioLogeado;
         if  (errors.isEmpty()){
-            for (let i = 0; i< usersJSON.length; i++) {
-                if (usersJSON[i].email == req.body.email){
-                    if (usersJSON[i].password == req.body.password) {
+            for (let i = 0; i< users.length; i++) {
+                if (users[i].email == req.body.email){
+                    if (users[i].password == req.body.password) {
                         usuarioLogeado = usersJSON[i];
                         req.session.usuarioLogeado = usuarioLogeado
                         return res.redirect('/')
@@ -68,10 +73,8 @@ const usersController = {
             
             res.render ('register', {errors : validator.array()})
             console.log(usuario);
-
         }
-    
-    
+        
 } 
 
 module.exports = usersController
