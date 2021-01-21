@@ -25,7 +25,7 @@ router.get('/login', usersController.login ) ;
 router.post("/login", usersController.processLogin)
 // REGISTER
 router.get('/register', usersController.register) ;
-router.post('/register', upload.any(), registerMiddleware, usersController.createUser)
+router.post('/register',upload.any(), registerMiddleware, usersController.createUser)
 //BUSQUEDA
 router.get('/search', usersController.search);
 //SESSION

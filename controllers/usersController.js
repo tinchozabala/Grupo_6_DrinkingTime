@@ -62,8 +62,8 @@ const usersController = {
         let usuario = {
             id : 1,
             email : req.body.email,
-            password : bcrypt.hashSync(req.body.contraseña, 10),
-            confirmPass : bcrypt.hashSync(req.body.confirm, 10),
+            password : bcrypt.hashSync(req.body.password, 10),
+            confirmPass : bcrypt.hashSync(req.body.confirmPass, 10),
             name : req.body.name,
             Edad : req.body.nacimiento,
             }
@@ -72,7 +72,6 @@ const usersController = {
             fs.writeFileSync(usersFilePath, usersJson);
             
             res.render ('register', {errors : validator.array()})
-            console.log(usuario);
         }
         
 } 

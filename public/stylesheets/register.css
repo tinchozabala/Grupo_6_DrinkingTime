@@ -36,6 +36,24 @@
 }
 
 
+.log-avatar{
+    margin-top: 10px;
+    text-align: center;
+    color:wheat;
+    width: 80%;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.log-avatar-imagen{
+    margin-top: 10px;
+    text-align: center; 
+    color:wheat;
+    font-size: 17px;
+    font-weight: 50;  
+}
+
+
 .log-container input{
     height: 25px;
     text-align: center;
