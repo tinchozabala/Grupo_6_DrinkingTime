@@ -1,15 +1,1 @@
-{
-
-    "id": 0,
-
-    "email": "email",
-
-    "password": "password",
-
-    "confirmPass": "Confirmar password",
-
-    "name": "nombre y apellido",
-
-    "edad": "fecha de nacimiento"
-    
-}
+[{"id":0,"email":"email","password":"password","confirmPass":"Confirmar password","name":"nombre y apellido","edad":"fecha de nacimiento"},null,{"id":1,"email":"f_ferrero@hotmail.com","password":"$2b$10$n1Wnmv89/EiW.jmIMS7df.fLSSLtJLZruFhZr1Q4FBWLbU9JKycM2","confirmPass":"$2b$10$Qz481EKXHBIQdiyQ1lkr5.t20q4ZM/zpWf1vIPCWJU4SttO9xWRX6","name":"Facundo Ferrero","Edad":"1987-06-06"}]

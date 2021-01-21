@@ -6,6 +6,7 @@ const usersFilePath = path.join(__dirname, '..', 'data', 'users.json');
 let users = fs.readFileSync(path.resolve(usersFilePath), {encoding : 'utf8'})
 users = JSON.parse(users)
 
+
 const { check, validationResult, body} = require("express-validator");
 
 
@@ -35,18 +36,18 @@ const usersController = {
         let errors = validationResult(req);
         let usuarioLogeado;
         if  (errors.isEmpty()){
-            for (let i = 0; i< usersJSON.length; i++) {
-                if (usersJSON[i].email == req.body.email){
-                    if (usersJSON[i].password == req.body.password) {
-                        usuarioLogeado = usersJSON[i];
+            for (let i = 0; i< users.length; i++) {
+                if (users[i].email == req.body.email){
+                    if (bcrypt.compareSync(req.body.password, users[i].password)) {
+                        usuarioLogeado = users[i];
                         req.session.usuarioLogeado = usuarioLogeado
-                        return res.redirect('/')
+                        return res.redirect('index')
                     } else {
                         return res.render('login',{errors:errors})
                     }
                 }  
             } 
-        } else {return res.redirect('/login')}
+        } else {return res.redirect('login')}
     },
 
     register : (req, res, next) => {
@@ -55,7 +56,7 @@ const usersController = {
     createUser : (req, res) => {
         let validator = validationResult(req)
         let usuario = {
-            id : 1,
+            id : users.length ++,
             email : req.body.email,
             password : bcrypt.hashSync(req.body.password, 10),
             confirmPass : bcrypt.hashSync(req.body.confirmPass, 10),
@@ -63,7 +64,8 @@ const usersController = {
             Edad : req.body.nacimiento,
             }
             users.push(usuario)
-            let usersJson = JSON.stringify(users, null, 2);
+            let usersJson = JSON.stringify(users);
+            
             fs.writeFileSync(usersFilePath, usersJson);
             
             res.render ('register', {errors : validator.array()})
