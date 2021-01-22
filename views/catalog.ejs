@@ -8,16 +8,20 @@
         <%- include("./partials/header.ejs") %>
         <div class="products-details-container">
             <% products.forEach (producto =>{ %>
+                <a  href="/products/<%= producto.id %>" class="aProduct">
                 <div class="product-container">
+                    
                      <div class="product-container-left">
                         <img src="<%=producto.imagen%>" alt="" class="product-container-image">
                     </div>
                     <div class="product-container-right">
+
                         <h4 class="product-container-title"><%= producto.nombre %></h4>
                         <p class="product-container-category"><%= producto.categoria %></p>
                         <p class="product-container-price"><%= producto.precio %></p>
-                            <a class="product-container-addcart" href="/products/<%= producto.id %>"> Leer mas </a>
+                         
                     </div>
+                </a>
                 </div>
             <% }) %>
         </div>    
