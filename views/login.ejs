@@ -30,18 +30,25 @@
                         </ul>
                     <% } %>  
 
-                    <p>Ingresa tu email</p>
+                    <p>Usuario:</p>
                     
                     <label for="email"></label>
                     <input type="email" name="email">
                         
-                    <p>Ingresa tu contraseña</p>
+                    <p>Contraseña:</p>
                     <label for="password"></label>
                     <input type="password" name="password" id="password">
-                        
-                    <input type="submit" value="ingresar" class="ingresar">
+                    <div >
+                    <input type="checkbox" name="remember" id="remember" value="Recordarme" class="remember"> 
+                    <label for="remember" style="color: white;">Recordarme</label>
+                    </div>
                     
-                    <a href="/register" class="ingresar"> <p>Registrarse</p></a>
+                    <input type="submit" value="ingresar" class="ingresar"> 
+                    <br>
+                    
+                    <a href="/register" class="btn"> Registrarse</a>
+                    <br>
+                    <a href="#" class="btn">¿Olvidaste tu contraseña?</a>
                 </form>
 
                     </div>

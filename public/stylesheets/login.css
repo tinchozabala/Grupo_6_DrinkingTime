@@ -1,7 +1,7 @@
 .principal{
     height: 72vh;
-    padding-top: 30px;
-    background-image: url('/images/banners/banner-aperitivos.jpg');
+    padding-top: 50px;
+    background-image: url('/images/banners/banner-espirituosas.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -14,6 +14,8 @@
     display: flex;
     flex-wrap: wrap;
     position: relative;
+    height: 74%;
+    padding-top: 20px;
     margin-bottom: 5%;
     justify-content: center;
     text-align: center;
@@ -33,9 +35,7 @@
 
 
 .log-container input{
-    height: 25px;
     text-align: center;
-    width: 80%;
     margin-bottom: 10px;
 }
 
@@ -60,9 +60,29 @@
 
 }
 
+.btn{
+    font-size: 16px;
+    border:none;
+    border-radius: 5px;
+   
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: white;
+
+}
+
 a.ingresar {
     height: 43px;
     
+}
+
+.remember-check {
+    width: 10px;
+}
+
+.remember{
+    font-size: 10px;
 }
 
 @media(min-width: 768px){
@@ -99,7 +119,7 @@ a.ingresar {
      }
 
      .log-title{
-         font-size: 40px;
+         font-size: 55px;
      }
 
      
