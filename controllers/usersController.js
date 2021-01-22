@@ -12,7 +12,6 @@ let products = fs.readFileSync(path.resolve(productsFilePath), {encoding : 'utf8
 products = JSON.parse(products)
 
 const { check, validationResult, body} = require("express-validator");
-const { LOADIPHLPAPI } = require('dns');
 
 function getUserByEmail(email) {
     return users.find((user) => user.email == email)
@@ -44,6 +43,7 @@ const usersController = {
         let persona = getUserByEmail(req.body.email);
         if (persona != undefined){
             if (bcrypt.compareSync(req.body.password, persona.password)){
+                req.session.usuario = persona
                 res.redirect('/');
             } else {
                 res.render ('login',{errors:errors})
@@ -70,14 +70,14 @@ const usersController = {
             
             fs.writeFileSync(usersFilePath, usersJson);
             
-            res.render ('register', {errors : validator.array()})
+            res.redirect('/login')
         }
         
 } 
 
 module.exports = usersController
 
-
+//, {errors : validator.array()}
 
 //let laBusqueda = req.query.search;
       //let results = [];

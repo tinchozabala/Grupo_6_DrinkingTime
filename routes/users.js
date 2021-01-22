@@ -25,7 +25,7 @@ router.get('/', usersController.index ) ;
 router.get('/login', usersController.login ) ;
 router.post('/login', [
   check('email').isEmail().withMessage('Email Invalido'),
-  check('password').isLength(8).withMessage('La contraseña debe tener un minimo de 8 caracteres')
+  check('password').isLength({min:8}).withMessage('La contraseña debe tener un minimo de 8 caracteres')
 ], usersController.processLogin)
 // REGISTER
 router.get('/register', usersController.register) ;
