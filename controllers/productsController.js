@@ -41,9 +41,10 @@ const productsController ={
     },    
     productCreate: (req, res, next) => { 
       let productos = {
+        id: products.length ++, 
         nombre: req.body.nombre,
         descripcion: req.body.descripcion,
-        imagen: req.files[0].filename,
+        imagen: "/images/" + req.files[0].filename,
         categoria: req.body.categoria,
         marca: req.body.marca,
         precio: req.body.precio
@@ -51,7 +52,7 @@ const productsController ={
       products.push(productos);
       console.log(productos);
       let productsJson = JSON.stringify(products);
-      fs.writeFileSync("../data/products.json", productsJson);
+      fs.writeFileSync("./data/products.json", productsJson);
       res.redirect ("products");
       }
 }

@@ -66,6 +66,7 @@ const usersController = {
             password : bcrypt.hashSync(req.body.password, 10),
             confirmPass : bcrypt.hashSync(req.body.confirmPass, 10),
             name : req.body.name,
+            image : req.files[0].filename,
             Edad : req.body.nacimiento,
             }
             users.push(usuario)
