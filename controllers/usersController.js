@@ -75,8 +75,10 @@ const usersController = {
             fs.writeFileSync(usersFilePath, usersJson);
             
             res.redirect('/login')
-        }
-        
+        },
+    profile : (req, res, next) => {
+        res.render('profile')
+    }     
 } 
 
 module.exports = usersController

@@ -1,3 +1,4 @@
+const { ifError } = require('assert')
 const fs = require ('fs')
 const path = require ('path')
 
@@ -15,8 +16,7 @@ const productsController ={
       },  
     productDetail : function(req, res, next) {
         let detalle = req.params.id;
-
-        res.render('productDetail', {products : products[detalle]})
+        res.render('productDetail', {products : products[detalle]});
       },
     edit :  (req, res, next) => {
       let edit = {

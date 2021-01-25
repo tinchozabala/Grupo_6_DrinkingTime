@@ -28,11 +28,12 @@ router.post('/login', [
   check('password').isLength({min:8}).withMessage('La contraseña debe tener un minimo de 8 caracteres')
 ], usersController.processLogin)
 // REGISTER
-router.get('/register', usersController.register) ;
+router.get('/register', usersController.register);
 router.post('/register',upload.any(), registerMiddleware, usersController.createUser)
 //BUSQUEDA
 router.get('/search', usersController.search);
-
+//MI PERFIL
+router.get('/profile', usersController.profile);
 
 
 
