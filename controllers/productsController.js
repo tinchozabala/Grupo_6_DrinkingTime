@@ -47,7 +47,7 @@ const productsController ={
         imagen: "/images/" + req.files[0].filename,
         categoria: req.body.categoria,
         marca: req.body.marca,
-        precio: req.body.precio
+        precio: "$" + req.body.precio
       }
       products.push(productos);
       console.log(productos);

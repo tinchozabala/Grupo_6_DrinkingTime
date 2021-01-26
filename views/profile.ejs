@@ -6,9 +6,22 @@
 <body>
     <main>
         <%- include("./partials/header.ejs") %>
+        <div class="profile-details-container">
+                    <div class="profile-container">
+                    
+                        <div class="profile-container-left">
+                            
+                        </div>
+                        <div class="profile-container-right">
 
-
-        <P>ACA VA MI PERFIL</P>
+                            <h4 class="profile-container-name"><%= users.name %></h4>
+                            <p class="profile-container-email"><%= users.email %></p>
+                            <p class="profile-container-edad"><%= users.edad %></p> 
+                            <p class="profile-container-direccion"><%= users.direccion %></p> 
+                            <p class="profile-container-telefono"><%= users.telefono %></p> 
+                        </div>
+                    </div>   
+        </div>
 
 
         <%- include("./partials/footer.ejs") %>

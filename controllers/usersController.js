@@ -67,7 +67,9 @@ const usersController = {
             confirmPass : bcrypt.hashSync(req.body.confirmPass, 10),
             name : req.body.name,
             image : req.files[0].filename,
-            Edad : req.body.nacimiento,
+            edad : req.body.nacimiento,
+            direccion : null,
+            telefono : null,
             }
             users.push(usuario)
             let usersJson = JSON.stringify(users);
@@ -76,8 +78,9 @@ const usersController = {
             
             res.redirect('/login')
         },
-    profile : (req, res, next) => {
-        res.render('profile')
+    profile : function (req, res, next){
+        let perfil = req.params.id;
+        res.render('profile', {users : users[perfil]});
     }     
 } 
 

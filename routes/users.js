@@ -33,7 +33,7 @@ router.post('/register',upload.any(), registerMiddleware, usersController.create
 //BUSQUEDA
 router.get('/search', usersController.search);
 //MI PERFIL
-router.get('/profile', usersController.profile);
+router.get('/profile/:id', usersController.profile);
 
 
 
