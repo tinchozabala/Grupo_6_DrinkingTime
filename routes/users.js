@@ -34,6 +34,7 @@ router.post('/register',upload.any(), registerMiddleware, usersController.create
 router.get('/search', usersController.search);
 //MI PERFIL
 router.get('/profile/:id', usersController.profile);
+router.put('/profile/:id', usersController.profileEdit);
 
 
 

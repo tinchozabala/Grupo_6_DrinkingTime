@@ -12,6 +12,7 @@ let products = fs.readFileSync(path.resolve(productsFilePath), {encoding : 'utf8
 products = JSON.parse(products)
 
 const { check, validationResult, body} = require("express-validator");
+const { name } = require('ejs');
 
 function getUserByEmail(email) {
     return users.find((user) => user.email == email)
@@ -81,6 +82,25 @@ const usersController = {
     profile : function (req, res, next){
         let perfil = req.params.id;
         res.render('profile', {users : users[perfil]});
+    },
+    profileEdit : (req, res) => {
+        function usuarioEncontrado(users){
+            req.body.id = req.params.id
+        };
+        function usuarioModificado(){
+            if (users.find(usuarioEncontrado)){
+            name = req.body.name,
+            email = req.body.email,
+            edad = req.body.nacimiento,
+            ciudad = req.body.ciudad,
+            direccion = req.body.direccion,
+            codigoPostal = req.body.codigoPostal,
+            telefono = req.body.telefono
+        }
+    }
+        let usuarioEditJson = JSON.stringify(users);
+        fs.writeFileSync(usersFilePath, usuarioEditJson);
+        res.redirect(this.profile)
     }     
 } 
 

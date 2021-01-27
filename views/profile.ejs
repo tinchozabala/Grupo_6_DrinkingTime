@@ -9,17 +9,32 @@
         <div class="profile-details-container">
                     <div class="profile-container">
                     
-                        <div class="profile-container-left">
+                            <form action=":id?_method=PUT" method="POST" class="profile-container-edit">
+                                <img src="<%=users.image %>" alt="" class="profile-container-imagen">
                             
-                        </div>
-                        <div class="profile-container-right">
+                                <label for="name"></label>
+                                <input name="name" type="text" value="<%= users.name %>">
 
-                            <h4 class="profile-container-name"><%= users.name %></h4>
-                            <p class="profile-container-email"><%= users.email %></p>
-                            <p class="profile-container-edad"><%= users.edad %></p> 
-                            <p class="profile-container-direccion"><%= users.direccion %></p> 
-                            <p class="profile-container-telefono"><%= users.telefono %></p> 
-                        </div>
+                                <label for="email"></label>
+                                <input name="email" type="email" value="<%= users.email %>">
+
+                                <label for="edad"></label>
+                                <input name="edad" type="date" value="<%= users.edad %>">
+
+                                <label for="ciudad">Ciudad</label>
+                                <input name="ciudad" type="text" value="<%= users.ciudad %>">
+
+                                <label for="direccion">Direccion</label>
+                                <input name="direccion" type="text" value="<%= users.direccion %>">
+
+                                <label for="codigoPostal">Codigo Postal</label>
+                                <input name="codigoPostal" type="number" value="<%= users.codigoPostal %>">
+
+                                <label for="telefono">Telefono</label>
+                                <input name="telefono" type="number" value="<%= users.telefono %>">
+
+                                <input type="submit" value="Editar" class="editar">
+                            </form>   
                     </div>   
         </div>
 

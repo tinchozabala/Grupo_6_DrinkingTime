@@ -1,0 +1,7 @@
+.profile-container-imagen{
+    box-sizing: content-box;
+    width: 10%;
+    display: block;
+    margin: auto;
+    overflow: hidden;
+}
