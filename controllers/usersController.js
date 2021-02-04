@@ -1,22 +1,27 @@
 const fs = require ('fs')
 const path = require ('path')
 const bcrypt = require("bcrypt");
+const db= require("../database/models")
 
+
+// LECTURA DE ARCHIVOS JSON PARA 
 const usersFilePath = path.join(__dirname, '..', 'data', 'users.json');
 let users = fs.readFileSync(path.resolve(usersFilePath), {encoding : 'utf8'})
 users = JSON.parse(users)
-
 
 const productsFilePath = path.join(__dirname, '..', 'data', 'products.json');
 let products = fs.readFileSync(path.resolve(productsFilePath), {encoding : 'utf8'})
 products = JSON.parse(products)
 
+// EXPRESS VALIDATOR
 const { check, validationResult, body} = require("express-validator");
 const { name } = require('ejs');
 
+// FUNCION PARA ENCONTRAR EMAIL
 function getUserByEmail(email) {
     return users.find((user) => user.email == email)
 };
+
 const usersController = {
     search :  (req, res, next) => {
        
@@ -60,24 +65,43 @@ const usersController = {
         res.render('register')
     },
     createUser : (req, res) => {
-        let validator = validationResult(req)
-        let usuario = {
-            id : users.length ++,
-            email : req.body.email,
-            password : bcrypt.hashSync(req.body.password, 10),
-            confirmPass : bcrypt.hashSync(req.body.confirmPass, 10),
+        db.Customers.create({
+            email: req.body.email,
             name : req.body.name,
-            image : req.files[0].filename,
-            edad : req.body.nacimiento,
-            direccion : null,
-            telefono : null,
-            }
-            users.push(usuario)
-            let usersJson = JSON.stringify(users);
-            
-            fs.writeFileSync(usersFilePath, usersJson);
-            
-            res.redirect('/login')
+            password: bcrypt.hashSync(req.body.password, 10),
+            shipping_addres: null, 
+            avatar: null,
+            telephone: null,
+            birth_date: req.body.nacimiento,
+
+        })
+
+
+
+
+
+
+
+
+
+    //    let validator = validationResult(req)
+    //    let usuario = {
+    //        id : users.length ++,
+    //        email : req.body.email,
+    //        password : bcrypt.hashSync(req.body.password, 10),
+    //        confirmPass : bcrypt.hashSync(req.body.confirmPass, 10),
+    //        name : req.body.name,
+    //        image : req.files[0].filename,
+    //       edad : req.body.nacimiento,
+    //         direccion : null,
+    //        telefono : null,
+    //        }
+    //        users.push(usuario)
+    //        let usersJson = JSON.stringify(users);
+    //        
+    //        fs.writeFileSync(usersFilePath, usersJson);
+    //        
+    //        res.redirect('/login')
         },
     profile : function (req, res, next){
         let perfil = req.params.id;

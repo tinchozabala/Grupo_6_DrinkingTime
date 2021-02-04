@@ -46,3 +46,13 @@ Dividimos tareas sprint-5-
 
 21/01
 Hicimos la entrega del sprint-5 con algunos faltantes, encontramos que aun no tenemos listo el BREAD del sprint 4, seguimos trabajando sobre los formularios y las funciones del login. Registro de usuarios listo. Pendiente de revisar creacion de objeto null, en el archivo users.json.
+
+
+27/01
+Nos reunimos para ver las correcciones del spritn-5, leer sprint-6.
+
+2/2
+Nos pasamos reporte de tareas, actualizacion de trello. 
+
+3/2
+Trabajamos sobre la base de datos, modelos y controladores. 
