@@ -22,6 +22,10 @@ function getUserByEmail(email) {
     return users.find((user) => user.email == email)
 };
 
+
+    //CONTROLADORES DE USUARIO
+
+
 const usersController = {
     search :  (req, res, next) => {
        
@@ -44,6 +48,8 @@ const usersController = {
         res.render('login') 
     },
     processLogin: (req, res) => {
+        //RECORDAR ESTA PAGINA DEBE REDIRECIONAR A PROFILE/:ID
+
         let errors = validationResult(req);
 
         let persona = getUserByEmail(req.body.email);
@@ -65,6 +71,8 @@ const usersController = {
         res.render('register')
     },
     createUser : (req, res) => {
+        //RECORDAR ESTA PAGINA DEBE REDIRECCION AL LOGIN 
+        //PENDIENTE
         db.Customers.create({
             email: req.body.email,
             name : req.body.name,

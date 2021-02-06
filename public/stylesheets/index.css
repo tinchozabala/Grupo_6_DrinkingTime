@@ -215,11 +215,39 @@ footer .footer-iconos i{
     font-size: 20px;
 }
 
+
+.whatsappButton{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    border-radius: 300px;
+    width: 12%;
+    border: none;
+    background-color: transparent;
+}
+
+.whatsappButton img {
+    width: 100%;
+}
+
+
+
 @media(max-width: 400px){
     .logo{
         width: 125px;
     }
+
+    .whatsappButton{
+
+    }
 }
+
+@media(min-width: 500px){
+    .whatsappButton{
+        width: 35px;
+    }
+}
+
 
 @media(min-width: 768px){
     .search-form{
@@ -232,6 +260,10 @@ footer .footer-iconos i{
     }
     .barra-de-busqueda{
         padding-left: 0px;
+    }
+    .whatsappButton{
+        width: 5%;
+        height: 6%;
     }
 
 }
@@ -306,6 +338,12 @@ footer .footer-iconos i{
         flex-grow: 2;
         height: 100%;
     }
+
+    .whatsappButton{
+        bottom: 45px;
+        width: 60px;
+    }
+
 
 
 }
