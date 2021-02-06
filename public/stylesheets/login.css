@@ -9,17 +9,17 @@
     justify-content: center;
 }
 
+
+
 .log-container {
     width: 80%;
-    display: flex;
     flex-wrap: wrap;
     position: relative;
-    height: 74%;
     padding-top: 20px;
     margin-bottom: 5%;
     justify-content: center;
     text-align: center;
-    background-color: rgba(80, 00, 20,0.5);
+    background-color: rgba(80, 00, 20,0.9);
     border-radius: 5px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0);
 }
@@ -28,7 +28,6 @@
 .log-title{
     text-align: center;
     color:wheat;
-    width: 80%;
     font-size: 24px;
     font-weight: 500;
 }
@@ -37,12 +36,20 @@
 .log-container input{
     text-align: center;
     margin-bottom: 10px;
+    width: 80%;
+    border-radius: 15px;
 }
 
 .formulario-login p{
     color: white;
     margin-bottom: 3px;
 
+}
+
+.formulario-login input{
+    height: 25px;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 .log-container .ingresar{
@@ -94,6 +101,7 @@ a.ingresar {
         font-size: 45px;
     }
     
+    
 }
 
 @media(min-width: 1024px){
@@ -102,8 +110,7 @@ a.ingresar {
         
     }
 
-    .log-container {
-        width: 35%;
+    .log-container { 
         height: 95%;
         padding-top: 15px;
      }
@@ -111,34 +118,34 @@ a.ingresar {
          font-size: 50px;
     
      }
+     
 }
 
 @media(min-width: 1440px){
     .log-container {
-        width: 25%;
+        width: 45%;
      }
 
      .log-title{
          font-size: 55px;
      }
 
-     
-.formulario-login p{
-    font-size: 24px;
-    color: white;
-    margin-bottom: 3px;
-}
 
-.ingresar{
-    font-size: 24PX;
-    padding: 3PX;
-    width: 40PX;
-}
+    .formulario-login p{
+        font-size: 24px;
+        color: white;
+        margin-bottom: 3px;
+     }
 
-.log-container .ingresar {
-    width: 140px;
-    font-size: 20px;
+    .ingresar{
+        font-size: 24PX;
+        padding: 3PX;
+        width: 40PX;
+     }
 
-}
+    .log-container .ingresar {
+        width: 140px;
+        font-size: 20px;
+     }
 }
    

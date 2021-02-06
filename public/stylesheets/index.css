@@ -83,8 +83,6 @@ h2{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 5px;
-    
     
 }
 
@@ -98,26 +96,34 @@ h2{
     width: 27px;
 }
 
-.search-form {
-    width: 90%;
-}
-
 .barra{
-    margin: auto;
-    width: 85%;
-    padding: 5px;
-
-     
+    width: 95%;
 }
+
+.input-barra{
+    width: 100%;
+    display: inline-block;
+    justify-content: center;
+    display: flex;
+}
+
+.barrablanca{
+    width: 87%
+}
+
 .fa-glass-cheers{
     padding: 3px;
     background-color: white;
     border:none;
 }
 
+
+
 .sections-container{
     height: 72vh;
 }
+
+
 
 
 .promociones{
@@ -250,17 +256,7 @@ footer .footer-iconos i{
 
 
 @media(min-width: 768px){
-    .search-form{
-        margin: auto;
-        width: 60%;
-    }
-
-    .barra-de-busqueda .barra{
-        width: 90%;
-    }
-    .barra-de-busqueda{
-        padding-left: 0px;
-    }
+   
     .whatsappButton{
         width: 5%;
         height: 6%;
@@ -271,6 +267,10 @@ footer .footer-iconos i{
 @media(min-width: 1024px){
     .nav-bar {
         display: flex;
+    }
+
+    .barrablanca {
+        width: 75%;
     }
 
     .nav-bar ul{
@@ -286,18 +286,7 @@ footer .footer-iconos i{
         font-weight: bolder;
     }
 
-    .search-form{
-        margin: auto;
-        width: 50%;
-        padding-left: 60px;
-    }
     
-
-    .barra-de-busqueda .barra{
-        width: 90%;
-        padding-left: 10px;
-    }
-
     .nav-bar ul li a{
         color: #800020;
     }
