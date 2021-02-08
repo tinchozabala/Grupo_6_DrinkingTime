@@ -1,5 +1,3 @@
-const sequelize = require("sequelize");
-
 module.exports = (sequelize, dataTypes) => {
     // EL ALIAS VA EN PLURAL 
     let alias = "Customers"
@@ -48,7 +46,8 @@ module.exports = (sequelize, dataTypes) => {
 
     // No agregamos config, de timestamps
     let config = {
-        tableName: "Customers"
+        tableName: "Customers",
+        timestamp: true
     }
 
     const Customer = sequelize.define(alias, cols, config)

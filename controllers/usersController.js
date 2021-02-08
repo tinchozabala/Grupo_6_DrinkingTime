@@ -73,16 +73,22 @@ const usersController = {
     createUser : (req, res) => {
         //RECORDAR ESTA PAGINA DEBE REDIRECCION AL LOGIN 
         //PENDIENTE
-        db.Customers.create({
-            email: req.body.email,
-            name : req.body.name,
-            password: bcrypt.hashSync(req.body.password, 10),
-            shipping_addres: null, 
-            avatar: null,
-            telephone: null,
-            birth_date: req.body.nacimiento,
-
+        //db.Customers.create({
+         //   email: req.body.email,
+         //   name : req.body.name,
+           // password: bcrypt.hashSync(req.body.password, 10),
+          //  shipping_addres: null, 
+           // avatar: null,
+           // telephone: null,
+          // birth_date: req.body.nacimiento,
+        db.Customers.findAll()
+        .then((resultado) =>{
+            console.log(resultado)
         })
+        .catch(function(e) {
+            res.send(e)
+        })
+        
 
 
 
