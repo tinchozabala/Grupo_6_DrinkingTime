@@ -118,7 +118,7 @@ const usersController = {
     //        
     //        res.redirect('/login')
         },
-    profile : function (req, res, next){
+    profileView : function (req, res, next){
         let perfil = req.params.id;
         res.render('profile', {users : users[perfil]});
     },
@@ -128,13 +128,14 @@ const usersController = {
         };
         function usuarioModificado(){
             if (users.find(usuarioEncontrado)){
-            name = req.body.name,
-            email = req.body.email,
-            edad = req.body.nacimiento,
-            ciudad = req.body.ciudad,
-            direccion = req.body.direccion,
-            codigoPostal = req.body.codigoPostal,
-            telefono = req.body.telefono
+            console.log(usuarioEncontrado)
+                name = req.body.name,
+                email = req.body.email,
+                edad = req.body.nacimiento,
+                ciudad = req.body.ciudad,
+                direccion = req.body.direccion,
+                codigoPostal = req.body.codigoPostal,
+                telefono = req.body.telefono
         }
     }
         let usuarioEditJson = JSON.stringify(users);
