@@ -1,6 +1,7 @@
 const { ifError } = require('assert')
 const fs = require ('fs')
 const path = require ('path')
+const db = require("../database/models");
 
 let products = fs.readFileSync(path.resolve(__dirname, '../data/products.json'), {encoding : 'utf-8'})
 products = JSON.parse(products)
@@ -12,8 +13,15 @@ const productsController ={
       return res.render('catalog', {products})
       },
     create : (req, res, next) => {
-      res.render('create')
+      db.Categories.findAll()
+      .then(function(categories){
+        return res.render('create', {categories: categories}) 
+      })
+      
       },  
+    productCreate: (req, res, next) => { 
+    
+    },
     productDetail : function(req, res, next) {
         let detalle = req.params.id;
         res.render('productDetail', {products : products[detalle]});
@@ -39,22 +47,7 @@ const productsController ={
     delete: (req,res) => {
       res.render ("edit")
     },    
-    productCreate: (req, res, next) => { 
-      let productos = {
-        id: products.length ++, 
-        nombre: req.body.nombre,
-        descripcion: req.body.descripcion,
-        imagen: "/images/" + req.files[0].filename,
-        categoria: req.body.categoria,
-        marca: req.body.marca,
-        precio: "$" + req.body.precio
-      }
-      products.push(productos);
-      console.log(productos);
-      let productsJson = JSON.stringify(products);
-      fs.writeFileSync("./data/products.json", productsJson);
-      res.redirect ("products");
-      }
+    
 }
 
 

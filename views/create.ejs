@@ -32,12 +32,12 @@
                     <li>
                         <label for="categoria">Categoria: <br></label>
                             <select name="categoria" id="categoria" class="selector-categorias">
-                                <option value="">Promociones</option>
-                                <option value="">Cervezas</option>
-                                <option value="">Vinos</option>
-                                <option value="">Espumantes</option>
-                                <option value="">Aperitivos</option>
-                                <option value="">Espirituosas</option>
+                                <% for (let i = 0; i < categories.length; i++) { %>
+                                    <option value=" <%=categories[i].id %> ">
+                                        <%=categories[i].name %>
+                                    </option>
+                                <% } %>
+                                
                             </select>
                     </li>
 

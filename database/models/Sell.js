@@ -31,6 +31,8 @@ module.exports = function(sequelize, dataTypes) {
     let config = {
         tableName: 'sells',
         timestamps: true,
+        createdAt: "created_at",
+        updatedAt: "updated_at"
     }
 
     const Sell = sequelize.define(alias, cols, config);

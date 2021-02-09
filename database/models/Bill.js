@@ -28,6 +28,8 @@ module.exports = function(sequelize, dataTypes) {
     let config = {
         tableName: 'bills',
         timestamps: true,
+        createdAt: "created_at",
+        updatedAt: "updated_at"
     }
 
     const Bill = sequelize.define(alias, cols, config);
