@@ -51,9 +51,14 @@ const usersController = {
         //RECORDAR ESTA PAGINA DEBE REDIRECIONAR A PROFILE/:ID
 
         let errors = validationResult(req);
-
-        let persona = getUserByEmail(req.body.email);
-        if (persona != undefined){
+        db.Customers.findOne({
+            where: {
+                email: req.body.email,
+            }
+        })
+        .then((resultado)=> {
+            let persona = resultado;
+            if (persona != undefined){
             if (bcrypt.compareSync(req.body.password, persona.password)){
                 req.session.usuario = persona
                 if (req.body.remember) {
@@ -66,6 +71,11 @@ const usersController = {
         }else{
             res.render('login', {errors:errors})
         }
+        })
+        .catch((e)=>{
+            console.log(e);
+        })
+        
     },
     register : (req, res, next) => {
         res.render('register')

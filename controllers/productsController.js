@@ -20,6 +20,18 @@ const productsController ={
       
       },  
     productCreate: (req, res, next) => { 
+      db.Products.create({
+        name : req.body.name,
+        category : req.body.category,
+        product_detail : req.body.detail,
+        price : req.body.price
+        })
+        .then((resultado)=>{
+            res.redirect("/login")
+        })
+        .catch((e)=>{
+            console.log(e);
+        })
     
     },
     productDetail : function(req, res, next) {
