@@ -118,31 +118,31 @@ const usersController = {
     //        
     //        res.redirect('/login')
         },
-    profileView : function (req, res, next){
-        let perfil = req.params.id;
-        res.render('profile', {users : users[perfil]});
-    },
-    profileEdit : (req, res) => {
-        function usuarioEncontrado(users){
-            req.body.id = req.params.id
-        };
-        function usuarioModificado(){
-            if (users.find(usuarioEncontrado)){
-            console.log(usuarioEncontrado)
-                name = req.body.name,
-                email = req.body.email,
-                edad = req.body.nacimiento,
-                ciudad = req.body.ciudad,
-                direccion = req.body.direccion,
-                codigoPostal = req.body.codigoPostal,
-                telefono = req.body.telefono
+        profileView : function (req, res, next){
+            let perfil = req.params.id;
+            res.render('profile', {users : users[perfil]});
+        },
+        profileEdit : (req, res) => {
+            function usuarioEncontrado(users){
+                req.body.id = req.params.id
+            };
+            function usuarioModificado(){
+                if (users.find(usuarioEncontrado)){
+                console.log(usuarioEncontrado)
+                    name = req.body.name,
+                    email = req.body.email,
+                    edad = req.body.nacimiento,
+                    ciudad = req.body.ciudad,
+                    direccion = req.body.direccion,
+                    codigoPostal = req.body.codigoPostal,
+                    telefono = req.body.telefono
+            }
         }
-    }
-        let usuarioEditJson = JSON.stringify(users);
-        fs.writeFileSync(usersFilePath, usuarioEditJson);
-        res.redirect(this.profile)
-    }     
-} 
+            let usuarioEditJson = JSON.stringify(users);
+            fs.writeFileSync(usersFilePath, usuarioEditJson);
+            res.redirect(this.profile)
+        }     
+    } 
 
 module.exports = usersController
 
@@ -153,4 +153,3 @@ module.exports = usersController
       //for (let i = 0; i<products.length; i++){
       //  if (products[i].name.includes(laBusqueda)){
       //    results.push(products[i]); 
-      //  }

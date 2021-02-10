@@ -9,7 +9,7 @@
         <div class="profile-details-container">
                     <div class="profile-container">
                     
-                            <form action=":id?_method=PUT" method="POST" class="profile-container-edit">
+                            <form method="POST" class="profile-container-edit" action="/profile/<%= users.id %>/edit?_method=PUT" >
                                 <img src="<%=users.image %>" alt="" class="profile-container-imagen">
                             
                                 <label for="name"></label>
