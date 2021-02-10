@@ -10,14 +10,14 @@
                     <div class="profile-container">
                         <form action="/profile/edit/<%=Customers.id %>" method="POST" class="profile-container-edit">
                             <img src="" alt="" class="profile-container-imagen">
-                        
-                            <label for="name"></label>
+                            
+                            <label for="name">Nombre y apellido</label>
                             <input name="name" type="text" value="<%= Customers.name %>">
 
-                            <label for="email"></label>
+                            <label for="email">Correo electronico</label>
                             <input name="email" type="email" value="<%= Customers.email %>">
 
-                            <label for="edad"></label>
+                            <label for="edad">Fecha de nacimiento</label>
                             <input name="edad" type="date" value="<%= Customers.birth_date %>">
 
                             <label for="ciudad">Ciudad</label>
