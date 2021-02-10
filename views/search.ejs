@@ -9,7 +9,7 @@
           
         <div class="products-details-container">
 
-            <% if(productsResults.length <= 0) { %>
+            <% if(resultado.length <= 0) { %>
 
                 <h3>No encontramos bebidas</h3>
                 
@@ -19,24 +19,24 @@
 
                 <%  } %>
 
-            <% for (let i = 0; i < productsResults.length; i++) { %>
-                <div class="product-container">
-                     <div class="product-container-left">
-                        <img src="" alt="" class="product-container-image">
-                    </div>
-                    <div class="product-container-right">
-                            <h4 class="<%= productsResults[i].nombre %> "></h4>
-                            <p class="<%= productsResults[i].precio %>"></p>
-                            <button value="Leer mas"> <a class="product-container-addcart" href="/products/productDetail"></a> </a> </button>
-                    </div>
-                </div>
-
+            <% for (let i = 0; i < resultado.length; i++) { %>
+                <a  href="/products/ <%=resultado.id%> " class="aProduct">
+                    <div class="product-container">
+                        
+                         <div class="product-container-left">
+                            <img src="" alt="" class="product-container-image">
+                        </div>
+                        <div class="product-container-right">
+    
+                            <h4 class="product-container-title"><%= resultado.name %></h4>
+                            <p class="product-container-category"></p>
+                            <p class="product-container-price">$<%= resultado.price %></p>
+                             
+                        </div>
+                    </a>
                 <%  } %>
-            
-        </div>    
-
+        </div>
         <%- include("./partials/footer.ejs") %>
-
     </main>
     
 </body>

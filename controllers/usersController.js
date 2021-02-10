@@ -3,7 +3,6 @@ const path = require ('path')
 const bcrypt = require("bcrypt");
 const db= require("../database/models")
 
-
 // LECTURA DE ARCHIVOS JSON PARA 
 const usersFilePath = path.join(__dirname, '..', 'data', 'users.json');
 let users = fs.readFileSync(path.resolve(usersFilePath), {encoding : 'utf8'})
@@ -16,6 +15,8 @@ products = JSON.parse(products)
 // EXPRESS VALIDATOR
 const { check, validationResult, body} = require("express-validator");
 const { name } = require('ejs');
+const Sequelize= require('sequelize');
+var op = Sequelize.Op
 
 // FUNCION PARA ENCONTRAR EMAIL
 function getUserByEmail(email) {
@@ -28,18 +29,14 @@ function getUserByEmail(email) {
 
 const usersController = {
     search :  (req, res, next) => {
-       
-        let laBusqueda = req.query.search;
-
-        let productsResults = [];
-
-        for (let i = 0 ; i < products.length; i ++) {
-            if (products[i].nombre.includes(laBusqueda)){
-                productsResults.push(products[i]);
+        db.Products.findAll({
+            where:{
+                name : req.query.search
             }
-        }
-
-        res.render('search', {productsResults:productsResults})
+        })
+        .then((resultado)=>{
+            res.render("search", {resultado: resultado})
+        })
     },
     index : (req,res,next) => {
         res.render('index')
