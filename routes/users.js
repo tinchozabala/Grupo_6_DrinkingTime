@@ -35,7 +35,7 @@ router.get('/search', usersController.search);
 
 //MI PERFIL
 router.get('/profile/edit/:id', usersController.profileView);
-router.put('/profile/edit/:id', usersController.profileEdit);
+router.post('/profile/edit/:id', usersController.profileEdit);
 
 
 
