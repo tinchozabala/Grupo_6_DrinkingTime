@@ -15,8 +15,8 @@ module.exports = function(sequelize, dataTypes) {
             type: dataTypes.INTEGER,
             allowNull: false
         },
-        brand_id: {
-            type: dataTypes.INTEGER,
+        brand: {
+            type: dataTypes.STRING,
             allowNull: false
         },
         product_detail: {
