@@ -24,7 +24,8 @@ const productsController ={
       .catch((e)=>{
         console.log(e);
       })
-      },  
+      }, 
+       
       //Vista de Creacion de Productos
     create : (req, res, next) => {
       db.Categories.findAll()
