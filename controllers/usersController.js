@@ -137,8 +137,8 @@ const usersController = {
                 name : req.body.name,
                 email: req.body.email,
                 birth_date: req.body.edad,
-                shipping_addres: null, 
-                telephone: null,
+                shipping_addres: req.body.direccion, 
+                telephone: req.body.telefono,
                 
                 }, {
                     where : {
