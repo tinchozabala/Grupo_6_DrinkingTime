@@ -119,11 +119,24 @@ const usersController = {
     //        res.redirect('/login')
         },
         profileView : function (req, res, next){
-            let perfil = req.params.id;
-            res.render('profile', {users : users[perfil]});
+            let perfil = db.Customers.findByPk(req.params.id);
+
+            Promise.all([perfil])
+                .then(function([customer]){
+                    res.render ('profile', {Customers : customer})
+                })
+                .catch((e)=>{
+                    console.log(e);
+                })
+        
         },
+        //     let perfil = db.Customers.findByPk(req.params.id);
+        //         .then(function(customer){
+        //             res.render('profile', {customer : customer[perfil]})
+        //         })
+        //},
         profileEdit : (req, res) => {
-            function usuarioEncontrado(users){
+                function usuarioEncontrado(users){
                 req.body.id = req.params.id
             };
             function usuarioModificado(){
