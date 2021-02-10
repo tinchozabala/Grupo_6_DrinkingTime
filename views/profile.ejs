@@ -8,33 +8,33 @@
         <%- include("./partials/header.ejs") %>
         <div class="profile-details-container">
                     <div class="profile-container">
-                    
-                            <form action=":id?_method=PUT" method="POST" class="profile-container-edit">
-                                <img src="<%=users.image %>" alt="" class="profile-container-imagen">
-                            
-                                <label for="name"></label>
-                                <input name="name" type="text" value="<%= users.name %>">
+                        <form method="POST" class="profile-container-edit" action="edit?_method=PUT" >
+                            <img src="" alt="" class="profile-container-imagen">
+                        
+                            <label for="name"></label>
+                            <input name="name" type="text" value="<%= Customers.name %>">
 
-                                <label for="email"></label>
-                                <input name="email" type="email" value="<%= users.email %>">
+                            <label for="email"></label>
+                            <input name="email" type="email" value="<%= Customers.email %>">
 
-                                <label for="edad"></label>
-                                <input name="edad" type="date" value="<%= users.edad %>">
+                            <label for="edad"></label>
+                            <input name="edad" type="date" value="<%= Customers.birth_date %>">
 
-                                <label for="ciudad">Ciudad</label>
-                                <input name="ciudad" type="text" value="<%= users.ciudad %>">
+                            <label for="ciudad">Ciudad</label>
+                            <input name="ciudad" type="text" value="<%= Customers.shipping_addres %>">
 
-                                <label for="direccion">Direccion</label>
-                                <input name="direccion" type="text" value="<%= users.direccion %>">
+                            <label for="direccion">Direccion</label>
+                            <input name="direccion" type="text" value="<%= Customers.shipping_addres %>">
 
-                                <label for="codigoPostal">Codigo Postal</label>
-                                <input name="codigoPostal" type="number" value="<%= users.codigoPostal %>">
+                            <label for="codigoPostal">Codigo Postal</label>
+                            <input name="codigoPostal" type="number" value="">
 
-                                <label for="telefono">Telefono</label>
-                                <input name="telefono" type="number" value="<%= users.telefono %>">
+                            <label for="telefono">Telefono</label>
+                            <input name="telefono" type="number" value="<%= Customers.telephone %>">
 
-                                <input type="submit" value="Editar" class="editar">
-                            </form>   
+                            <input type="submit" value="Editar" class="editar">
+                        </form> 
+                               
                     </div>   
         </div>
 
