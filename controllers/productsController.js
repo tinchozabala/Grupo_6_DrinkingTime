@@ -22,33 +22,36 @@ const productsController ={
     productCreate: (req, res, next) => { 
       db.Products.create({
         name : req.body.name,
-        category : req.body.category,
-        product_detail : req.body.detail,
+        product_detail : req.body.product_detail,
+        brand : req.body.brand,
         price : req.body.price
         })
         .then((resultado)=>{
-            res.redirect("/login")
-        })
-        .catch((e)=>{
-            console.log(e);
-        })
-    
+          res.redirect("products")
+      })
+      .catch((e)=>{
+          console.log(e);
+      })
+        res.redirect("products")
     },
     productDetail : function(req, res, next) {
-        let detalle = req.params.id;
-        res.render('productDetail', {products : products[detalle]});
+       db.Products.findByPk(req.params.id)
+       .then(function(product){
+        res.render('productDetail', {products : product});
+       })
       },
     edit :  (req, res, next) => {
-      let edit = {
-        nombre: req.body.nombre,
-        descripcion: req.body.descripcion,
-        imagen: req.files[0].filename,
-        categoria: req.body.categoria,
-        marca: req.body.marca,
-        precio: req.body.precio
+      db.Products.update({
+        name : req.body.name,
+        category : req.body.category,
+        product_detail : req.body.detail,
+        price : req.body.price
+      },{
+      where: {
+        id: req.params.id
       }
-      let editJson = JSON.stringify (products);
-      res.redirect('products')
+      })
+      res.redirect("products")
       }, 
       productEdit : (req, res, next) => {
         res.render ("edit")
