@@ -3,15 +3,33 @@ const fs = require ('fs')
 const path = require ('path')
 const db = require("../database/models");
 
-let products = fs.readFileSync(path.resolve(__dirname, '../data/products.json'), {encoding : 'utf-8'})
-products = JSON.parse(products)
-
-
 
 const productsController ={
+      //Vista del listado de productos
     catalog : function(req, res, next) {
-      return res.render('catalog', {products})
+      db.Products.findAll()
+      .then((products)=>{
+        return res.render('catalog', {products})
+      })
+      .catch((e)=>{
+        console.log(e);
+      })
       },
+      // Vista del detalle de Productos
+    productDetail : function(req, res, next) {
+      db.Products.findOne({
+        where: {
+          id: req.params.id
+        }
+      })
+      .then((resultado)=> {
+        res.render('productDetail', {resultado : resultado})
+      })
+      .catch((e)=>{
+        console.log(e);
+      })
+      },  
+      //Vista de Creacion de Productos
     create : (req, res, next) => {
       db.Categories.findAll()
       .then(function(categories){
@@ -19,6 +37,7 @@ const productsController ={
       })
       
       },  
+      // Metodo de creacion de productos
     productCreate: (req, res, next) => { 
       db.Products.create({
         name : req.body.name,
@@ -33,11 +52,9 @@ const productsController ={
             console.log(e);
         })
     
-    },
-    productDetail : function(req, res, next) {
-        let detalle = req.params.id;
-        res.render('productDetail', {products : products[detalle]});
       },
+
+      //Edicion de productos
     edit :  (req, res, next) => {
       let edit = {
         nombre: req.body.nombre,
@@ -50,7 +67,8 @@ const productsController ={
       let editJson = JSON.stringify (products);
       res.redirect('products')
       }, 
-      productEdit : (req, res, next) => {
+
+    productEdit : (req, res, next) => {
         res.render ("edit")
       },
     cart :  (req, res, next) => {

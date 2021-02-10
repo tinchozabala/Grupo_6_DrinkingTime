@@ -54,3 +54,5 @@ Debemos continuar haciendo las reuniones cada dos o tres días, agregando la res
 # Link a trello del equipo:
 
 https://trello.com/b/Gx8P88wi/drinking-time
+
+
