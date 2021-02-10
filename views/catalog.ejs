@@ -7,8 +7,8 @@
     <main>  
         <%- include("./partials/header.ejs") %>
         <div class="products-details-container">
-            <% products.forEach (producto =>{ %>
-                <a  href="/products/<%= producto.id %>" class="aProduct">
+            <% resultado.forEach (resultado =>{ %>
+                <a  href="/products/<%=resultado.id%>" class="aProduct">
                 <div class="product-container">
                     
                      <div class="product-container-left">
@@ -16,9 +16,9 @@
                     </div>
                     <div class="product-container-right">
 
-                        <h4 class="product-container-title"><%= producto.name %></h4>
+                        <h4 class="product-container-title"><%= resultado.name %></h4>
                         <p class="product-container-category"></p>
-                        <p class="product-container-price">$<%= producto.price %></p>
+                        <p class="product-container-price">$<%= resultado.price %></p>
                          
                     </div>
                 </a>

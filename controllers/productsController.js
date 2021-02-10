@@ -7,11 +7,8 @@ const productsController ={
       //Vista del listado de productos
     catalog : function(req, res, next) {
       db.Products.findAll()
-      .then((products)=>{
-        return res.render('catalog', {products})
-      })
-      .catch((e)=>{
-        console.log(e);
+      .then((resultado)=>{
+        res.render("catalog", {resultado:resultado})
       })
       },
       // Vista del detalle de Productos
