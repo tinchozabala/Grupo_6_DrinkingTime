@@ -118,30 +118,58 @@ const usersController = {
     //        
     //        res.redirect('/login')
         },
-    profile : function (req, res, next){
-        let perfil = req.params.id;
-        res.render('profile', {users : users[perfil]});
-    },
-    profileEdit : (req, res) => {
-        function usuarioEncontrado(users){
-            req.body.id = req.params.id
-        };
-        function usuarioModificado(){
-            if (users.find(usuarioEncontrado)){
-            name = req.body.name,
-            email = req.body.email,
-            edad = req.body.nacimiento,
-            ciudad = req.body.ciudad,
-            direccion = req.body.direccion,
-            codigoPostal = req.body.codigoPostal,
-            telefono = req.body.telefono
+        profileView : function (req, res, next){
+            let perfil = db.Customers.findByPk(req.params.id);
+
+            Promise.all([perfil])
+                .then(function([customer]){
+                    res.render ('profile', {Customers : customer})
+                })
+                .catch((e)=>{
+                    console.log(e);
+                })
+        
+        },
+        //     let perfil = db.Customers.findByPk(req.params.id);
+        //         .then(function(customer){
+        //             res.render('profile', {customer : customer[perfil]})
+        //         })
+        //},
+        profileEdit : (req, res) => {
+            db.Customers.update({
+                name : req.body.name,
+                email: req.body.email,
+                birth_date: req.body.edad,
+                shipping_addres: null, 
+                telephone: null,
+                
+                }, {
+                    where : {
+                        id : req.params.id
+                    }
+                })
+                res.redirect ("/profile/edit/" + req.params.id)
         }
-    }
-        let usuarioEditJson = JSON.stringify(users);
-        fs.writeFileSync(usersFilePath, usuarioEditJson);
-        res.redirect(this.profile)
-    }     
-} 
+        //         function usuarioEncontrado(users){
+        //         req.body.id = req.params.id
+        //     };
+        //     function usuarioModificado(){
+        //         if (users.find(usuarioEncontrado)){
+        //         console.log(usuarioEncontrado)
+        //             name = req.body.name,
+        //             email = req.body.email,
+        //             edad = req.body.nacimiento,
+        //             ciudad = req.body.ciudad,
+        //             direccion = req.body.direccion,
+        //             codigoPostal = req.body.codigoPostal,
+        //             telefono = req.body.telefono
+        //     }
+        // }
+        //     let usuarioEditJson = JSON.stringify(users);
+        //     fs.writeFileSync(usersFilePath, usuarioEditJson);
+        //     res.redirect(this.profile)
+        // }     
+    } 
 
 module.exports = usersController
 
@@ -152,4 +180,3 @@ module.exports = usersController
       //for (let i = 0; i<products.length; i++){
       //  if (products[i].name.includes(laBusqueda)){
       //    results.push(products[i]); 
-      //  }

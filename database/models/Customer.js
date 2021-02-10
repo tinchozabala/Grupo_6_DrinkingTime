@@ -47,7 +47,7 @@ module.exports = (sequelize, dataTypes) => {
     // No agregamos config, de timestamps
     let config = {
         tableName: "Customers",
-        timestamp: true,
+        timestamps: true,
         createdAt: "created_at",
         updatedAt: "updated_at"
     }
