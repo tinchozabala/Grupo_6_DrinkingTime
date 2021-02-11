@@ -1,17 +1,19 @@
 .products-details-container{
-    display: flex;
     flex-direction: column;
     justify-content: space-around;
     height: 72vh;
-    padding: 10px 20px;
+    padding: 10px 20px 10px 30px;
     overflow-y: scroll;
     background-color: rgba(255, 245, 245, 0.95);
 }
 
 .product-container{
-   padding: 5px;
-   height: 30%;
-   margin-bottom: 15px;
+    padding: 7px;
+    height: 30%;
+    margin-bottom: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    background-color: white;
 }
 
 .product-container-left{   
@@ -19,11 +21,13 @@
     width: 38%;
     vertical-align: top;
     margin: auto;
-    
+    box-sizing:border-box;
 }
 
 .product-container-image{
-   max-width: 100px;
+    width: 94px;
+   align-items: center;
+   border-radius: 5px;
 }
 
 
@@ -36,7 +40,14 @@
     
 
 }
+.product-container-title{
+    font-size: 20px;
+    font-weight: 500;
+}
 
+.product-container-category{
+    font-size: 12px;
+}
 
 .product-container-price{
     margin-top: 10px;
@@ -44,13 +55,14 @@
 }
 
 .product-container-addcart{
-    color: black;
-    background-color: rgba(80, 00, 20,0.5);
+    color:white;
+    background-color: rgba(80, 00, 20,1 );
     margin-top: 10px;
     border: none;
     opacity: 0.8;
     border-radius: 5px;
     padding: 2px 3px;
+    font-weight: 500;
 
 }
 
@@ -80,20 +92,43 @@
 
 }
 
-@media(min-width: 1024px){
-
-    .product-container{
-        padding: 20px;
-    }   
-
- .product-container-image{
-        max-width: 120px;
-     }
-
-     .product-container-title{
-        font-size: 24px;
-
+@media(min-width: 700px) {
+    .products-details-container{
+        flex-direction: row;
+        flex-wrap: wrap;
+    
     }
-
-
-}       
+    
+    .product-container{
+        width: 40%;
+        display: inline-block;
+        margin-right: 15px;
+        
+    }
+    
+    .product-container-image{
+        max-width: 110px;
+     }
+    
+    }
+    
+    @media(min-width: 1024px){
+    
+        .product-container{
+            width: 30%;
+            padding: 5px;
+        }   
+    
+     .product-container-image{
+        margin: 3px 0px 0 30px;
+            max-width: 120px;
+        
+         }
+    
+         .product-container-title{
+            font-size: 24px;
+    
+        }
+    
+    
+    }       

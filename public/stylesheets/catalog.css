@@ -74,6 +74,11 @@
     color: black;
 }
 
+footer{
+    position: absolute;
+    bottom: 0px;
+}
+
 @media(min-width: 700px) {
 .products-details-container{
     flex-direction: row;
