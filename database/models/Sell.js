@@ -37,5 +37,17 @@ module.exports = function(sequelize, dataTypes) {
 
     const Sell = sequelize.define(alias, cols, config);
 
+    Sell.associate = function(models) {
+        Sell.belongsTo(models.Customers, {
+            as: "Bills", 
+            foreignKey: "bill_id"
+        })
+    }
+    Sell.associate = function(models) {
+        Sell.belongsTo(models.Products, {
+            as: "Products", 
+            foreignKey: "product_id"
+        })
+    }
     return Sell
 }

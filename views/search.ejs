@@ -9,6 +9,7 @@
           
         <div class="products-details-container">
 
+        <div class="resultado-de-busqueda">
             <% if(resultado.length <= 0) { %>
 
                 <h3>No encontramos bebidas</h3>
@@ -19,7 +20,7 @@
 
                 <%  } %>
 
-            <% for (let i = 0; i < resultado.length; i++) { %>
+            <% resultado.forEach(resultado => { %>
                 <a  href="/products/ <%=resultado.id%> " class="aProduct">
                     <div class="product-container">
                         
@@ -34,9 +35,16 @@
                              
                         </div>
                     </a>
-                <%  } %>
+                <%  }) %>
+
+
+
         </div>
-        <%- include("./partials/footer.ejs") %>
+
+
+            
+        </div>
+
     </main>
     
 </body>

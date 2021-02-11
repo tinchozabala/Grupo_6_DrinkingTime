@@ -13,7 +13,7 @@ const productsController ={
       .catch((e)=>{
         console.log(e);
       })
-    },
+      },
       // Vista del detalle de Productos
     productDetail : function(req, res, next) {
       db.Products.findOne({

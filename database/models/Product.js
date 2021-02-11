@@ -61,5 +61,12 @@ module.exports = function(sequelize, dataTypes) {
         })
     }
 
+    Product.associate = function(models) {
+        Product.belongsTo(models.Customers, {
+            as: "sells", 
+            foreignKey: "product_id"
+        })
+    }
+
     return Product
 }
