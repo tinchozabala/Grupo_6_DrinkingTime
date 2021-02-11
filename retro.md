@@ -56,3 +56,11 @@ Debemos continuar haciendo las reuniones cada dos o tres días, agregando la res
 https://trello.com/b/Gx8P88wi/drinking-time
 
 
+
+# Retrospectiva Sprint-6
+
+Este sprint notamos al grupo mas comunicado, con mas interaccion entre participantes, sentimos que al tener un integrante menos la responsabilidad fue mayor, tambien acercandonos a los ultimos sprints hay que ir atando cabos sueltos. 
+
+Vemos como la mayor fortaleza del equipo justamente la buena comunicacion, fluida, al punto de hablar todos los dias por whatsapp y conectarnos dia por media a ayudarnos mutuamente por mas que no siempre resolvemos los problemas. 
+
+Por otra parte nos falta poner al dia el proyecto, sentimos que van quedando pequeñas cosas pendientes que en conjunto luego es bastante, y se acumula pero creemos estar bien encaminados para llegar al fin de la cursada con el proyecto listo y al dia. 

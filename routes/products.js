@@ -34,7 +34,7 @@ router.get('/:id/edit',userLoggedMidleware, productsController.productEdit);
 // 6. /products/ :id (PUT) Acción de edición (a donde se envía el formulario): 
 router.put('/:id/edit',userLoggedMidleware, productsController.edit)
 // 7. /products/ :id (DELETE) Acción de borrado
-router.delete('/:id/delete', userLoggedMidleware, productsController.delete)
+router.delete('/:id/edit', userLoggedMidleware, productsController.productDelete)
 
 
 

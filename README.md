@@ -30,7 +30,8 @@ np# ProyectoDH - Drinking Time
 
 Nombre del comercio: Drinking Time
 
-
+USUARIO ADMINISTRADOR: admin@admin.com
+PASSWORD ADMINISTRADOR: 12345678
 
 
 

@@ -10,7 +10,10 @@ const productsController ={
       .then((resultado)=>{
         res.render("catalog", {resultado:resultado})
       })
-      },
+      .catch((e)=>{
+        console.log(e);
+      })
+    },
       // Vista del detalle de Productos
     productDetail : function(req, res, next) {
       db.Products.findOne({
@@ -48,7 +51,6 @@ const productsController ={
       .catch((e)=>{
           console.log(e);
       })
-        res.redirect("products")
     },
       //Edicion de productos
     edit :  (req, res, next) => {
@@ -70,11 +72,15 @@ const productsController ={
       },
     cart :  (req, res, next) => {
       res.render('productCart')
-      },   
-    delete: (req,res) => {
-      res.render ("edit")
     },    
-    
+    productDelete: (req,res) => {
+      db.Products.destroy({
+        where : {
+          id : req.params.id
+        }
+      })
+      res.redirect("products");
+    }
 }
 
 
