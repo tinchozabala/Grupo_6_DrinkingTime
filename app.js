@@ -8,6 +8,8 @@ var session = require ("express-session");
 
 var productsRouter = require('./routes/products');
 var usersRouter = require('./routes/users');
+const authMiddleWare = require('./middlewares/authMiddleWare');
+const userLoggedMidleware = require('./middlewares/userLoggedMidleware');
 
 var app = express();
 
@@ -26,6 +28,7 @@ app.use(session({
   secret: "secreto",
   resave: false, 
   saveUninitialized: true}));
+
 
 app.use('/products', productsRouter);
 app.use('/', usersRouter);

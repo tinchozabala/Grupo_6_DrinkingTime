@@ -1,6 +1,11 @@
 <header class="header-container">
     <div class="header-container-logo">
 
+        <% if (locals.usuario) { %>
+            <h4> usuario.name </h4>
+        <% } %>
+
+
         <a href="/">
             <img src="/images/logo-corona.png" class="logo" alt=""> </a>
             <nav class="nav-bar">
