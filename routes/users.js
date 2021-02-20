@@ -3,6 +3,9 @@ var router = express.Router();
 var usersController = require('../controllers/usersController');
 const path = require ("path");
 const multer = require('multer');
+const userLoggedMidleware = require('../middlewares/userLoggedMidleware.js');
+
+
 
 var storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -34,10 +37,13 @@ router.post('/register',upload.any(), registerMiddleware, usersController.create
 router.get('/search', usersController.search);
 
 //MI PERFIL
-router.get('/profile', usersController.profile)
+router.get('/profile', userLoggedMidleware, usersController.profile)
 
-router.get('/profile/edit/:id', usersController.profileView);
-router.post('/profile/edit/:id', usersController.profileEdit);
+router.get('/profile/edit/:id', userLoggedMidleware, usersController.profileView);
+router.post('/profile/edit/:id',userLoggedMidleware, usersController.profileEdit)
+
+//LISTADO DE PRODUCTOS
+router.get("/profile/productlist", userLoggedMidleware, usersController.productList)
 
 
 

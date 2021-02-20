@@ -1,17 +1,19 @@
 .principal{
     display: flex;
-    height: 70vh;
+    height: 72vh;
     padding-left: 30px;
     overflow-x: scroll;
     overflow-y: scroll;
+    display: flex;
+    justify-content: space-between;
 }
 
-.principal-container-left{
-    display: inline-block;
-    width: 70%;
+.principal-container{
+    width: 95%;
 }
 
 .product-table{
+    width: 100%;
     border-collapse: collapse;
     margin: 25px 10px;
     font-size: 0.9em;
@@ -19,6 +21,7 @@
     border-radius: 5px 5px  0 0;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    
 }
 
 .product-table thead tr {
@@ -33,9 +36,13 @@
     padding: 12px 15px ;
 }
 
+.product-table th .edit-colum{
+    width: 10px;
+}
 .product-table tbody tr {
     border-bottom: 1px solid gray;
 }
+
 
 i{
     color: #800020;

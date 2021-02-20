@@ -10,7 +10,7 @@
 
         <div class="principal">
 
-            <div class="principal-container-left"> 
+            <div class="principal-container"> 
                 <table class="product-table">
                     <thead>
                     <tr>
@@ -20,76 +20,36 @@
                         <th>Categoria</th>
                         <th>Marca</th>
                         <th>Precio</th>
-                        <th>Editar</th>
+                        <th class="edit-colum" >Editar</th>
                     </tr>
                     </thead>
                     <tbody>
+                    <% resultado.forEach (resultado =>{%> 
+                          
                     <tr>
-                        <td>IPA ANDINA - ANDES six pack</td> 
-                        <td>Lorem ipsum dolor...</td>
+                        <td>
+                    <a style="color: black; font-weight: 600;" href="/products/<%=resultado.id%>">
+                            <%= resultado.name %>
+                            </a>
+                        </td> 
+                        <td><%= resultado.product_detail %></td>
                         <th>Imagen</th>
-                        <th>Cerveza</th>
-                        <th>Andes</th>
-                        <th>$365.00</th>
-                        <th><i class="far fa-edit"></i>
-                            <i class="far fa-trash-alt"></i>
+                        <th><%= resultado.category %></th>
+                        <th><%= resultado.brand %></th>
+                        <th>$<%= resultado.price %>.00 </th>
+                        <th >
+                            <a href=""> 
+                                <i class="far fa-edit"></i>
+                            </a>
+                            <a href="">
+                                <form>
+                                    <i class="far fa-trash-alt"></i>
+                                </form>
+                            </a>
                         </th>
                     </tr>
-                    <tr>
-                        <td>IPA ANDINA - ANDES six pack</td> 
-                        <td>Lorem ipsum dolor...</td>
-                        <th>Imagen</th>
-                        <th>Cerveza</th>
-                        <th>Andes</th>
-                        <th>$365.00</th>
-                        <th><i class="far fa-edit"></i>
-                            <i class="far fa-trash-alt"></i>
-                        </th>
-                    </tr>
-                    <tr>
-                        <td>IPA ANDINA - ANDES six pack</td> 
-                        <td>Lorem ipsum dolor...</td>
-                        <th>Imagen</th>
-                        <th>Cerveza</th>
-                        <th>Andes</th>
-                        <th>$365.00</th>
-                        <th><i class="far fa-edit"></i>
-                            <i class="far fa-trash-alt"></i>
-                        </th>
-                    </tr>
-                    <tr>
-                        <td>IPA ANDINA - ANDES six pack</td> 
-                        <td>Lorem ipsum dolor...</td>
-                        <th>Imagen</th>
-                        <th>Cerveza</th>
-                        <th>Andes</th>
-                        <th>$365.00</th>
-                        <th><i class="far fa-edit"></i>
-                            <i class="far fa-trash-alt"></i>
-                        </th>
-                    </tr>
-                    <tr>
-                        <td>IPA ANDINA - ANDES six pack</td> 
-                        <td>Lorem ipsum dolor...</td>
-                        <th>Imagen</th>
-                        <th>Cerveza</th>
-                        <th>Andes</th>
-                        <th>$365.00</th>
-                        <th><i class="far fa-edit"></i>
-                            <i class="far fa-trash-alt"></i>
-                        </th>
-                    </tr>
-                    <tr>
-                        <td>IPA ANDINA - ANDES six pack</td> 
-                        <td>Lorem ipsum dolor...</td>
-                        <th>Imagen</th>
-                        <th>Cerveza</th>
-                        <th>Andes</th>
-                        <th>$365.00</th>
-                        <th><i class="far fa-edit"></i>
-                            <i class="far fa-trash-alt"></i>
-                        </th>
-                    </tr>
+                    <% }) %>    
+                    
                 </tbody>
         
                 </table>

@@ -176,8 +176,19 @@ const usersController = {
         //     let usuarioEditJson = JSON.stringify(users);
         //     fs.writeFileSync(usersFilePath, usuarioEditJson);
         //     res.redirect(this.profile)
-        // }     
+        // }   
+        ,
+        productList: (req,res) =>{
+            db.Products.findAll()
+            .then((resultado)=>{
+                res.render("productUsersList", {resultado:resultado})
+            })
+            .catch((e)=>{
+            console.log(e);
+            })
+        }  
     } 
+
 
 module.exports = usersController
 
