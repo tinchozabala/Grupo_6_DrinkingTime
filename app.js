@@ -8,6 +8,8 @@ var session = require ("express-session");
 
 var productsRouter = require('./routes/products');
 var usersRouter = require('./routes/users');
+var categoriesRouter = require('./routes/categories')
+
 const authMiddleWare = require('./middlewares/authMiddleWare');
 const userLoggedMidleware = require('./middlewares/userLoggedMidleware');
 
@@ -32,6 +34,7 @@ app.use(session({
 
 app.use('/products', productsRouter);
 app.use('/', usersRouter);
+app.use('/categories', categoriesRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

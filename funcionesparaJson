@@ -14,3 +14,17 @@ productCreate: (req, res, next) => {
       fs.writeFileSync("./data/products.json", productsJson);
       res.redirect ("products");
       }
+
+
+      //cERVEZAS
+router.get('/cervezas',);
+
+//VINOS
+router.get('/vinos',);
+
+//ESPUMANTES
+router.get('/espumantes',);
+
+//ESPIRITUOSAS
+router.get('/espirituosas',);
+
