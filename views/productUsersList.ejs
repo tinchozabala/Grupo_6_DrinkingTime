@@ -35,16 +35,17 @@
                           
                     <tr>
                         <td>
-                    <a style="color: black; font-weight: 600;" href="/products/<%=resultado.id%>">
-                            <%= resultado.name %>
+                            <a style="color: black; font-weight: 600;" href="/products/<%=resultado.id%>">
+                                <%= resultado.name %>
                             </a>
                         </td> 
+
                         <td><%= resultado.product_detail %></td>
-                        <th>Imagen</th>
-                        <th><%= resultado.category %></th>
-                        <th><%= resultado.brand %></th>
-                        <th>$<%= resultado.price %>.00 </th>
-                        <th >
+                        <td>Imagen</td>
+                        <td><%= resultado.category %></td>
+                        <td><%= resultado.brand %></td>
+                        <td>$<%= resultado.price %>.00 </td>
+                        <td >
                             <a href=""> 
                                 <i class="far fa-edit"></i>
                             </a>
@@ -53,7 +54,7 @@
                                     <i class="far fa-trash-alt"></i>
                                 </form>
                             </a>
-                        </th>
+                        </td>
                     </tr>
                     <% }) %>    
                     

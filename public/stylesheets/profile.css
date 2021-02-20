@@ -1,14 +1,16 @@
 .profile-principal-container{
     height: 72vh;
-    background-color: rgba(255, 245, 245, 0.95);
     padding: 10px;
     display: flex;
     justify-content: center;
+    background-image: url('/images/red-smoke-1168208.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 .profile-container{
     width: 100%;
-    background-color: rgba(80, 00, 20,0.1);
+    background-color: rgba(80, 00, 20,0.9);
     padding-top: 15px;
     border-radius: 5px;
 }
@@ -52,7 +54,7 @@
 
 .contact-info-table th{
     font-weight: 500;
-    width: 45%;
+    color: cornsilk;
 }
 
 .buttons-container{
@@ -66,7 +68,8 @@
     border-radius: 5px;
     font-weight: 500;
     font-size: 14px;
-    background-color: rgba(80, 00, 20,0.5 );
+    background-color: rgba(80, 00, 20,0.9 );
+    box-shadow: 0 0 20px rgba(0, 0, 0, 50%);
     padding: 2px;
     margin: 5px;
     width: 43%;
@@ -77,6 +80,13 @@
     color: cornsilk;
 }
 
+@media(min-width: 425px){
+    .contact-info-table th {
+        width: 45%;
+    }
+
+}
+
 @media(min-width: 768px){
     .profile-container{
         width: 60%;
@@ -85,6 +95,14 @@
 }
 
 @media(min-width: 1024px){
+    .profile-img{
+        width: 120px;
+        height: 120px;
+        
+    }
+    
+
+
     .profile-container{
         width: 50%;
     }
@@ -97,6 +115,11 @@
         width: 40%;
     }
 
+    .profile-img{
+        width: 145px;
+        height: 145px;
+        
+    }
     .buttons-container{
         margin-top: 20px;
     }

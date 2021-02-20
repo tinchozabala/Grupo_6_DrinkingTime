@@ -65,7 +65,7 @@ const usersController = {
                 if (req.body.remember) {
                     res.cookie('usuario', persona.email, {maxAge: 2592000000 })
                 }
-                res.redirect('/profile/:id');
+                res.redirect('/profile/'+ resultado.id);
             } else {
                 res.render ('login',{errors:errors})
             };
@@ -122,8 +122,15 @@ const usersController = {
     //        res.redirect('/login')
     },
 
-    profile : function (req, res, nest){
-        res.render('profile')
+    profile : function (req, res, next){
+        let perfil = db.Customers.findByPk(req.params.id);
+        Promise.all([perfil])
+            .then(function([customer]){
+                res.render ('profile', {Customers : customer})
+            })
+            .catch((e)=>{
+                console.log(e);
+            })
     },
 
 
@@ -156,7 +163,10 @@ const usersController = {
                     id : req.params.id
                 }
             })
-            res.redirect ("/profile/edit/" + req.params.id)
+            .then(function(){
+                res.redirect ("/profile/" + req.params.id)
+            })
+            
     }
         //         function usuarioEncontrado(users){
         //         req.body.id = req.params.id

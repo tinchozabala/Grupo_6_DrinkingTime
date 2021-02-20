@@ -3,7 +3,7 @@
     padding-left: 30px;
     overflow-x: scroll;
     overflow-y: scroll;
-    background-color: rgba(255, 245, 245, 0.95);
+    background-image: url('/images/red-smoke-1168208.jpg');
 }
 
 .principal-container{
@@ -21,17 +21,24 @@
     
 }
 
+.product-table td{
+    background-color: white;
+
+}
+
 .product-table thead tr {
     background-color: #800020;
     color: white;
     text-align: left;
     padding: 5px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 40%);
 }
 
-.product-table th, 
+.product-table th{
+    padding: 14px 15px ;
+} 
 .product-table td {
     padding: 12px 15px ;
+    background-color: white;
 }
 
 .product-table th .edit-colum{

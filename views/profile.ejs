@@ -18,7 +18,7 @@
                 </div>
 
                 <div class="profile-name">
-                    <h2>Camilo Rojas</h2>
+                    <h2> <%= Customers.name %> </h2>
                 </div>
 
                 <div class="contact-info">
@@ -26,22 +26,22 @@
                     <thead >
                         <tr>
                             <th>F. Nac:</th>
-                            <th>06/27/1995</th>
+                            <th> <%= Customers.birth_date %> </th>
                         </tr>
 
                         <tr>
                             <th>Tel:</th>
-                            <th>1124847479</th>
+                            <th> <%= Customers.telephone %> </th>
                         </tr>
 
                         <tr>
                             <th>Dir:</th>
-                            <th>Av. Corrientes 4000</th>
+                            <th> <%= Customers.shipping_addres %> </th>
                         </tr>
 
                         <tr>
                             <th>email:</th>
-                            <th>admin@admin.com</th>
+                            <th> <%= Customers.email %> </th>
                         </tr>
 
                     </thead>
@@ -50,10 +50,10 @@
                 </div>
 
                 <div class="buttons-container">
-                <button><a href="/users/profile/edit/:id">Editar perfil</a></button>
-                <button><a href="/users/profile/productlist">Lista de productos</a></button>
-                <button><a href="/products">Catalogo</a></button>
-                <button><a href="">Cerrar sessión</a></button>                    
+                <button><a href="/profile/edit/<%= Customers.id %>">Editar perfil</a></button>
+                <button><a href="/profile/productlist">Lista de productos</a></button>
+                <button><a href="/">Catalogo</a></button>
+                <button><a href="#">Cerrar sessión</a></button>                    
 
                 </div>
 

@@ -36,14 +36,14 @@ router.post('/register',upload.any(), registerMiddleware, usersController.create
 //BUSQUEDA
 router.get('/search', usersController.search);
 
+//LISTADO DE PRODUCTOS
+router.get("/profile/productlist", usersController.productList)
+
 //MI PERFIL
-router.get('/profile', userLoggedMidleware, usersController.profile)
+router.get('/profile/:id', usersController.profile)
 
 router.get('/profile/edit/:id', userLoggedMidleware, usersController.profileView);
 router.post('/profile/edit/:id',userLoggedMidleware, usersController.profileEdit)
-
-//LISTADO DE PRODUCTOS
-router.get("/profile/productlist", userLoggedMidleware, usersController.productList)
 
 
 
