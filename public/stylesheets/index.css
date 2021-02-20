@@ -83,6 +83,7 @@ h2{
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 40%);
     
 }
 
@@ -135,6 +136,7 @@ h2{
     filter: grayscale(5);
     object-fit: cover;
     text-align: center;
+    
     
 }
 
@@ -206,6 +208,7 @@ footer {
     padding: 10px;
     display: flex;
     justify-content: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 40%);
     
 }
 
@@ -230,10 +233,14 @@ footer .footer-iconos i{
     width: 12%;
     border: none;
     background-color: transparent;
+    
 }
 
 .whatsappButton img {
     width: 100%;
+    
+
+
 }
 
 
