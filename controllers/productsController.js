@@ -31,17 +31,21 @@ const productsController ={
        
       //Vista de Creacion de Productos
     create : (req, res, next) => {
-      db.Categories.findAll()
-      .then(function(categories){
-        return res.render('create', {categories: categories}) 
+      let cat = db.Categories.findAll();
+      let bra = db.Brands.findAll();
+
+      Promise.all([cat, bra])
+      .then(function([cat, bra]){
+      return res.render('create', {categories: cat, brands: bra}) 
       })
-      
-      },  
+    },  
       // Metodo de creacion de productos
     productCreate: (req, res, next) => { 
       db.Products.create({
         name : req.body.name,
         product_detail : req.body.product_detail,
+        image: req.files[0].filename,
+        category: req.body.category,
         brand : req.body.brand,
         price : req.body.price
         })
