@@ -28,22 +28,26 @@ function getUserByEmail(email) {
 
 
 const usersController = {
-    search :  (req, res, next) => {
+
+    search: (req, res, next) => {
         db.Products.findAll({
             where:{
                 name : req.query.search
             }
         })
         .then((resultado)=>{
-            res.render("search", {resultado: resultado})
+            res.render('search', {resultado: resultado})
         })
     },
+
     index : (req,res,next) => {
         res.render('index')
     },
+
     login : (req,res,next) => {
         res.render('login') 
     },
+
     processLogin: (req, res) => {
         //RECORDAR ESTA PAGINA DEBE REDIRECIONAR A PROFILE/:ID
 
@@ -61,7 +65,7 @@ const usersController = {
                 if (req.body.remember) {
                     res.cookie('usuario', persona.email, {maxAge: 2592000000 })
                 }
-                res.redirect('/');
+                res.redirect('/profile/:id');
             } else {
                 res.render ('login',{errors:errors})
             };
@@ -74,9 +78,11 @@ const usersController = {
         })
         
     },
+
     register : (req, res, next) => {
         res.render('register')
     },
+
     createUser : (req, res) => {
         //RECORDAR ESTA PAGINA DEBE REDIRECCION AL LOGIN 
         //PENDIENTE
@@ -114,39 +120,44 @@ const usersController = {
     //        fs.writeFileSync(usersFilePath, usersJson);
     //        
     //        res.redirect('/login')
-        },
-        profileView : function (req, res, next){
-            let perfil = db.Customers.findByPk(req.params.id);
+    },
 
-            Promise.all([perfil])
-                .then(function([customer]){
-                    res.render ('profile', {Customers : customer})
-                })
-                .catch((e)=>{
-                    console.log(e);
-                })
-        
-        },
+    profile : function (req, res, nest){
+        res.render('profile')
+    },
+
+
+    profileView : function (req, res, next){
+        let perfil = db.Customers.findByPk(req.params.id);
+        Promise.all([perfil])
+            .then(function([customer]){
+                res.render ('profileEdit', {Customers : customer})
+            })
+            .catch((e)=>{
+                console.log(e);
+            })
+    
+    },
         //     let perfil = db.Customers.findByPk(req.params.id);
         //         .then(function(customer){
         //             res.render('profile', {customer : customer[perfil]})
         //         })
         //},
-        profileEdit : (req, res) => {
-            db.Customers.update({
-                name : req.body.name,
-                email: req.body.email,
-                birth_date: req.body.edad,
-                shipping_addres: req.body.direccion, 
-                telephone: req.body.telefono,
-                
-                }, {
-                    where : {
-                        id : req.params.id
-                    }
-                })
-                res.redirect ("/profile/edit/" + req.params.id)
-        }
+    profileEdit : (req, res) => {
+        db.Customers.update({
+            name : req.body.name,
+            email: req.body.email,
+            birth_date: req.body.edad,
+            shipping_addres: req.body.direccion, 
+            telephone: req.body.telefono,
+            
+            }, {
+                where : {
+                    id : req.params.id
+                }
+            })
+            res.redirect ("/profile/edit/" + req.params.id)
+    }
         //         function usuarioEncontrado(users){
         //         req.body.id = req.params.id
         //     };
@@ -170,10 +181,3 @@ const usersController = {
 
 module.exports = usersController
 
-//, {errors : validator.array()}
-
-//let laBusqueda = req.query.search;
-      //let results = [];
-      //for (let i = 0; i<products.length; i++){
-      //  if (products[i].name.includes(laBusqueda)){
-      //    results.push(products[i]); 

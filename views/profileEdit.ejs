@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="/stylesheets/profileEdit.css">
+<%- include("./partials/head.ejs") %>
+
+<body>
+    <main>
+        <%- include("./partials/header.ejs") %>
+        <div class="profile-details-container">
+                    <div class="profile-container">
+                        <form action="/profile/edit/<%=Customers.id %>" method="POST" class="profile-container-edit">
+                            <img src="" alt="" class="profile-container-imagen">
+                            
+                            <label for="name">Nombre y apellido</label>
+                            <input name="name" type="text" value="<%= Customers.name %>">
+
+                            <label for="email">Correo electronico</label>
+                            <input name="email" type="email" value="<%= Customers.email %>">
+
+                            <label for="edad">Fecha de nacimiento</label>
+                            <input name="edad" type="date" value="<%= Customers.birth_date %>">
+
+                            <label for="ciudad">Ciudad</label>
+                            <input name="ciudad" type="text" value="">
+
+                            <label for="direccion">Direccion</label>
+                            <input name="direccion" type="text" value="<%= Customers.shipping_addres %>">
+
+                            <label for="codigoPostal">Codigo Postal</label>
+                            <input name="codigoPostal" type="number" value="">
+
+                            <label for="telefono">Telefono</label>
+                            <input name="telefono" type="number" value="<%= Customers.telephone %>">
+
+                            <button><input type="submit" value="Editar" class="editar"></button>
+                        </form> 
+                               
+                    </div>   
+        </div>
+
+
+        <%- include("./partials/footer.ejs") %>
+    </main>
+</body>

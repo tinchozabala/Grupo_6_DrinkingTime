@@ -1,0 +1,40 @@
+.profile-details-container{
+    height: 73vh;
+    
+}
+
+.profile-container-edit{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+    margin-top: 20px;
+}
+
+.profile-container-edit label{
+    margin: 5px;
+}
+.profile-container-edit input{
+    width: 40%;
+    text-align: center;
+}
+
+.profile-container-edit button input{
+    border: none;
+    font-size: medium;
+    text-decoration: strong;
+}
+
+.profile-container-edit button {
+    width: 20%;
+    margin: 10px;
+    height: 30px;
+}
+
+.profile-container-imagen{
+    box-sizing: content-box;
+    width: 10%;
+    display: block;
+    margin: auto;
+    overflow: hidden;
+}

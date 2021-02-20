@@ -62,8 +62,8 @@ module.exports = function(sequelize, dataTypes) {
     }
 
     // RELACION EN PROBLEMA 
-    //Product.associate = function(models) {
-    //    Product.belongsTo(models.Customers, {
+    //Product.hasMany(models.Customers, {
+    //        Product.associate = function(models) {
     //        as: "sells", 
     //        foreignKey: "product_id"
     //    })

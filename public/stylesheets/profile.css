@@ -1,40 +1,104 @@
-.profile-details-container{
-    height: 73vh;
-    
-}
-
-.profile-container-edit{
+.profile-principal-container{
+    height: 72vh;
+    background-color: rgba(255, 245, 245, 0.95);
+    padding: 10px;
     display: flex;
-    align-items: center;
-    flex-direction: column;
-    
-    margin-top: 20px;
+    justify-content: center;
 }
 
-.profile-container-edit label{
-    margin: 5px;
+.profile-container{
+    width: 100%;
+    background-color: rgba(80, 00, 20,0.1);
+    padding-top: 15px;
+    border-radius: 5px;
 }
-.profile-container-edit input{
-    width: 40%;
+
+
+.profile-name{
     text-align: center;
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color:blanchedalmond;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 50%);
+    opacity: 0.9;
 }
 
-.profile-container-edit button input{
+.profile-name h2 {
+    color: black;
+    font-weight: 400;
+    font-size: 24px;
+    
+}
+
+.profile-img-container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+    
+}
+
+.profile-img{
+    width: 100px;
+    height: 100px;
+    border-radius: 75px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 50%);
+    
+}
+
+.contact-info-table{
+    width: 100%;
+    margin: 15px 10px 10px 10px;
+}
+
+.contact-info-table th{
+    font-weight: 500;
+    width: 45%;
+}
+
+.buttons-container{
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.buttons-container button{
     border: none;
-    font-size: medium;
-    text-decoration: strong;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 14px;
+    background-color: rgba(80, 00, 20,0.5 );
+    padding: 2px;
+    margin: 5px;
+    width: 43%;
 }
 
-.profile-container-edit button {
-    width: 20%;
-    margin: 10px;
-    height: 30px;
+.buttons-container button a {
+    text-decoration: none;
+    color: cornsilk;
 }
 
-.profile-container-imagen{
-    box-sizing: content-box;
-    width: 10%;
-    display: block;
-    margin: auto;
-    overflow: hidden;
+@media(min-width: 768px){
+    .profile-container{
+        width: 60%;
+    }
+
+}
+
+@media(min-width: 1024px){
+    .profile-container{
+        width: 50%;
+    }
+    
+}
+
+
+@media(min-width: 1440px){
+    .profile-container{
+        width: 40%;
+    }
+
+    .buttons-container{
+        margin-top: 20px;
+    }
+    
 }
