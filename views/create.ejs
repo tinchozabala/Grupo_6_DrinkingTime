@@ -43,7 +43,14 @@
 
                     <li>
                         <label for="brand">Marca: <br></label>
-                        <input type="text" id="brand" name="brand">
+                            <select name="brand" id="brand">
+                                <% for (let i = 0; i < brands.length; i++) { %>
+                                    <option value=" <%=brands[i].id %> ">
+                                        <%=brands[i].name %>
+                                    </option>
+                                <% } %>
+                            </select>
+                        </optgroup>
                     </li>
                     
                     <li>

@@ -45,8 +45,8 @@ const productsController ={
           name : req.body.name,
           product_detail : req.body.product_detail,
           image: req.files[0].filename,
-          category: req.body.category,
-          brand : req.body.brand,
+          category_id: req.body.category,
+          brand_id : req.body.brand,
           price : req.body.price
           })
           .then((resultado)=>{
