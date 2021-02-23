@@ -189,9 +189,13 @@ const usersController = {
         // }   
         ,
         productList: (req,res) =>{
-            db.Products.findAll()
-            .then((resultado)=>{
-                res.render("productUsersList", {resultado:resultado})
+            let cat = db.Categories.findAll();
+            let bra = db.Brands.findAll();
+            let resultado = db.Products.findAll()
+
+            Promise.all([cat, bra, resultado])
+            .then(([cat, bra, resultado])=>{
+                return res.render("productUsersList", {categories: cat, brands: bra, resultado : resultado})
             })
             .catch((e)=>{
             console.log(e);
