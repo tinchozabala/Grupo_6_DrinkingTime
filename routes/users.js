@@ -43,7 +43,7 @@ router.get("/profile/productlist", usersController.productList)
 router.get('/profile/:id', usersController.profile)
 
 router.get('/profile/edit/:id', userLoggedMidleware, usersController.profileView);
-router.post('/profile/edit/:id',userLoggedMidleware, usersController.profileEdit)
+router.post('/profile/edit/:id',userLoggedMidleware,upload.any(), usersController.profileEdit)
 
 
 
