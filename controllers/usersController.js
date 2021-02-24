@@ -191,11 +191,11 @@ const usersController = {
         productList: (req,res) =>{
             let cat = db.Categories.findAll();
             let bra = db.Brands.findAll();
-            let resultado = db.Products.findAll()
+            let resultado = db.Products.findAll();
 
             Promise.all([cat, bra, resultado])
             .then(([cat, bra, resultado])=>{
-                return res.render("productUsersList", {categories: cat, brands: bra, resultado : resultado})
+                return res.render("productUsersList", {cat: cat, bra: bra, resultado : resultado})
             })
             .catch((e)=>{
             console.log(e);

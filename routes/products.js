@@ -32,7 +32,7 @@ router.post ("/", upload.any(), productsController.productCreate);
 // 5. /products/ :id /edit (GET) Formulario de edición de productos
 router.get('/:id/edit',userLoggedMidleware, productsController.productEdit);
 // 6. /products/ :id (PUT) Acción de edición (a donde se envía el formulario): 
-router.put('/:id/edit',userLoggedMidleware, productsController.edit)
+router.put('/:id/edit',userLoggedMidleware,upload.any(), productsController.edit)
 
 
 module.exports = router;

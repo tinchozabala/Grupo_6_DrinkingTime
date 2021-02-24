@@ -42,8 +42,8 @@
 
                         <td><%= resultado.product_detail %></td>
                         <td><img src="/images/<%= resultado.image %>" alt=""></td>
-                        <td></td>
-                        <td><%= brands.name %></td>
+                        <td><% cat.forEach (cat =>{%><%= cat.name %><% }) %> </td>
+                        <td><% bra.forEach (bra =>{%><%= bra.name %><% }) %> </td>
                         <td>$<%= resultado.price %>.00 </td>
                         <td >
                             <a href="/products/<%=resultado.id%>/edit"> 
