@@ -60,20 +60,31 @@ const productsController ={
     edit :  (req, res, next) => {
       db.Products.update({
         name : req.body.name,
-        category : req.body.category,
-        product_detail : req.body.detail,
+        product_detail : req.body.product_detail,
+        image: req.files[0].filename,
+        category_id : req.body.category_id,
+        brand_id : req.body.brand_id,
         price : req.body.price
       },{
-      where: {
-        id: req.params.id
-      }
+      where: { id: req.params.id }
       })
-      res.redirect("products")
-      }, 
+      .then((resultado)=>{
+        res.redirect("products")
+    })
+    .catch((e)=>{
+        console.log(e);
+    })
+    }, 
 
     productEdit : (req, res, next) => {
-        res.render ("edit")
-      },
+      let cat = db.Categories.findAll();
+      let bra = db.Brands.findAll();
+      
+      Promise.all([cat, bra])
+      .then(function([cat, bra]){
+      return res.render('edit', {categories: cat, brands: bra}) 
+      })
+    },
     cart :  (req, res, next) => {
       res.render('productCart')
     }

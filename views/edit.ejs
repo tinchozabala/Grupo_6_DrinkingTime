@@ -16,34 +16,41 @@
                     <ul>
                         <li>
                             <label for="name">Nombre: <br></label>
-                            <input type="text" id="name" name="nombre">
+                            <input type="text" id="name" name="name">
                         </li>
 
                         <li>
-                            <label for="text">Descripcion: <br></label>
-                            <input type="textarea" id="Descripcion" name="Descripcion">
+                            <label for="product_detail">Descripcion: <br></label>
+                            <input type="textarea" id="product_detail" name="product_detail">
                         </li>
 
                         <li>
-                            <label for="imagen">Imagen: <br></label>
-                            <input type="file" id="imagen" name="upload file" class="subir-imagen">
+                            <label for="image">Imagen: <br></label>
+                            <input type="file" id="image" name="image" class="subir-imagen">
                         </li>
 
                         <li>
-                            <label for="categoria">Categoria: <br></label>
-                                <select name="categoria" id="categoria" class="selector-categorias">
-                                    <option value="">Promociones</option>
-                                    <option value="">Cervezas</option>
-                                    <option value="">Vinos</option>
-                                    <option value="">Espumantes</option>
-                                    <option value="">Aperitivos</option>
-                                    <option value="">Espirituosas</option>
+                            <label for="category_id">Categoria: <br></label>
+                                <select name="category_id" id="category_id" class="selector-categorias">
+                                    <% for (let i = 0; i < categories.length; i++) { %>
+                                        <option value=" <%=categories[i].id %> ">
+                                            <%=categories[i].name %>
+                                        </option>
+                                    <% } %>
                                 </select>
+                            </optgroup>
                         </li>
-
+    
                         <li>
-                            <label for="brand">Marca: <br></label>
-                            <input type="text" id="brand" name="brand">
+                            <label for="brand_id">Marca: <br></label>
+                                <select name="brand_id" id="brand_id">
+                                    <% for (let i = 0; i < brands.length; i++) { %>
+                                        <option value=" <%=brands[i].id %> ">
+                                            <%=brands[i].name %>
+                                        </option>
+                                    <% } %>
+                                </select>
+                            </optgroup>
                         </li>
                     
                         <li>
