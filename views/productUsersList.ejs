@@ -35,13 +35,19 @@
                           
                     <tr>
                         <td>
-                            <a style="color: black; font-weight: 600;" href="/products/<%=resultado.id%>">
+                            <a style="color: black; font-weight: 600;" href="">
                                 <%= resultado.name %>
                             </a>
                         </td> 
 
                         <td><%= resultado.product_detail %></td>
-                        <td><img src="/images/<%= resultado.image %>" alt=""></td>
+                        <td>
+                            <a href="/products/<%=resultado.id%>">
+                                <img src="/images/<%= resultado.image %>" alt="Los tejos" class="imagelist">
+                            </a>
+                        
+                        </td>
+                        
                         <td><% cat.forEach (cat =>{%><%= cat.name %><% }) %> </td>
                         <td><% bra.forEach (bra =>{%><%= bra.name %><% }) %> </td>
                         <td>$<%= resultado.price %>.00 </td>

@@ -264,6 +264,12 @@ footer .footer-iconos i{
 
 }
 
+@media(min-width: 320px){
+    .footer-copyright p{
+        font-size: 8px;
+        
+    }
+}
 
 
 @media(max-width: 400px){

@@ -2,7 +2,7 @@
     flex-direction: column;
     justify-content: space-around;
     height: 72vh;
-    padding: 10px 20px 10px 30px;
+    padding: 15px;
     overflow-y: scroll;
     background-image: url('/images/red-smoke-1168208.jpg');
     
@@ -10,14 +10,16 @@
 
 .product-container{
    padding: 7px;
-   height: 30%;
+   height: 25%;
    margin-bottom: 15px;
-   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+   box-shadow: 0 0 20px rgba(0, 0, 0, 40%);
    border-radius: 5px;
-   background-color: white;
+   background-color: rgba(80, 00, 20,0.95);
+   flex-wrap: nowrap;
 }
 
 .product-container-left{   
+    padding: 5px;
     display: inline-block;
     width: 38%;
     vertical-align: top;
@@ -26,11 +28,14 @@
     
 }
 
+
+
 .product-container-image{
-   width: 94px;
+   width: 90%;
    align-items: center;
    border-radius: 5px;
 }
+
 
 
 .product-container-right{
@@ -46,15 +51,18 @@
 .product-container-title{
     font-size: 20px;
     font-weight: 500;
+    color: wheat;
 }
 
 .product-container-category{
     font-size: 12px;
+    color: wheat;
 }
 
 .product-container-price{
     margin-top: 10px;
     margin-bottom: 5px;
+    color: wheat;
 }
 
 .product-container-addcart{
@@ -72,6 +80,26 @@
 .aProduct{
     text-decoration: none;
     color: black;
+}
+
+@media(min-width: 315px){
+    .product-container-image{
+        width: 75%;
+     }
+}
+
+@media(min-width: 370px){
+    .product-container{
+        width: 80%;
+    }
+   
+}
+
+@media(min-width: 446px){
+    .product-container{
+        width: 75%;
+    }
+   
 }
 
 
