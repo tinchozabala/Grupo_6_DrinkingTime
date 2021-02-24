@@ -1,39 +1,46 @@
 .principal{
-    display: flex;
     height: 72vh;
     background-image: url('/images/red-smoke-1168208.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 3px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
 }
 
 .edit-form{
-    background-color: #800020;
+    height: 100%;
     width: 80%;
-    display: inline-block;
-    vertical-align: top;
-    padding: 10px 15px;
-    margin-top: 25px;
-    margin: auto;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 50%);
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin-bottom: 5%;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(80, 00, 20,0.9);
     border-radius: 5px;
-
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0);
 
 }
 
 .principal-container-right-title{
-    font-size: 20px;
-    margin-bottom: 15px;
+    margin: 5px;
+    color:wheat;
+    font-size: 18px;
+    font-weight: 500;
 }
 
 label{
-    font-size: 16px;
-    font-weight: 550;
+    color:wheat;
+    font-size: 14px;
 }
 
 input{
-    border: none;
-    border-radius: 5px;
+    border-radius: 15px;
     font-size: 15px;
-    margin: 5px;
-    width: 95%;
+    width: 95%;  
+    margin-bottom: 3px;
 }
 
 
@@ -56,9 +63,30 @@ li {
 }
 
 .crear-producto-input{
-    font-weight: 550;
-    font-size: 18px;
-    margin-top: 25px;
-    background-color:  rgba(80, 00, 20,0.5 );
+    width: 50%;
+    border:none;
+    border-radius: 15px;
+    padding: 3px;
+    background-color:  rgba(80, 00, 20,0.7 );
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: white;   
 }
 
+@media(min-width: 590px){
+    .edit-form{
+        width: 50%;
+    }
+    
+}
+
+@media(min-width: 900px){
+    .edit-form{
+        width: 40%; 
+}
+
+@media(min-width: 1440px){
+    
+}
+   

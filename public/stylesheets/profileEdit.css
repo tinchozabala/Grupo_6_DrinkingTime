@@ -1,35 +1,57 @@
 .profile-details-container{
-    height: 73vh;
+    height: 72vh;
     background-image: url('/images/red-smoke-1168208.jpg');
-    
-}
-
-.profile-container-edit{
+    background-size: cover;
+    background-position: center;
+    padding: 3px;
     display: flex;
-    align-items: center;
-    flex-direction: column;
-    
-    margin-top: 20px;
+    flex-wrap: nowrap;
+    justify-content: center;
 }
 
-.profile-container-edit label{
-    margin: 5px;
-}
-.profile-container-edit input{
-    width: 40%;
+
+.profile-container{
+    height: 100%;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin-bottom: 5%;
+    justify-content: center;
     text-align: center;
+    background-color: rgba(80, 00, 20,0.9);
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0);
+    padding: 7px;
+
+}
+ 
+
+label{
+    margin: 5px;
+    color:wheat;
+    font-size: 16px;
 }
 
-.profile-container-edit button input{
-    border: none;
-    font-size: medium;
-    text-decoration: strong;
+input{
+    width: 90%;
+    text-align: center;
+    border-radius: 15px;
+    margin-bottom: 3px;
+    height: 25px;
+
 }
 
-.profile-container-edit button {
-    width: 20%;
-    margin: 10px;
-    height: 30px;
+.editar {
+    width: 50%;
+    border:none;
+    border-radius: 15px;
+    padding: 3px;
+    background-color:  rgba(80, 00, 20,0.7 );
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: white;      
 }
 
 .profile-container-imagen{
@@ -39,3 +61,19 @@
     margin: auto;
     overflow: hidden;
 }
+
+
+@media(min-width: 768px){
+    .profile-container{
+        width: 50%;
+    }
+    
+}
+
+@media(min-width: 1024px){
+    .profile-container{
+        width: 40%;
+    }
+     
+}
+

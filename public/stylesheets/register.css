@@ -1,15 +1,17 @@
 .principal{
     height: 72vh;
-    padding-top: 30px;
     background-image: url('/images/red-smoke-1168208.jpg');
     background-size: cover;
     background-position: center;
+    padding: 3px;
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
+    
 }
 
 .log-container {
+    height: 100%;
     width: 80%;
     display: flex;
     flex-wrap: wrap;
@@ -30,9 +32,6 @@
     width: 80%;
     font-size: 30px;
     font-weight: 500;
-    
-    
-    
 }
 
 
@@ -58,7 +57,7 @@
     height: 25px;
     text-align: center;
     width: 80%;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     border-radius: 15px;
 }
 
@@ -86,11 +85,15 @@
 
 @media(min-width: 768px){
     .log-container {
-        width: 60%;
+        width: 50%;
      }
 
     .log-title{
-        font-size: 45px;
+        font-size: 40px;
+    }
+
+    .log-container input {
+        margin-bottom: 10px;
     }
     
 }
@@ -100,16 +103,7 @@
         padding-left: 10px;
         
     }
-
-    .log-container {
-        width: 40%;
-        height: 95%;
-        padding-top: 15px;
-     }
-     .log-title {
-         font-size: 50px;
-    
-     }
+     
 }
 
 @media(min-width: 1440px){
