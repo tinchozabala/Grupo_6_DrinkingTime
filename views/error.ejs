@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include("./partials/head.ejs") %>
+<link rel="stylesheet" href="/stylesheets/error.css">
 <body>
     <main>
         <%- include("./partials/header.ejs") %> 
-        <img src="https://http.cat/<%=error%>" alt="">
+        <div class="principal">
+            <img src="https://http.cat/<%=error%>" alt="" class="imagen">
+        </div>
+       
         <%- include("./partials/footer.ejs") %>
     </main>
 
 </body>
 </html>
-    <img src="https://http.cat/<%=error%>" alt="">
+   
     
 
 

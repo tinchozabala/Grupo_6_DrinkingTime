@@ -20,7 +20,7 @@
     text-align: center;
     background-color: rgba(80, 00, 20,0.9);
     border-radius: 5px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 50%);
 
 }
 
@@ -86,7 +86,23 @@ li {
         width: 40%; 
 }
 
-@media(min-width: 1440px){
-    
 }
-   
+
+@media(min-width: 900px){
+
+    .principal-container-right-title{
+        margin: 15px;
+        color:wheat;
+        font-size: 24px;
+        font-weight: 500;
+    }
+    
+    .edit-form{
+        width: 30%;
+    }
+
+    .crear-producto-input{
+        margin-top: 20px;
+    }
+
+}
