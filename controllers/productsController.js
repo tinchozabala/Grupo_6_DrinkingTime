@@ -76,14 +76,6 @@ const productsController ={
       },
     cart :  (req, res, next) => {
       res.render('productCart')
-    },    
-    productDelete: (req,res) => {
-      db.Products.destroy({
-        where : {
-          id : req.params.id
-        }
-      })
-      res.redirect("products");
     }
 }
 

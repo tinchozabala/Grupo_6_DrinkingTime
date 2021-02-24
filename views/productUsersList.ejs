@@ -49,11 +49,11 @@
                             <a href="/products/<%=resultado.id%>/edit"> 
                                 <i class="far fa-edit"></i>
                             </a>
-                            <a href="">
-                                <form>
+                                <form action="/profile/edit/<%= resultado.id%>?_method=DELETE" method="POST">
+                                    <button type="submit" style="color: transparent; border: none;">
                                     <i class="far fa-trash-alt"></i>
+                                    </button>
                                 </form>
-                            </a>
                         </td>
                     </tr>
                     <% }) %>    

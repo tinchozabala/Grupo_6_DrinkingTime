@@ -45,6 +45,9 @@ router.get('/profile/:id', usersController.profile)
 router.get('/profile/edit/:id', userLoggedMidleware, usersController.profileView);
 router.post('/profile/edit/:id',userLoggedMidleware,upload.any(), usersController.profileEdit)
 
+// 7. /products/ :id (DELETE) Acción de borrado
+router.delete('/profile/edit/:id', usersController.productDelete)
+
 
 
 //SESSION

@@ -1,10 +1,11 @@
 .principal{
     display: flex;
     height: 72vh;
+    background-image: url('/images/red-smoke-1168208.jpg');
 }
 
 .edit-form{
-    background-image: url('/images/red-smoke-1168208.jpg');
+    background-color: #800020;
     width: 80%;
     display: inline-block;
     vertical-align: top;

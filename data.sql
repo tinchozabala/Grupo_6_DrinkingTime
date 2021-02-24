@@ -64,7 +64,7 @@ INSERT INTO `products` VALUES (1,'Ipa Andina',2,1,'Cerveza Andes - variedad Ipa,
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
---
+--  
 -- Dumping data for table `sells`
 --
 

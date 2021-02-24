@@ -200,6 +200,17 @@ const usersController = {
             .catch((e)=>{
             console.log(e);
             })
+        },    
+        productDelete: (req,res) => {
+          db.Products.destroy({
+            where : {
+              id : req.params.id
+            }
+          })
+          .then(function(){
+            res.redirect("/profile/productlist");
+          })
+         
         }  
     } 
 

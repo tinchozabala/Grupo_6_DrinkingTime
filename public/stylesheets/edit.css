@@ -1,14 +1,15 @@
 .principal{
     display: flex;
     height: 72vh;
+    background-image: url('/images/red-smoke-1168208.jpg');
 }
 
 .edit-form{
-    background-image: url('/images/red-smoke-1168208.jpg');
     width: 80%;
+    background-color: rgba(80, 00, 20,0.9);
     display: inline-block;
     vertical-align: top;
-    padding: 10px 15px;
+    padding: 14px 16px;
     margin-top: 25px;
     margin: auto;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
@@ -59,6 +60,12 @@ li {
     font-weight: 550;
     font-size: 18px;
     margin-top: 25px;
+    width: 95%;
+    padding: 5px;
+    
                 
 }
+
+
+medi
 
