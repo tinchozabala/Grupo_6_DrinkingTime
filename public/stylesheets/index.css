@@ -84,6 +84,9 @@ h2{
     align-items: center;
     justify-content: center;
     box-shadow: 0 0 20px rgba(0, 0, 0, 40%);
+
+    border-top: 0.11px solid gray ;
+    border-bottom: 0.11px solid gray ;
     
 }
 
@@ -204,10 +207,6 @@ h2{
 
 footer {
     height: 8vh;
-    background-color:#800020;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
     box-shadow: 0 0 20px rgba(0, 0, 0, 40%);
     
 }
@@ -219,9 +218,31 @@ footer div{
     align-items: center;
 }
 
+.footer-iconos{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 3px;
+    height: 70%;
+    background-color:#800020;
+}
+
 footer .footer-iconos i{
-    color: white;
+    color: wheat;
     font-size: 20px;
+}
+
+.footer-copyright{
+    background-color: #800020;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    height: 30%;
+    opacity: 0.95;
+}
+.footer-copyright p{
+    font-size: 10px;
+    color: wheat;
 }
 
 
