@@ -37,7 +37,7 @@ router.post('/register',upload.any(), registerMiddleware, usersController.create
 router.get('/search', usersController.search);
 
 //LISTADO DE PRODUCTOS
-router.get("/profile/productlist", upload.any(), usersController.productList)
+router.get("/profile/productlist", usersController.productList)
 
 //MI PERFIL
 router.get('/profile/:id', usersController.profile)
