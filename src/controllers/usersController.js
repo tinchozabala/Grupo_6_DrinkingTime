@@ -189,11 +189,10 @@ const usersController = {
         // }   
         ,
         productList: (req,res) =>{
-            let cat = db.Categories.findAll();
-            let bra = db.Brands.findAll();
-            let resultado = db.Products.findAll();
+            let cat = db.Categories.findAll()
+            let bra = db.Brands.findAll()
+            let resultado = db.Products.findAll()
 
-            Promise.all([cat, bra, resultado])
             .then(([cat, bra, resultado])=>{
                 return res.render("productUsersList", {cat: cat, bra: bra, resultado : resultado})
             })
