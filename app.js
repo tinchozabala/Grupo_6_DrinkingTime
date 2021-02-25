@@ -6,17 +6,17 @@ var logger = require('morgan');
 var methodOverride = require ("method-override");
 var session = require ("express-session");
 
-var productsRouter = require('./routes/products');
-var usersRouter = require('./routes/users');
-var categoriesRouter = require('./routes/categories')
+var productsRouter = require('./src/routes/products');
+var usersRouter = require('./src/routes/users');
+var categoriesRouter = require('./src/routes/categories')
 
-const authMiddleWare = require('./middlewares/authMiddleWare');
-const userLoggedMidleware = require('./middlewares/userLoggedMidleware');
+const authMiddleWare = require('./src/middlewares/authMiddleWare');
+const userLoggedMidleware = require('./src/middlewares/userLoggedMidleware');
 
 var app = express();
 
 // VIEW ENGINE SETUP
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, '/src/views'));
 app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
