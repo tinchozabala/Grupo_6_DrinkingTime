@@ -64,3 +64,7 @@ Este sprint notamos al grupo mas comunicado, con mas interaccion entre participa
 Vemos como la mayor fortaleza del equipo justamente la buena comunicacion, fluida, al punto de hablar todos los dias por whatsapp y conectarnos dia por media a ayudarnos mutuamente por mas que no siempre resolvemos los problemas. 
 
 Por otra parte nos falta poner al dia el proyecto, sentimos que van quedando pequeñas cosas pendientes que en conjunto luego es bastante, y se acumula pero creemos estar bien encaminados para llegar al fin de la cursada con el proyecto listo y al dia. 
+
+
+
+# Retrospectiva Sprint-7

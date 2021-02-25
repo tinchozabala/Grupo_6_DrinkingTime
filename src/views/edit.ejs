@@ -12,30 +12,35 @@
             <div class="edit-form"> 
                 <h4 class="principal-container-right-title">Editar producto</h4>
                 <br>
-                <form action="/products" method="PUT" enctype="multipart/form-data" >
+                <form action="" method="POST" enctype="multipart/form-data" >
                     <ul>
                         <li>
-                            <label for="name">Nombre: <br></label>
-                            <input type="text" id="name" name="name">
+                            <img src="/images/<%= product.image %>" class="imagendeproducto" alt="">
                         </li>
 
                         <li>
-                            <label for="product_detail">Descripcion: <br></label>
-                            <input type="textarea" id="product_detail" name="product_detail">
+                            <label for="name">Nombre:<br></label>
+                            <input type="text" id="name" name="name" value="<%= product.name %>">
                         </li>
 
+                        <li>
                             <label for="price">Precio: <br></label>
-                            <input type="number" id="price" name="price" min="1.0" max="100000.00">
+                            <input type="number" id="price" name="price" min="1.0" max="100000.00"  value="<%= product.price %>" >
                         </li>
 
                         <li>
-                            <label for="image">Imagen: <br></label>
+                            <label for="image">Cambiar imagen: <br></label>
                             <input type="file" id="image" name="image" class="subir-imagen">
                         </li>
 
                         <li>
+                            <label for="product_detail">Descripcion: <br></label>
+                            <textarea class="texarea" cols="40" rows="3" id="product_detail" name="product_detail" style="border-radius: 15px; margin: 0px;"  >  <%= product.product_detail  %> </textarea>
+                        </li>
+
+                        <li>
                             <label for="category_id">Categoria: <br></label>
-                                <select name="category_id" id="category_id" class="selector-categorias">
+                                <select name="category_id" id="category_id" class="selector-categorias" >
                                     <% for (let i = 0; i < categories.length; i++) { %>
                                         <option value=" <%=categories[i].id %> ">
                                             <%=categories[i].name %>
@@ -47,7 +52,8 @@
     
                         <li>
                             <label for="brand_id">Marca: <br></label>
-                                <select name="brand_id" id="brand_id">
+                                <select name="brand_id" id="brand_id"
+                                class="selector-categorias">
                                     <% for (let i = 0; i < brands.length; i++) { %>
                                         <option value=" <%=brands[i].id %> ">
                                             <%=brands[i].name %>

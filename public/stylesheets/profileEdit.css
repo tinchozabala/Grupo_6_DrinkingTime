@@ -16,7 +16,6 @@
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    margin-bottom: 5%;
     justify-content: center;
     text-align: center;
     background-color: rgba(80, 00, 20,0.9);

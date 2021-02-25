@@ -56,3 +56,19 @@ Nos pasamos reporte de tareas, actualizacion de trello.
 
 3/2
 Trabajamos sobre la base de datos, modelos y controladores. 
+
+10/02 
+Nos reunimos para terminar la entrega del sprint-6
+
+17/02 
+Nos reunimos para ver que partes del sprint nos quedaron pendientes, sobre la base de datos, y como mejorar para solicitar nueva revision del CRUS
+
+22/02 
+Revisamos, los ultimos detalles, ya se pueden crear productos, quedan pendiente trabajar sobre edicion de productos. 
+
+23/02
+Nos compartimos los avances de las vistas, queda pendiente reunirnos para revisar sprint-7
+
+24/02
+Tenemos casi listo el CRUD para entrega, pendiente ver como mostrar asociaciones. 
+

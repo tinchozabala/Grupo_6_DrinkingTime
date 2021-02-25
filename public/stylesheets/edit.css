@@ -16,7 +16,6 @@
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    margin-bottom: 5%;
     justify-content: center;
     text-align: center;
     background-color: rgba(80, 00, 20,0.9);
@@ -31,6 +30,10 @@
     font-size: 18px;
     font-weight: 500;
  }
+
+.imagendeproducto{
+    width: 15%;
+}
 
 label{
     color:wheat;
@@ -76,6 +79,44 @@ li {
     color: white;         
 }
 
+
+
+@media(min-width: 320px){
+    .principal-container-right-title{
+        margin: 3px;
+        color:wheat;
+        font-size: 16px;
+        font-weight: 500;
+     }
+
+     label{
+        font-size: 12px; 
+     }
+
+     .texarea{
+         height: 20px;
+         width: 90%;
+     }
+
+     input{
+        border-radius: 15px;
+        font-size: 12px;
+        width: 90%;  
+        margin-bottom: 3px;
+    
+    }
+    .selector-categorias{
+        border: none;
+        margin: 2px;
+        font-size: 12px;
+        border-color: grey;
+        border-radius: 5px;
+    }
+
+    
+}
+
+
 @media(min-width: 580px){
     .edit-form{
         width: 50%;
@@ -83,11 +124,16 @@ li {
     
 }
 
+@media(min-width: 768px){
+    
+    
+}
+
 @media(min-width: 900px){
     .principal-container-right-title{
-        margin: 15px;
+        margin: 10px;
         color:wheat;
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 500;
     }
     
@@ -96,6 +142,6 @@ li {
     }
 
     .crear-producto-input{
-        margin-top:24px;
+        margin-top:5px;
     }
 }
