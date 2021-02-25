@@ -43,7 +43,7 @@
                         <td><%= resultado.product_detail %></td>
                         <td>
                             <a href="/products/<%=resultado.id%>">
-                                <img src="/images/<%= resultado.image %>" alt="Los tejos" class="imagelist">
+                                <img src="/images/<%= resultado.image %>" alt="" class="imagelist">
                             </a>
                         
                         </td>
@@ -52,7 +52,7 @@
                         <td><% bra.forEach (bra =>{%><%= bra.name %><% }) %> </td>
                         <td>$<%= resultado.price %>.00 </td>
                         <td >
-                            <a href="/products/<%=resultado.id%>/edit"> 
+                            <a href="/products/edit/<%=resultado.id%>"> 
                                 <i class="far fa-edit"></i>
                             </a>
                                 <form action="/profile/edit/<%= resultado.id%>?_method=DELETE" method="POST">

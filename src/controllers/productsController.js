@@ -79,13 +79,20 @@ const productsController ={
     productEdit : (req, res, next) => {
       let cat = db.Categories.findAll();
       let bra = db.Brands.findAll();
-      
-      Promise.all([cat, bra])
-      .then(function([cat, bra]){
-      return res.render('edit', {categories: cat, brands: bra}) 
+      let prod = db.Products.findByPk(req.params.id)
+      Promise.all([cat, bra, prod])
+      .then(function([cat, bra, prod]){
+      res.render('edit', {categories: cat, brands: bra, product:prod}) 
       })
+      .catch((e)=>{
+        console.log(e);
+      })
+
     },
+
+
     cart :  (req, res, next) => {
+
       res.render('productCart')
     }
 }
