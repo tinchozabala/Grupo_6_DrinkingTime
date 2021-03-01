@@ -1,21 +1,12 @@
-const fs = require ('fs')
-const path = require ('path')
 const bcrypt = require("bcrypt");
 const db= require("../database/models")
-
-// LECTURA DE ARCHIVOS JSON PARA 
-const usersFilePath = path.join(__dirname, '..', 'data', 'users.json');
-let users = fs.readFileSync(path.resolve(usersFilePath), {encoding : 'utf8'})
-users = JSON.parse(users)
-
-const productsFilePath = path.join(__dirname, '..', 'data', 'products.json');
-let products = fs.readFileSync(path.resolve(productsFilePath), {encoding : 'utf8'})
-products = JSON.parse(products)
+const Sequelize= require('sequelize');
 
 // EXPRESS VALIDATOR
 const { check, validationResult, body} = require("express-validator");
 const { name } = require('ejs');
-const Sequelize= require('sequelize');
+const { log } = require("debug");
+
 var op = Sequelize.Op
 
 // FUNCION PARA ENCONTRAR EMAIL
@@ -23,12 +14,9 @@ function getUserByEmail(email) {
     return users.find((user) => user.email == email)
 };
 
-
-    //CONTROLADORES DE USUARIO
-
-
+//CONTROLADORES DE USUARIO
 const usersController = {
-
+    //Funcion para la barra de busqueda
     search: (req, res, next) => {
         db.Products.findAll({
             where:{
@@ -40,88 +28,81 @@ const usersController = {
         })
     },
 
+    //Funcion para ir a la vista principal
     index : (req,res,next) => {
         res.render('index')
     },
 
+    //Funcion para ir a vista de login
     login : (req,res,next) => {
         res.render('login') 
     },
 
+    // Funcion para loguearse en al pagina
     processLogin: (req, res) => {
         //RECORDAR ESTA PAGINA DEBE REDIRECIONAR A PROFILE/:ID
-
         let errors = validationResult(req);
-        db.Customers.findOne({
-            where: {
-                email: req.body.email,
-            }
-        })
-        .then((resultado)=> {
-            let persona = resultado;
-            if (persona != undefined){
-            if (bcrypt.compareSync(req.body.password, persona.password)){
-                req.session.usuario = persona
-                if (req.body.remember) {
-                    res.cookie('usuario', persona.email, {maxAge: 2592000000 })
+        if (errors.isEmpty()) {
+            db.Customers.findOne({
+                where: {
+                    email: req.body.email,
                 }
-                res.redirect('/profile/'+ resultado.id);
-            } else {
-                res.render ('login',{errors:errors})
-            };
-        }else{
-            res.render('login', {errors:errors})
-        }
-        })
-        .catch((e)=>{
-            console.log(e);
-        })
-        
+            })
+            .then((resultado)=> {
+                let persona = resultado;
+                if (persona != undefined){
+                if (bcrypt.compareSync(req.body.password, persona.password)){
+                    req.session.usuario = persona
+                    if (req.body.remember) {
+                        res.cookie('usuario', persona.email, {maxAge: 2592000000 })
+                    }
+                    res.redirect('/profile/'+ resultado.id);
+                } else {
+                    res.render ('login',{errors:errors})
+                };
+            }else{
+                res.render('login', {errors:errors})
+            }
+            })
+            .catch((e)=>{
+                console.log(e);
+            })
+        } else {
+            return res.render("login", {errors : errors.errors})
+        }   
     },
 
+    //Funcion para ir a la vista de registro
     register : (req, res, next) => {
         res.render('register')
     },
 
+    //Funcion para hacer el registro exitoso 
     createUser : (req, res) => {
-        //RECORDAR ESTA PAGINA DEBE REDIRECCION AL LOGIN 
-        //PENDIENTE
-        db.Customers.create({
-        email: req.body.email,
-        name : req.body.name,
-        password: bcrypt.hashSync(req.body.password, 10),
-        shipping_addres: null, 
-        avatar: null,
-        telephone: null,
-        birth_date: req.body.nacimiento
-        })
-        .then((resultado)=>{
-            res.redirect("/login")
-        })
-        .catch((e)=>{
-            console.log(e);
-        })
-      
-    //    let validator = validationResult(req)
-    //    let usuario = {
-    //        id : users.length ++,
-    //        email : req.body.email,
-    //        password : bcrypt.hashSync(req.body.password, 10),
-    //        confirmPass : bcrypt.hashSync(req.body.confirmPass, 10),
-    //        name : req.body.name,
-    //        image : req.files[0].filename,
-    //       edad : req.body.nacimiento,
-    //         direccion : null,
-    //        telefono : null,
-    //        }
-    //        users.push(usuario)
-    //        let usersJson = JSON.stringify(users);
-    //        
-    //        fs.writeFileSync(usersFilePath, usersJson);
-    //        
-    //        res.redirect('/login')
+        let errors = validationResult(req)
+        console.log(errors)
+        if (errors.isEmpty()) {
+            db.Customers.create({
+            email: req.body.email,
+            name : req.body.name,
+            password: bcrypt.hashSync(req.body.password, 10),
+            shipping_addres: null, 
+            avatar: null,
+            telephone: null,
+            birth_date: req.body.nacimiento
+            })
+            .then((resultado)=>{
+                res.redirect("/login")
+            })
+            .catch((e)=>{
+                console.log(e);
+            })
+        } else {
+            res.render("register", {errors : errors.errors})
+        }
     },
 
+    //Funcion para ir a vista perfil
     profile : function (req, res, next){
         let perfil = db.Customers.findByPk(req.params.id);
         Promise.all([perfil])
@@ -133,7 +114,7 @@ const usersController = {
             })
     },
 
-
+    //Funcion para ir a vista de perfil 
     profileView : function (req, res, next){
         let perfil = db.Customers.findByPk(req.params.id);
         Promise.all([perfil])
@@ -145,11 +126,8 @@ const usersController = {
             })
     
     },
-        //     let perfil = db.Customers.findByPk(req.params.id);
-        //         .then(function(customer){
-        //             res.render('profile', {customer : customer[perfil]})
-        //         })
-        //},
+    
+    // Funcion para vista de edicion de peril del usuario
     profileEdit : (req, res) => {
         db.Customers.update({
             name : req.body.name,
@@ -167,51 +145,35 @@ const usersController = {
                 res.redirect ("/profile/" + req.params.id)
             })
             
-    }
-        //         function usuarioEncontrado(users){
-        //         req.body.id = req.params.id
-        //     };
-        //     function usuarioModificado(){
-        //         if (users.find(usuarioEncontrado)){
-        //         console.log(usuarioEncontrado)
-        //             name = req.body.name,
-        //             email = req.body.email,
-        //             edad = req.body.nacimiento,
-        //             ciudad = req.body.ciudad,
-        //             direccion = req.body.direccion,
-        //             codigoPostal = req.body.codigoPostal,
-        //             telefono = req.body.telefono
-        //     }
-        // }
-        //     let usuarioEditJson = JSON.stringify(users);
-        //     fs.writeFileSync(usersFilePath, usuarioEditJson);
-        //     res.redirect(this.profile)
-        // }   
-        ,
-        productList: (req,res) =>{
-            let cat = db.Categories.findAll();
-            let bra = db.Brands.findAll();
-            let resultado = db.Products.findAll();
+    },
 
-            Promise.all([cat, bra, resultado])
-            .then(function([cat, bra, resultado]){
-            return res.render('productUsersList', {categories: cat, brands: bra, resultado: resultado})
-            })
-            .catch((e)=>{
-            console.log(e);
-            })
+    //Funcion para ir a vista del listado de producto para administradores
+    productList: (req,res) =>{
+        let cat = db.Categories.findAll();
+        let bra = db.Brands.findAll();
+        let resultado = db.Products.findAll();
+
+        Promise.all([cat, bra, resultado])
+        .then(function([cat, bra, resultado]){
+        return res.render('productUsersList', {categories: cat, brands: bra, resultado: resultado})
+        })
+        .catch((e)=>{
+        console.log(e);
+        })
         },    
-        productDelete: (req,res) => {
-          db.Products.destroy({
-            where : {
-              id : req.params.id
-            }
-          })
-          .then(function(){
-            res.redirect("/profile/productlist");
-          })
-         
-        }  
+
+    //Funcion para eliminar productos    
+    productDelete: (req,res) => {
+        db.Products.destroy({
+        where : {
+            id : req.params.id
+        }
+        })
+        .then(function(){
+        res.redirect("/profile/productlist");
+        })
+        
+    }  
     } 
 
 

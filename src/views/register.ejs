@@ -18,6 +18,21 @@
 
                 <form action="/register" method="POST" enctype="multipart/form-data" class="formulario-login">
 
+                    <% if (typeof errors != 'undefined') { %>
+                    
+                        <p style="color: bisque;"> Revisa tus datos</p>
+
+                        <ul>
+                            <% for(let i = 0; i < errors.length; i++) { %>
+                                <li style="color:bisque; font-size: 8px;">
+                                    <%= errors[i].msg %>
+                                </li>
+        
+                                <% } %>
+                        </ul>
+                        
+                    <% } %>  
+
                     <label for="email"></label>
                     <input placeholder="Ingrese su email" type="email" name="email" id="email">
                    
