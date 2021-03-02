@@ -6,17 +6,17 @@ var logger = require('morgan');
 var methodOverride = require ("method-override");
 var session = require ("express-session");
 
-var productsRouter = require('./src/routes/products');
-var usersRouter = require('./src/routes/users');
-var categoriesRouter = require('./src/routes/categories')
+var productsRouter = require('./routes/products');
+var usersRouter = require('./routes/users');
+var categoriesRouter = require('./routes/categories')
 
-const authMiddleWare = require('./src/middlewares/authMiddleWare');
-const userLoggedMidleware = require('./src/middlewares/userLoggedMidleware');
+const authMiddleWare = require('./middlewares/authMiddleWare');
+const userLoggedMidleware = require('./middlewares/userLoggedMidleware');
 
 var app = express();
 
 // VIEW ENGINE SETUP
-app.set('views', path.join(__dirname, '/src/views'));
+app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
@@ -24,7 +24,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '..', 'public')));
 app.use(methodOverride("_method"));
 app.use(session({
   secret: "secreto",

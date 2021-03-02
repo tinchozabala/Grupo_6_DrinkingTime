@@ -20,7 +20,9 @@ const usersController = {
     search: (req, res, next) => {
         db.Products.findAll({
             where:{
-                name : req.query.search
+                name : {
+                    [op.like] : '%' + req.query.search + '%'
+                }
             }
         })
         .then((resultado)=>{
@@ -149,13 +151,15 @@ const usersController = {
 
     //Funcion para ir a vista del listado de producto para administradores
     productList: (req,res) =>{
-        let cat = db.Categories.findAll();
-        let bra = db.Brands.findAll();
-        let resultado = db.Products.findAll();
 
-        Promise.all([cat, bra, resultado])
-        .then(function([cat, bra, resultado]){
-        return res.render('productUsersList', {categories: cat, brands: bra, resultado: resultado})
+        let resultado = db.Products.findAll({
+            include: ['category', 'brand']
+        });
+
+        Promise.all([resultado])
+        .then(function([resultado]){
+           //return res.json (resultado)
+        return res.render('productUsersList', {resultado: resultado})
         })
         .catch((e)=>{
         console.log(e);
