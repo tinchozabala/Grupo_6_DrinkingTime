@@ -9,19 +9,21 @@
     
 }
 .product-detail-container{
-    box-shadow: 0 0 20px rgba(0, 0, 0, 40%);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 20%);
     background-color: white;
     border-radius: 5px;
     width: 80%;
     height: 95%;
+    margin-top: 5px;
 
 }
 
 .photo-product-detail-container{
-    height: 65%;
+    height: 60%;
     display: flex;
     margin-bottom: 5px;
-    border-bottom: 1px solid #800220;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 20%)
 }
 
 .photo-product{
@@ -38,6 +40,7 @@
     background-color: white;
     margin-bottom: 5px;
     box-sizing: border-box;
+    padding: 5px 2px 0px 5px ;
 }
 
 .product-title{
@@ -45,10 +48,22 @@
     font-weight: 500;
 
 }
+.linksDetail{
+    font-style: italic;
+    color: #800220;
+    font-size: 8px;
+}
+
+.linksDetail a{
+    font-style: italic;
+    color: #800220;
+    font-size: 8px;
+}
 
 .add-to-cart-prodcuto-detail-container{
     height: 10%;
     text-align: center;
+    color: wheat;
     
 }
 
@@ -56,7 +71,7 @@
     text-align: right;
     font-size: 24px;
     margin-right: 5px;
-
+    font-weight: 400;
 }
 
 .add-to-cart-prodcuto-detail-container button{
@@ -69,11 +84,16 @@
     font-weight: 500;
     color: white;
     box-shadow: 0 0 20px rgba(0, 0, 0, 40%);
+    color: wheat;
 
 }
 
 
 @media(min-width: 380px){
+    .product-detail-container{
+        width: 55%;
+    }
+
     .photo-product{
         width: 42%;
 
@@ -93,8 +113,14 @@
     }
 }
 
+@media(min-width: 768px){
+    .product-detail-container{
+        width: 50%;
+    }
+}
 
-@media(min-width: 800px){
+
+@media(min-width: 768px){
     .product-detail-container{
         width: 50%  ;
     }
@@ -114,17 +140,15 @@
         flex-direction: row;
         flex-wrap: wrap;
         padding: 0 0 0 0;
-        width: 90%;
+        width: 65%;
         justify-content: space-around;
     }
     
     .photo-product-detail-container{
         width: 40%;
-        height: 95%;
-        padding: 0;
+        height: 90%;
+        margin: auto;
         border-bottom: white;
-        border-right: 1px solid #800220;
-        
     }
     .photo-product{
         width: 80%;
@@ -164,6 +188,10 @@
 }
 
 @media(min-width: 1440px) {
+
+    .product-detail-container{
+        width: 65%;
+    }
 
     .photo-product{
         width: 80%;

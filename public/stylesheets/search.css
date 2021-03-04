@@ -2,7 +2,7 @@
     flex-direction: column;
     justify-content: space-around;
     height: 72vh;
-    padding: 10px 20px 10px 30px;
+    padding: 15px;
     overflow-y: scroll;
     background-image: url('/images/red-smoke-1168208.jpg');
 }
@@ -28,8 +28,8 @@
 
 .product-container-image{
     width: 90%;
-   align-items: center;
-   border-radius: 5px;
+    align-items: center;
+    border-radius: 5px;
 }
 
 

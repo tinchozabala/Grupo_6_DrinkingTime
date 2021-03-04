@@ -7,6 +7,18 @@
     <main>  
         <%- include("./partials/header.ejs") %>
         <div class="products-details-container">
+            <% if(resultado.length <= 0) { %>
+
+                <h3>No encontramos bebidas</h3>
+                
+                <%  }  else{ %>
+
+                <h3>Este es el resultado de tu busqueda:</h3>    
+
+                <%  } %>
+
+
+
             <% resultado.forEach (resultado =>{ %>
                 <a  href="/products/<%=resultado.id%>" class="aProduct">
                 <div class="product-container">
