@@ -6,21 +6,27 @@ const db = require("../database/models");
 const productsController ={
       // Vista del catalog de productos
       catalog : function(req, res, next) {
-        db.Products.findAll()
-        .then((resultado)=>{
-          res.render("catalog", {resultado:resultado})
+        let resultado = db.Products.findAll({
+            include: ['category', 'brand']
+        });
+
+        Promise.all([resultado])
+        .then(function([resultado]){
+           //return res.json (resultado)
+        return res.render('catalog', {resultado: resultado})
         })
         .catch((e)=>{
-          console.log(e);
+        console.log(e);
         })
-      },
+        },
 
       // Vista del detalle de Productos
       productDetail : function(req, res, next) {
         db.Products.findOne({
           where: {
             id: req.params.id
-          }
+          },
+          include: ['category']
         })
         .then((resultado)=> {
           res.render('productDetail', {resultado : resultado})

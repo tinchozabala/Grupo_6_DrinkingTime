@@ -2,29 +2,26 @@
 
 .principal{
     height: 72vh;
-    padding: 5px;
-    margin-bottom: 5px;
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
-    padding-top: 20px;
     background-image: url('/images/red-smoke-1168208.jpg');
     
 }
 .product-detail-container{
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 40%);
     background-color: white;
     border-radius: 5px;
     width: 80%;
     height: 95%;
-   
+
 }
 
 .photo-product-detail-container{
     height: 65%;
     display: flex;
     margin-bottom: 5px;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid #800220;
 }
 
 .photo-product{
@@ -40,7 +37,6 @@
     height: 22%;
     background-color: white;
     margin-bottom: 5px;
-    padding: 10px;
     box-sizing: border-box;
 }
 
@@ -53,6 +49,7 @@
 .add-to-cart-prodcuto-detail-container{
     height: 10%;
     text-align: center;
+    
 }
 
 .price-product{
@@ -71,6 +68,7 @@
     padding: 8px 12px;
     font-weight: 500;
     color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 40%);
 
 }
 
@@ -107,6 +105,10 @@
 }
 
 @media(min-width: 1024px){
+    .principal{
+        padding-top: 20px;
+    }
+
     .product-detail-container{
         display: flex;
         flex-direction: row;
@@ -121,6 +123,7 @@
         height: 95%;
         padding: 0;
         border-bottom: white;
+        border-right: 1px solid #800220;
         
     }
     .photo-product{
@@ -144,7 +147,7 @@
 
     .add-to-cart-prodcuto-detail-container{
         position: relative;
-        margin-bottom: 20%;       
+        margin-bottom: 20%;      
     }
 
     .product-title {
@@ -155,6 +158,7 @@
 
     .add-to-cart-prodcuto-detail-container button p {
         font-size: 20px;
+        color: wheat;
     }
 
 }

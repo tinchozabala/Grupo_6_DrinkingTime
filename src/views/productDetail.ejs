@@ -16,10 +16,9 @@
                 </div>
                 <div class="name-info-product-detail-container">
                     <h3 class="product-title"><%= resultado.name %></h3>
-                
+                    <a href="/categories/<%= resultado.category.name %>"><p class="info-product" style="font-style: italic; font-size: 8px;"><%= resultado.category.name %></p></a>
                     <p class="info-product"><%= resultado.product_detail %></p>
-
-                    <h4 class="price-product">$<%= resultado.price %></h4>
+                    <h4 class="price-product">AR $ <%= resultado.price %></h4>
                     <div class="add-to-cart-prodcuto-detail-container">  
                         <a href="/products/cart">   
                         <button><p> Agregar al carrito </p></button> 

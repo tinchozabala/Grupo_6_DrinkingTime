@@ -9,6 +9,8 @@ const categoriesController = {
             where: {
                 category_id : 1
             }
+            ,
+            include: ['category']
         })
         .then( (resultado) => {
             res.render("catalog", {resultado:resultado})
@@ -20,6 +22,8 @@ const categoriesController = {
             where: {
                 category_id : 2
             }
+            ,
+            include: ['category']
         })
         .then( (resultado) => {
             res.render("catalog", {resultado:resultado})
@@ -31,6 +35,8 @@ const categoriesController = {
             where: {
                 category_id : 4
             }
+            ,
+            include: ['category']
         })
         .then( (resultado) => {
             res.render("catalog", {resultado:resultado})
@@ -42,6 +48,8 @@ const categoriesController = {
             where: {
                 category_id : 5
             }
+            ,
+            include: ['category']
         })
         .then( (resultado) => {
             res.render("catalog", {resultado:resultado})
@@ -53,6 +61,8 @@ const categoriesController = {
             where: {
                 category_id : 6
             }
+            ,
+            include: ['category']
         })
         .then( (resultado) => {
             res.render("catalog", {resultado:resultado})

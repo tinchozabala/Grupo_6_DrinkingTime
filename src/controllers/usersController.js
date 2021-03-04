@@ -17,16 +17,22 @@ function getUserByEmail(email) {
 //CONTROLADORES DE USUARIO
 const usersController = {
     //Funcion para la barra de busqueda
+
+    
     search: (req, res, next) => {
         db.Products.findAll({
             where:{
                 name : {
                     [op.like] : '%' + req.query.search + '%'
                 }
-            }
+            },
+            include: ['category']
         })
         .then((resultado)=>{
             res.render('search', {resultado: resultado})
+        })
+        .catch((e)=>{
+            console.log(e);
         })
     },
 
