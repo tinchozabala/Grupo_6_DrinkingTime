@@ -9,22 +9,19 @@
         <%- include("./partials/header.ejs") %>
         <div class="principal">
 
-            <section class="log-container">
+            <div class="log-container">
 
-            
-                <h1 class="log-title">Ingresá tus datos </h1>
-        
-
-
+                <h1  class="log-title">Ingresá tus datos </h1>
+                <div class="form-container">
                 <form action="/register" method="POST" enctype="multipart/form-data" class="formulario-login">
 
                     <% if (typeof errors != 'undefined') { %>
                     
-                        <p style="color: bisque;"> Revisa tus datos</p>
+                        <p style="color: bisque; "> Revisa tus datos</p>
 
                         <ul>
                             <% for(let i = 0; i < errors.length; i++) { %>
-                                <li style="color:bisque; font-size: 8px;">
+                                <li style="color:bisque; font-size: 8px; list-style: none;">
                                     <%= errors[i].msg %>
                                 </li>
         
@@ -60,7 +57,10 @@
 
                     <input type="submit" value="Registrarse" class="ingresar">
                 </form>
-            </section>
+                </div>
+            </div>
+
+            
         </div>
         <%- include("./partials/footer.ejs") %>
     </main>

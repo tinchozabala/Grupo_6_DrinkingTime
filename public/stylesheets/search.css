@@ -17,6 +17,11 @@
     flex-wrap: nowrap;
 }
 
+.resultadoDeBusqueda{
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
 .product-container-left{   
     padding: 5px;
     display: inline-block;

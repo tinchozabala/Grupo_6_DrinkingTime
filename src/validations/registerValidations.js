@@ -17,4 +17,6 @@ module.exports = [
 
     check('name').isLength({min:2}).withMessage('Este campo es obligatorio'),
     
+    //PENDIENTE AGREGAR CHECK DE IMAGEN ARCHIVO VALIDO
+
 ]
