@@ -2,7 +2,7 @@
 <html lang="en">
 <%- include("./partials/head.ejs") %>
 <link rel="stylesheet" href="/stylesheets/productDetail.css">
-
+<script src="/js/cart.js"></script>
 <body>
     
         <%- include("./partials/header.ejs") %>
@@ -17,14 +17,14 @@
                 <div class="name-info-product-detail-container">
                     <h3 class="product-title"><%= resultado.name %></h3>
                     <p class="linksDetail"> 
-                        <a href="/categories/<%= resultado.category.name %>"><%= resultado.category.name %></a> - <a href="/categories/promociones"> Promociones</a> - <a href="/">Ver los medios de pago</a>
+                        <a href="/categories/<%= resultado.category.name %>"><%= resultado.category.name %> - </a> <a href="/categories/promociones"> Ver promociones - </a> <a href="/">Ver los medios de pago</a>
                     </p>
                     
                     <p class="info-product"><%= resultado.product_detail %></p>
                     <h4 class="price-product">AR $ <%= resultado.price %></h4>
                     <div class="add-to-cart-prodcuto-detail-container">  
                         <a href="/products/cart">   
-                        <button>Agregar al carrito</button> 
+                        <button id="agregarBoton">Agregar al carrito</button> 
                     
                     </a>
     
