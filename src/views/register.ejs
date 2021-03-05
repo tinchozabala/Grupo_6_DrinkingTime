@@ -2,7 +2,7 @@
 <html lang="en">
 <%- include("./partials/head.ejs") %>
 <link rel="stylesheet" href="/stylesheets/register.css">
-
+<script src="/js/register.js"></script>
 
 <body>
     <main>
@@ -11,52 +11,43 @@
 
             <div class="log-container">
 
-                <h1  class="log-title">Ingresá tus datos </h1>
+                <h2  class="log-title">Ingresá tus datos </h2>
+
                 <div class="form-container">
-                <form action="/register" method="POST" enctype="multipart/form-data" class="formulario-login">
+                    <form action="/register" method="POST"  enctype="multipart/form-data" class="formulario-login">
 
-                    <% if (typeof errors != 'undefined') { %>
-                    
-                        <p style="color: bisque; "> Revisa tus datos</p>
-
-                        <ul>
-                            <% for(let i = 0; i < errors.length; i++) { %>
-                                <li style="color:bisque; font-size: 8px; list-style: none;">
-                                    <%= errors[i].msg %>
-                                </li>
-        
-                                <% } %>
-                        </ul>
+                        <% if (typeof errors != 'undefined') { %>
+                            <p style="color:wheat;">Revisa tus datos</p>
+                        <% } %>  
                         
-                    <% } %>  
-
-                    <label for="email"></label>
-                    <input placeholder="Ingrese su email" type="email" name="email" id="email">
-                   
-
-                    <label for="Contraseña"></label>
-                    <input type="password" placeholder="Ingrese su contraseña" name="password" id="contraseña">
+                        <p class="errorsfront" style="color: wheat ; font-size: 11px;"></p>
+                        <label for="email"></label>
+                        <input placeholder="Ingrese su email" type="email" name="email" id="email">
                     
+                        <p class="errorsfrontpass" style="color: wheat ; font-size: 11px;"></p>
+                        <label for="Contraseña"></label>
+                        <input type="password" placeholder="Ingrese su contraseña" name="password" id="contraseña">
+                        
+                        <p class="errorsfrontrepass" style="color:wheat; font-size: 11px;"></p>
+                        <label for="confirm"></label>
+                        <input type="password" name="confirmPass" placeholder="Confirme contraseña" id="confirmPass">
+                        
+                        <p class="errorsfrontname" style="color:wheat; font-size: 11px;"></p>
+                        <label for="name"></label>
+                        <input placeholder="Nombre y apellido" name="name" type="text" id="name">
 
-                    <label for="confirm"></label>
-                    <input type="password" name="confirmPass" placeholder="Confirme contraseña">
-                    
+                        <br>
+                        <label for="image" class="log-avatar">Ingresa tu Avatar </label>
+                        <input type="file" id="image" name="image" class="log-avatar-imagen">
+                        
 
-                    <label for="name"></label>
-                    <input placeholder="Nombre y apellido" name="name" type="text">
+                        <p>Fecha de Nacimiento</p>
+                        <label for="nacimiento"></label>
+                        <input type="date" placeholder="Nacimiento" name="nacimiento" id="Nacimiento">
+                        <br>
 
-                    <br>
-                    <label for="image" class="log-avatar">Ingresa tu Avatar </label>
-                    <input type="file" id="image" name="image" class="log-avatar-imagen">
-                    
-
-                    <p>Fecha de Nacimiento</p>
-                    <label for="nacimiento"></label>
-                    <input type="date" placeholder="Nacimiento" name="nacimiento" id="Nacimiento">
-                    <br>
-
-                    <input type="submit" value="Registrarse" class="ingresar">
-                </form>
+                        <input type="submit" value="Registrarse" class="ingresar">
+                    </form>
                 </div>
             </div>
 
