@@ -75,20 +75,22 @@ const productsController ={
 
       //Metodo de Edicion de productos
       edit :  (req, res) => {
+        console.log(req.files[0])
         db.Products.update({
           name : req.body.name,
-          //product_detail : req.body.product_detail,
-          //image: req.files[0].filename,
-          //category_id : req.body.category_id,
-          //brand_id : req.body.brand_id,
-          price : req.body.price
+          price : req.body.price,
+          image: req.files[0].filename,
+          product_detail : req.body.product_detail,
+          category_id : req.body.category_id,
+          brand_id : req.body.brand_id,
         },{
           where: { 
             id: req.params.id 
             }
         })
-        .then(function() {
-          res.redirect("/profile/productlist")
+        .then(function(a) {
+          console.log(a);
+          res.redirect("profile/productlist")
         })
         .catch((e)=>{
           console.log(e);
