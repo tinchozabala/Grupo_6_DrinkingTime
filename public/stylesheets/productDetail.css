@@ -2,29 +2,28 @@
 
 .principal{
     height: 72vh;
-    padding: 5px;
-    margin-bottom: 5px;
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
-    padding-top: 20px;
     background-image: url('/images/red-smoke-1168208.jpg');
     
 }
 .product-detail-container{
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 20%);
     background-color: white;
     border-radius: 5px;
     width: 80%;
     height: 95%;
-   
+    margin-top: 5px;
+
 }
 
 .photo-product-detail-container{
-    height: 65%;
+    height: 60%;
     display: flex;
     margin-bottom: 5px;
-    border-bottom: 1px solid grey;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 20%)
 }
 
 .photo-product{
@@ -40,8 +39,8 @@
     height: 22%;
     background-color: white;
     margin-bottom: 5px;
-    padding: 10px;
     box-sizing: border-box;
+    padding: 5px 2px 0px 5px ;
 }
 
 .product-title{
@@ -49,17 +48,32 @@
     font-weight: 500;
 
 }
+.linksDetail{
+    font-style: italic;
+    color: #800220;
+    font-size: 8px;
+}
+
+.linksDetail a{
+    font-style: italic;
+    color: #800220;
+    font-size: 8px;
+}
+
+
 
 .add-to-cart-prodcuto-detail-container{
     height: 10%;
     text-align: center;
+    color: wheat;
+    
 }
 
 .price-product{
     text-align: right;
     font-size: 24px;
     margin-right: 5px;
-
+    font-weight: 400;
 }
 
 .add-to-cart-prodcuto-detail-container button{
@@ -71,11 +85,17 @@
     padding: 8px 12px;
     font-weight: 500;
     color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 40%);
+    color: wheat;
 
 }
 
 
 @media(min-width: 380px){
+    .product-detail-container{
+        width: 55%;
+    }
+
     .photo-product{
         width: 42%;
 
@@ -95,8 +115,14 @@
     }
 }
 
+@media(min-width: 768px){
+    .product-detail-container{
+        width: 50%;
+    }
+}
 
-@media(min-width: 800px){
+
+@media(min-width: 768px){
     .product-detail-container{
         width: 50%  ;
     }
@@ -107,21 +133,24 @@
 }
 
 @media(min-width: 1024px){
+    .principal{
+        padding-top: 20px;
+    }
+
     .product-detail-container{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         padding: 0 0 0 0;
-        width: 90%;
+        width: 65%;
         justify-content: space-around;
     }
     
     .photo-product-detail-container{
         width: 40%;
-        height: 95%;
-        padding: 0;
+        height: 90%;
+        margin: auto;
         border-bottom: white;
-        
     }
     .photo-product{
         width: 80%;
@@ -144,7 +173,7 @@
 
     .add-to-cart-prodcuto-detail-container{
         position: relative;
-        margin-bottom: 20%;       
+        margin-bottom: 20%;      
     }
 
     .product-title {
@@ -155,11 +184,16 @@
 
     .add-to-cart-prodcuto-detail-container button p {
         font-size: 20px;
+        color: wheat;
     }
 
 }
 
 @media(min-width: 1440px) {
+
+    .product-detail-container{
+        width: 65%;
+    }
 
     .photo-product{
         width: 80%;

@@ -16,7 +16,7 @@
                 
                 <%  }  else{ %>
 
-                <h3>Este es el resultado de tu busqueda:</h3>    
+                <h3 class="resultadoDeBusqueda">Este es el resultado de tu busqueda:</h3>    
 
                 <%  } %>
 
@@ -25,15 +25,17 @@
                     <div class="product-container">
                         
                          <div class="product-container-left">
-                            <img src="" alt="" class="product-container-image">
+                            <img src="/images/<%= resultado.image %>" alt="" class="product-container-image">
                         </div>
                         <div class="product-container-right">
     
                             <h4 class="product-container-title"><%= resultado.name %></h4>
-                            <p class="product-container-category"></p>
-                            <p class="product-container-price">$<%= resultado.price %></p>
+                            <p class="product-container-category"> <%= resultado.category.name %></p>
+                            
+                            <p class="product-container-price">AR $ <%= resultado.price %></p>
                              
                         </div>
+                    </div>    
                     </a>
                 <%  }) %>
 
@@ -44,7 +46,7 @@
 
             
         </div>
-
+        <%- include("./partials/footer.ejs") %>
     </main>
     
 </body>
