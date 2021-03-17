@@ -1,7 +1,7 @@
 window.addEventListener("load", function(){
-    const errorsfrontName = document.querySelector(".errorsfront")
+    const errorsfront = document.querySelector(".errorsfront")
     
-    let name = document.querySelector("name");
+    let name = document.querySelector("#name");
     name.addEventListener("blur", ()=>{
         if (name.value == ""){
             errorsfront.innerHTML = "Este campo es obligatorio"
@@ -11,23 +11,24 @@ window.addEventListener("load", function(){
         
     })
 
-    const errorsfrontDescription = document.querySelector(".errorsfrontpass")
-    let contraseña = document.querySelector("#password")
-    contraseña.addEventListener("blur", ()=>{
-        if (contraseña.value == ""){
-            errorsfrontpass.innerHTML = "Este campo es obligatorio"
+    const errorsfrontDetails = document.querySelector(".errorsfrontDetails")
+    let details = document.querySelector("#product_detail")
+    details.addEventListener("blur", ()=>{
+        if (details.value == ""){
+            errorsfrontDetails.innerHTML = "Este campo es obligatorio"
         }else{
             errorsfrontpass.innerHTML = ""
         }
     })
-
-    const viewpass = document.querySelector("#view-pass")
-    viewpass.addEventListener("click", ()=>{
-        if (contraseña.getAttribute("type") == "password"){
-            contraseña.setAttribute("type", "text")
-        } else{
-            contraseña.setAttribute("type", "password")
+    const errorsfrontPrice = document.querySelector(".errorsfrontPrice")
+    let price = document.querySelector("#price")
+    price.addEventListener("blur", ()=>{
+        if (price.value == ""){
+            errorsfrontPrice.innerHTML = "Este campo es obligatorio"
+        }else{
+            errorsfrontpass.innerHTML = ""
         }
     })
+    
 
 })
