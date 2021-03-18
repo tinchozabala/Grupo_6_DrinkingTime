@@ -24,29 +24,29 @@ var upload = multer ({ storage: storage });
 
 /* GET users listing. */
 // HOME INDEX
-router.get('/', usersController.index ) ;
+router.get('/', userLoggedMidleware, usersController.index ) ;
 
 // LOGIN 
 router.get('/login', usersController.login ) ;
-router.post('/login', loginValidations, usersController.processLogin)
+router.post('/login', loginValidations, userLoggedMidleware, usersController.processLogin)
 
 // REGISTER
 router.get('/register', usersController.register);
-router.post('/register',upload.any(), registerMiddleware, registerValidations, usersController.createUser)
+router.post('/register',upload.any(), registerMiddleware, registerValidations, userLoggedMidleware, usersController.createUser)
 
 //BUSQUEDA
-router.get('/search', usersController.search);
+router.get('/search',userLoggedMidleware, usersController.search);
 
 //LISTADO DE PRODUCTOS
-router.get("/profile/productlist", usersController.productList)
+router.get("/profile/productlist", userLoggedMidleware, usersController.productList)
 
 //MI PERFIL
-router.get('/profile/:id', usersController.profile)
+router.get('/profile/:id', userLoggedMidleware, usersController.profile)
 router.get('/profile/edit/:id', userLoggedMidleware, usersController.profileView);
 router.post('/profile/edit/:id',userLoggedMidleware,upload.any(), usersController.profileEdit)
 
 // 7. /products/ :id (DELETE) Acción de borrado
-router.delete('/profile/edit/:id', usersController.productDelete)
+router.delete('/profile/edit/:id', userLoggedMidleware, usersController.productDelete)
 
 
 

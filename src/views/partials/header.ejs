@@ -1,11 +1,6 @@
 <header class="header-container">
     <div class="header-container-logo">
 
-        <% if (locals.usuario) { %>
-            <h4> <%= usuario.name %> </h4>
-        <% } %>
-
-
         <a href="/">
             <img src="/images/logo-corona.png" class="logo" alt=""> </a>
             <nav class="nav-bar">
@@ -18,8 +13,11 @@
                 </ul>
             </nav>
         <div class="button-loggin-carrito">
-            <a href="/login"> <i class="fas fa-child"></i> </a>
-            <a href="/login"> <i class="fas fa-sign-out-alt"></i> </a>
+            <% if (locals.usuario) { %>
+                <a href="/profile/<%=usuario.id%>"> <i class="fas fa-child"></i> </a>
+            <% } else { %>
+                <a href="/login"> <i class="fas fa-sign-out-alt"></i> </a>
+            <% } %>
        
             <a href="/products/cart"> <i class="fas fa-box-open"></i> </a>
             <a><i class="fas fa-bars"></i></button></a>

@@ -94,6 +94,7 @@ const usersController = {
             email: req.body.email,
             name : req.body.name,
             password: bcrypt.hashSync(req.body.password, 10),
+            image: req.files[0].filename,
             shipping_addres: null, 
             avatar: null,
             telephone: null,
