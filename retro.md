@@ -68,3 +68,9 @@ Por otra parte nos falta poner al dia el proyecto, sentimos que van quedando peq
 
 
 # Retrospectiva Sprint-7
+
+A medida que avanza el tiempo, vemos como la comunicacion e interacion de los tres ha crecido. 
+Estamos trabajando los tres con el mismo ritmo, repartiendo tareas, ayudandonos con los diferentes problemas que nos van sucediendo. Esta era una de las metas que nos propusimos al principio. Hacemos reuniones cada tres o cuatro dias, para ocuparnos de las cosas importantes del proyecto, analizar que tareas venimos arrastrando. 
+
+Vamos a aunmentar el compromiso, no porque sea bajo. Entramos en el ultimo mes de la cursada, esperamos que nuestro proyecto sea uno de los mejores. 
+

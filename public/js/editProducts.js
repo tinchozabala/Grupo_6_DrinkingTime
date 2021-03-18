@@ -6,6 +6,7 @@ window.addEventListener("load", function(){
         let errores = [];
 
     let name = document.querySelector("#name");
+    
         if (name.value == ""){
             errores.push ("Debe indicar el nombre del producto")
         }

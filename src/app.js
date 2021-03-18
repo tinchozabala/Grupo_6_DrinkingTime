@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var methodOverride = require ("method-override");
 var session = require ("express-session");
+var Swal = require('sweetalert')
 
 var productsRouter = require('./routes/products');
 var usersRouter = require('./routes/users');
