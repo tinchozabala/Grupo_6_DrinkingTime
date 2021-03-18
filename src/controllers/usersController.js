@@ -59,18 +59,18 @@ const usersController = {
             .then((resultado)=> {
                 let persona = resultado;
                 if (persona != undefined){
-                if (bcrypt.compareSync(req.body.password, persona.password)){
-                    req.session.usuario = persona
-                    if (req.body.remember) {
-                        res.cookie('usuario', persona.email, {maxAge: 2592000000 })
-                    }
-                    res.redirect('/profile/'+ resultado.id);
-                } else {
-                    res.render ('login',{errors:errors})
-                };
-            }else{
+                    if (bcrypt.compareSync(req.body.password, persona.password)){
+                        req.session.usuario = persona
+                        if (req.body.remember) {
+                            res.cookie('usuario', persona.email, {maxAge: 2592000000 })
+                        }
+                        res.redirect('/profile/'+ resultado.id);
+                    } else {
+                        res.render ('login',{errors:errors})
+                    };
+                }else{
                 res.render('login', {errors:errors})
-            }
+                }
             })
             .catch((e)=>{
                 console.log(e);

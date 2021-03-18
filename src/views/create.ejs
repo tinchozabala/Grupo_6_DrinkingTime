@@ -6,6 +6,7 @@
 <body>
     <main>
         <%- include("./partials/header.ejs") %>
+        <script src="/js/product.js"></script>
 
         <div class="principal">
             
@@ -13,63 +14,68 @@
                 <h4 class="principal-container-right-title">Crear producto</h4>
 
                 <form action="/products" method="POST" enctype="multipart/form-data">
-                <ul>
-                    <li>
-                        <label for="name">Nombre: <br></label>
-                        <input type="text" id="name" name="name">
-                    </li>
-
-                    <li>
-                        <label for="product_detail">Descripcion: <br></label>
-                        <input type="textarea" id="product_detail" name="product_detail">
-                    </li>
-
-                    <li>
-                        <label for="price">Precio: <br></label>
-                        <input type="number" id="price" name="price" min="1.0" max="100000.00">
-                    </li>
-
-                    <li>
-                        <label for="image">Imagen: <br></label>
-                        <input type="file" id="image" name="image" class="subir-imagen">
-                    </li>
-
-                    <li>
-                        <label for="category">Categoria: <br></label>
-                            <select name="category" id="category" class="selector-categorias">
-                                <% for (let i = 0; i < categories.length; i++) { %>
-                                    <option value=" <%=categories[i].id %> ">
-                                        <%=categories[i].name %>
-                                    </option>
-                                <% } %>
-                            </select>
-                        </optgroup>
-                    </li>
-
-                    <li>
-                        <label for="brand">Marca: <br></label>
-                            <select name="brand" id="brand">
-                                <% for (let i = 0; i < brands.length; i++) { %>
-                                    <option value=" <%=brands[i].id %> ">
-                                        <%=brands[i].name %>
-                                    </option>
-                                <% } %>
-                            </select>
-                        </optgroup>
-                    </li>
+                    <% if (typeof errors != 'undefined') { %>
                     
+                        <p style="color: bisque;"> Revisa los datos de producto</p>
+                        
+                    <% } %>
+                    <ul>
+                        <li>
+                            <label for="name">Nombre: <br></label>
+                            <p class="errorsfront" style="color:wheat ; font-size: 11px;"></p>
+                            <input type="text" id="name" name="name">
+                        </li>
 
-                    <li>
-                    <input type="submit" value="Crear producto" class="crear-producto-input">   
-                    </li>
+                        <li>
+                            <label for="product_detail">Descripcion: <br></label>
+                            <p class="errorsfrontDetails" style="color:wheat ; font-size: 11px;"></p>
+                            <input type="textarea" id="product_detail" name="product_detail">
+                        </li>
 
-    
+                        <li>
+                            <label for="price">Precio: <br></label>
+                            <p class="errorsfrontPrice" style="color:wheat ; font-size: 11px;"></p>
+                            <input type="number" id="price" name="price" min="1.0" max="100000.00">
+                        </li>
 
-                </ul>
+                        <li>
+                            <label for="image">Imagen: <br></label>
+                            
+                            <input type="file" id="image" name="image" class="subir-imagen">
+                        </li>
 
+                        <li>
+                            <label for="category">Categoria: <br></label>
+                                <select name="category" id="category" class="selector-categorias">
+                                    <% for (let i = 0; i < categories.length; i++) { %>
+                                        <option value=" <%=categories[i].id %> ">
+                                            <%=categories[i].name %>
+                                        </option>
+                                    <% } %>
+                                </select>
+                            </optgroup>
+                        </li>
 
+                        <li>
+                            <label for="brand">Marca: <br></label>
+                                <select name="brand" id="brand">
+                                    <% for (let i = 0; i < brands.length; i++) { %>
+                                        <option value=" <%=brands[i].id %> ">
+                                            <%=brands[i].name %>
+                                        </option>
+                                    <% } %>
+                                </select>
+                            </optgroup>
+                        </li>
+                        
 
+                        <li>
+                        <input type="submit" value="Crear producto" class="crear-producto-input">   
+                        </li>
 
+        
+
+                    </ul>
                 </form>
             </div>    
 
