@@ -4,11 +4,8 @@ var productsController = require('../controllers/productsController.js');
 const path = require ("path");
 const multer = require('multer');
 const userLoggedMidleware = require('../middlewares/userLoggedMidleware.js');
-<<<<<<< HEAD
 const productEditValidations = require('../validations/productEditValidations.js');
-=======
 const createEditValidations = require('../validations/createEditValidations');
->>>>>>> 6f380fa778fdccb677dcf15ea356830a47aabc3c
 
 var storage = multer.diskStorage({
     destination: (req, file, cb) => {
