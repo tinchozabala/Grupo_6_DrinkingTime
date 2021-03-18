@@ -10,6 +10,11 @@
     
 }
 
+.errores{
+    background-color: black;
+    color: wheat;
+}
+
 .edit-form{
     height: 100%;
     width: 80%;

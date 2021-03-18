@@ -4,6 +4,7 @@ var productsController = require('../controllers/productsController.js');
 const path = require ("path");
 const multer = require('multer');
 const userLoggedMidleware = require('../middlewares/userLoggedMidleware.js');
+const productEditValidations = require('../validations/productEditValidations.js');
 
 var storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -30,7 +31,7 @@ router.get('/:id', productsController.productDetail);
 // 4. /products/create (POST) Acción de creación (a donde se envía el formulario) 
 router.post ("/", upload.any(), productsController.productCreate);
 // 5. /products/ :id /edit (GET) Formulario de edición de productos
-router.put('/edit/:id',upload.any(),userLoggedMidleware, productsController.edit);
+router.put('/edit/:id',upload.any(), userLoggedMidleware, productEditValidations, productsController.edit);
 router.get('/edit/:id',userLoggedMidleware, productsController.productEdit);
 // 6. /products/ :id (PUT) Acción de edición (a donde se envía el formulario): 
 

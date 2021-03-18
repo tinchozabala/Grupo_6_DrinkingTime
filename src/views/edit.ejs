@@ -2,6 +2,7 @@
 <html lang="en">
 <%- include("./partials/head.ejs") %>
 <link rel="stylesheet" href="/stylesheets/edit.css">
+<script src="/js/editProducts.js"></script>
 
 <body>
     <main>
@@ -12,7 +13,10 @@
             <div class="edit-form"> 
                 <h4 class="principal-container-right-title">Editar producto</h4>
                 <br>
-                <form action="/products/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data" >
+                <div class="errores">
+                    <ul></ul>
+                </div>
+                <form class="editProduct" action="/products/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data" >
                     <ul>
                         <li>
                             <img src="/images/<%= product.image %>" class="imagendeproducto" alt="">
