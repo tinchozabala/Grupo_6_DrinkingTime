@@ -1,54 +1,49 @@
 window.addEventListener("load", function(){
-    const errorsfront = document.querySelector(".errorsfront")
-    
+
+    let formulario = document.querySelector ("form.formulario-login")
+    formulario.addEventListener("submit", function(event){
+        event.preventDefault();
+        let errores = [];
+
     let email = document.querySelector("#email");
-    email.addEventListener("blur", ()=>{
         if (email.value == ""){
-            errorsfront.innerHTML = "Este campo es obligatorio"
-        }else{
-            errorsfront.innerHTML = ""
+            errores.push ("Debe indicar su correo electronico")
         }
-    })
 
-    const errorsfrontpass = document.querySelector(".errorsfrontpass")
-    const rgpassword = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm
-
-    let contraseña = document.querySelector("#contraseña")
-    contraseña.addEventListener("keyup", ()=>{
-        if (rgpassword.test(contraseña.value) == false){
-            errorsfrontpass.innerHTML = "La contraseña debe contener 8 digitos entre: mayusculas, minusculas y numeros "
-        }else{
-            errorsfrontpass.innerHTML = ""
+    let contraseña = document.querySelector("#contraseña");
+        if (contraseña.value == ""){
+            errores.push ("Debe indicar una contraseña")
         }
-    })
 
-    const errorsfrontrepass = document.querySelector(".errorsfrontrepass")
-    let confirmPass = document.querySelector("#confirmPass")
-    confirmPass.addEventListener("keyup", ()=>{
-        if (contraseña.value != confirmPass.value){
-            errorsfrontrepass.innerHTML = "Las contraseñas no coinciden"
-        } else{
-            errorsfrontrepass.innerHTML = ""
+    let confirmPass= document.querySelector("#confirmPass");
+        if (confirmPass.value == ""){
+            errores.push ("Debe reingresar la contraseña")
         }
-    })
 
-    const errorsfrontname = document.querySelector(".errorsfrontname")
-    let name = document.querySelector("#name")
-    name.addEventListener("keyup", () =>{
-        let namevalue = name.value
-        if ( namevalue.lenght <= 2) {
-            errorsfrontname.innerHTML = "Debe tener al menos 2 caracteres"
-        }else{
-            errorsfrontname.innerHTML = ""
+        let name= document.querySelector("#name");
+        if (name.value == ""){
+            errores.push ("Debe indicar su nombre completo")
         }
-    })
 
-   // const form = document.querySelector(".formulario-login")
-   // form.addEventListener("sumbit", (e) =>{
-   //     if(revisa.value == "Revisa tus datos"){
-   //         e.preventDefault()
-   //     }else{
-   //
-   //     }        
-   // })
+    let image = document.querySelector("#image");
+        if (image.value == ""){
+            errores.push ("Debe seleccionar una imagen de perfil")
+        }
+
+        let nacimiento= document.querySelector("#nacimiento");
+        if (nacimiento.value == ""){
+            errores.push ("Debe indicar su fecha de nacimiento")
+        }
+
+        if(errores.length > 0 ){
+            event.preventDefault();
+
+        let ulErrores = document.querySelector("div.errores ul");
+        for (let i = 0; i < errores.length; i++) {
+            ulErrores.innerHTML += "<li>" + errores[i] + "</li>" 
+        }
+    } else {
+        formulario.submit()
+    }
+})
 })

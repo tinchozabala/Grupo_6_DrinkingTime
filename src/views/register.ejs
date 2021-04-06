@@ -13,8 +13,12 @@
 
                 <h2  class="log-title">Ingresá tus datos </h2>
 
+                <div class="errores">
+                    <ul></ul>
+                </div>
+
                 <div class="form-container">
-                    <form action="/register" method="POST"  enctype="multipart/form-data" class="formulario-login">
+                    <form class="formulario-login" action="/products" method="POST" enctype="multipart/form-data">
 
                         <% if (typeof errors != 'undefined') { %>
                             <p style="color:wheat;">Revisa tus datos</p>
@@ -29,7 +33,7 @@
                         <input type="password" placeholder="Ingrese su contraseña" name="password" id="contraseña">
                         
                         <p class="errorsfrontrepass" style="color:wheat; font-size: 11px;"></p>
-                        <label for="confirm"></label>
+                        <label for="confirmPass"></label>
                         <input type="password" name="confirmPass" placeholder="Confirme contraseña" id="confirmPass">
                         
                         <p class="errorsfrontname" style="color:wheat; font-size: 11px;"></p>
