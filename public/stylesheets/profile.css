@@ -6,6 +6,7 @@
     background-image: url('/images/red-smoke-1168208.jpg');
     background-size: cover;
     background-position: center;
+    overflow-y: auto;
 }
 
 .profile-container{
@@ -14,6 +15,7 @@
     padding-top: 15px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 50%);
+    height: fit-content;
 }
 
 
@@ -77,6 +79,25 @@
 }
 
 .buttons-container button a {
+    text-decoration: none;
+    color: cornsilk;
+}
+
+.form-cerrar{
+    width: 50%;
+    margin: auto;
+}
+
+.buttons-cerrar{
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 14px;
+    background-color: rgba(80, 00, 20,0.9 );
+    box-shadow: 0 0 20px rgba(0, 0, 0, 50%);
+    padding: 2px;
+    margin: 5px;
+    width: 80%;
     text-decoration: none;
     color: cornsilk;
 }
