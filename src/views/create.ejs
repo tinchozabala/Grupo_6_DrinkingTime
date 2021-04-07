@@ -13,7 +13,11 @@
             <div class="edit-form"> 
                 <h4 class="principal-container-right-title">Crear producto</h4>
 
-                <form action="/products" method="POST" enctype="multipart/form-data">
+                <div class="errores">
+                    <ul></ul>
+                </div>
+
+                <form class="createProduct" action="/products" method="POST" enctype="multipart/form-data">
                     <% if (typeof errors != 'undefined') { %>
                     
                         <p style="color: bisque;"> Revisa los datos de producto</p>

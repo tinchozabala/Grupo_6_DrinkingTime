@@ -11,6 +11,11 @@
     
 }
 
+.errores{
+    color: wheat;
+}
+
+
 .log-container {
     height: 115%;
     width: 80%;
