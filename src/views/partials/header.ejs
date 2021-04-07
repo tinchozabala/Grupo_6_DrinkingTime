@@ -14,7 +14,7 @@
             </nav>
         <div class="button-loggin-carrito">
             <% if (locals.usuario) { %>
-                <a href="/profile/<%=usuario.id%>"> <img src="/images/<%=usuario.image%>" class="imageprofile" alt=""></a>
+                <a href="/profile/<%=usuario.id%>"> <img src="/images/avatarUsuarios/<%=usuario.image%>" class="imageprofile" alt=""></a>
             <% } else { %>
                 <a href="/login"> <i class="fas fa-sign-out-alt" ></i> </a>
             <% } %>
