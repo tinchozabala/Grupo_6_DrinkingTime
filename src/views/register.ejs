@@ -13,26 +13,26 @@
 
                 <h2  class="log-title">Ingresá tus datos </h2>
 
-                <div class="form-container">
-                    <form action="/register" method="POST"  enctype="multipart/form-data" class="formulario-login">
+                <div class="errores">
+                    <ul></ul>
+                </div>
 
-                        <% if (typeof errors != 'undefined') { %>
-                            <p style="color:wheat;">Revisa tus datos</p>
-                        <% } %>  
+                <div class="form-container">
+
+                    <form class="formularioLogin" action="/register" method="POST"  enctype="multipart/form-data">
                         
-                        <p class="errorsfront" style="color: wheat ; font-size: 11px;"></p>
                         <label for="email"></label>
                         <input placeholder="Ingrese su email" type="email" name="email" id="email">
                     
-                        <p class="errorsfrontpass" style="color: wheat ; font-size: 11px;"></p>
-                        <label for="Contraseña"></label>
-                        <input type="password" placeholder="Ingrese su contraseña" name="password" id="contraseña">
                         
-                        <p class="errorsfrontrepass" style="color:wheat; font-size: 11px;"></p>
-                        <label for="confirm"></label>
+                        <label for="Contraseña"></label>
+                        <input type="password" placeholder="Ingrese su contraseña" name="contraseña" id="contraseña">
+                        
+                        
+                        <label for="confirmPass"></label>
                         <input type="password" name="confirmPass" placeholder="Confirme contraseña" id="confirmPass">
                         
-                        <p class="errorsfrontname" style="color:wheat; font-size: 11px;"></p>
+                       
                         <label for="name"></label>
                         <input placeholder="Nombre y apellido" name="name" type="text" id="name">
 

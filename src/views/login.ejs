@@ -14,23 +14,22 @@
                 <h2 class="log-title">Iniciar sesión</h2>
                 
                   
-                
+                <div class="errores">
+                    <ul></ul>
+                </div>
+            
             
                 <form class="formulario-login" action="/login" method="POST">
                         
-                    <% if (typeof errors != 'undefined') { %>
                     
-                        <p style="color: bisque;"> Revisa tus datos</p>
-                        
-                    <% } %>  
 
                     <p>Usuario:</p>
-                    <p class="errorsfront" style="color:wheat ; font-size: 11px;"></p>
+                    
                     <label for="email"></label>
                     <input type="email" name="email" id="email">
                         
                     <p>Contraseña:</p>
-                    <p class="errorsfrontpass" style="color:wheat; font-size: 11px;"></p>
+                    
 
                     <label for="password"></label>
                     <input type="password" name="password" id="password" class="password">
