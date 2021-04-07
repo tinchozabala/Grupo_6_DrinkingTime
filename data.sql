@@ -52,7 +52,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `customers` WRITE;
 /*!40000 ALTER TABLE `customers` DISABLE KEYS */;
-INSERT INTO `customers` VALUES (1,'admin@admin.com','Administrador','$2b$10$KC7d6CJm7vUgocbrf160rOEw8jAICdEIW9UebHYnd8anrJkwTerWS',NULL,NULL,NULL,'1993-01-02','2021-02-09 16:04:43','2021-02-09 16:04:43',NULL),(2,'crespo@leble.com.ar','Trabajo','$2b$10$ZT/c03zs.Bjs6jID7hcy4OgycSf4wEjRs6JqQNdq9I4jQB/QGTKZC',NULL,NULL,NULL,'1980-02-03','2021-02-09 16:14:54','2021-02-09 16:14:54',NULL);
+INSERT INTO `customers` VALUES (1,'admin@admin.com','Administrador','$2b$10$KC7d6CJm7vUgocbrf160rOEw8jAICdEIW9UebHYnd8anrJkwTerWS','favicon.png',NULL,NULL,NULL,'1993-01-02','2021-02-09 16:04:43','2021-02-09 16:04:43',NULL),(2,'crespo@leble.com.ar','Trabajo','$2b$10$ZT/c03zs.Bjs6jID7hcy4OgycSf4wEjRs6JqQNdq9I4jQB/QGTKZC',NULL,NULL,NULL,NULL,'1980-02-03','2021-02-09 16:14:54','2021-02-09 16:14:54',NULL);
 /*!40000 ALTER TABLE `customers` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -62,11 +62,11 @@ UNLOCK TABLES;
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (1,'Ipa Andina',2,1,'Cerveza Andes - variedad Ipa, por 6 unidades.',560,'andes-ipa.jpg',NULL,NULL,NULL),(2,'24.7',2,2,'Cerveza Patagonia - variedad 24.7, por 6 unidades.',800,'patagonia247.jpg',NULL,NULL,NULL),(3,'Campari',5,3,'Campari, por 6 unidades',1200,'campari-435197_p.jpg',NULL,NULL,NULL),(4,'Chivas',1,9,'Chivas Regal 12 anos',1800,'chivas.jpeg',NULL,NULL,NULL),(5,'Cerveza Negra',2,1,'Cerveza Andes - variedad Negra, por 6 unidades.',580,'andes-negra.jpg',NULL,NULL,NULL),(6,'Absolut',6,6,'Absolut original, por 6 unidades.',2750,'imagen-1611338992757.jpeg',NULL,NULL,NULL),(7,'Beefeater',6,8,'Gin Beefeater, por 6 unidades.',3250,'beefeter.jpeg',NULL,NULL,NULL),(8,'Noemia',4,4,'Noemia - variedad Malbec, por 6 unidades',2650,'vino-noemia3.jpg',NULL,NULL,NULL),(9,'Smirnoff Watermelon',5,7,'Vodka smirnoff sabor sandia',450,'smirnoff-sandia.jpeg',NULL,NULL,NULL),(10,'Trumpeter',4,5,'Trumpeter - variedad Malbec, por 6 unidades',2890,'vino-trumpete5.webp',NULL,NULL,NULL),(11,'Vodka Absolut',6,6,'Vodka Absolut classic 750ml',1300,'imagen-1611338992757.jpeg',NULL,NULL,NULL),(12,'Gin Bombay',5,10,'Gin Bombay Sapphire, 750ml',1200,'gin bombay.jpeg',NULL,NULL,NULL);
+INSERT INTO `products` VALUES (1,'Ipa Andina',2,1,'Cerveza Andes - variedad Ipa, por 6 unidades.',560,'andes-ipa.jpg',NULL,NULL,NULL),(2,'27.4',1,1,'  Cerveza Patagonia - variedad 24.7, por 6 unidades. ',800,'image-1617661974219.jpg',NULL,'2021-04-05 22:32:54',NULL),(3,'Campari',5,3,'Campari, por 6 unidades',1200,'campari-435197_p.jpg',NULL,NULL,NULL),(4,'Chivas',1,9,'Chivas Regal 12 anos',1800,'chivas.jpeg',NULL,NULL,NULL),(5,'Cerveza Negra',2,1,'Cerveza Andes - variedad Negra, por 6 unidades.',580,'andes-negra.jpg',NULL,NULL,NULL),(6,'Absolut',6,6,'Absolut original, por 6 unidades.',2750,'imagen-1611338992757.jpeg',NULL,NULL,NULL),(7,'Beefeater',6,8,'Gin Beefeater, por 6 unidades.',3250,'beefeter.jpeg',NULL,NULL,NULL),(8,'Noemia',4,4,'Noemia - variedad Malbec, por 6 unidades',2650,'vino-noemia3.jpg',NULL,NULL,NULL),(9,'Smirnoff Watermelon',5,7,'Vodka smirnoff sabor sandia',450,'smirnoff-sandia.jpeg',NULL,NULL,NULL),(10,'Trumpeter',4,5,'Trumpeter - variedad Malbec, por 6 unidades',2890,'vino-trumpete5.webp',NULL,NULL,NULL),(11,'Vodka Absolut',6,6,'Vodka Absolut classic 750ml',1300,'imagen-1611338992757.jpeg',NULL,NULL,NULL),(12,'Gin Bombay',5,10,'Gin Bombay Sapphire, 750ml',1200,'gin bombay.jpeg',NULL,NULL,NULL);
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
---  
+--
 -- Dumping data for table `sells`
 --
 
@@ -74,10 +74,6 @@ LOCK TABLES `sells` WRITE;
 /*!40000 ALTER TABLE `sells` DISABLE KEYS */;
 /*!40000 ALTER TABLE `sells` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Dumping routines for database 'drinkingtime_db'
---
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -88,4 +84,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-02-10 17:09:34
+-- Dump completed on 2021-04-07  9:46:57
