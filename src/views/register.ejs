@@ -19,7 +19,7 @@
 
                 <div class="form-container">
 
-                    <form class="formularioLogin" action="/login" method="POST"  enctype="multipart/form-data">
+                    <form class="formularioLogin" action="/register" method="POST"  enctype="multipart/form-data">
                         
                         <label for="email"></label>
                         <input placeholder="Ingrese su email" type="email" name="email" id="email">
@@ -45,6 +45,9 @@
                         <label for="nacimiento"></label>
                         <input type="date" placeholder="Nacimiento" name="nacimiento" id="Nacimiento">
                         <br>
+
+                        <label for="terminosCondiciones" class="log-avatar">Aceptar terminos y condiciones</label>
+                        <input type="checkbox" name="terminosCondiciones" id="terminosCondiciones">
 
                         <input type="submit" value="Registrarse" class="ingresar">
                     </form>

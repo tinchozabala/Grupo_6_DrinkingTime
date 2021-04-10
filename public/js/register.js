@@ -20,7 +20,7 @@ window.addEventListener("load", function(){
             errores.push ("Debe reingresar la contraseña")
         }
 
-        let name= document.querySelector("#name");
+    let name= document.querySelector("#name");
         if (name.value == ""){
             errores.push ("Debe indicar su nombre completo")
         }
@@ -28,6 +28,11 @@ window.addEventListener("load", function(){
     let image = document.querySelector("#image");
         if (image.value == ""){
             errores.push ("Debe seleccionar una imagen de perfil")
+        }
+
+    let terminosCondiones = document.querySelector("#terminosCondiciones").checked;
+        if(terminosCondiones == false){
+         errores.push ("Debe aceptar los terminos y condiciones");
         }
 
 
