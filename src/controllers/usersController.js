@@ -184,7 +184,14 @@ const usersController = {
         res.redirect("/profile/productlist");
         })
         
-    }  
+    } ,
+    logout: (req,res)=>{
+        res.clearCookie('remember')
+		req.session.destroy(() => {
+			res.redirect('/')
+		})
+    }
+
     } 
 
 

@@ -42,6 +42,11 @@ router.get("/profile/productlist", userLoggedMidleware, usersController.productL
 
 //MI PERFIL
 router.get('/profile/:id', userLoggedMidleware, usersController.profile)
+
+//CERRAR SESION 
+router.get('/logout', userLoggedMidleware, usersController.logout)
+
+//EDITAR PERFIL
 router.get('/profile/edit/:id', userLoggedMidleware, usersController.profileView);
 router.post('/profile/edit/:id',userLoggedMidleware,upload.any(), usersController.profileEdit)
 
