@@ -96,7 +96,7 @@ const productsController ={
         })
         .then(function(a) {
           console.log(a);
-          res.redirect("profile/productlist")
+          res.redirect("/profile/productlist")
         })
         .catch((e)=>{
           console.log(e);

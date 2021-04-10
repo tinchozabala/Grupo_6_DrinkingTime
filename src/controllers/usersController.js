@@ -101,7 +101,7 @@ const usersController = {
             birth_date: req.body.nacimiento
             })
             .then((resultado)=>{
-                res.redirect("/login")
+                res.redirect("login")
             })
             .catch((e)=>{
                 console.log(e);
