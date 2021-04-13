@@ -34,10 +34,11 @@ app.use(session({
   saveUninitialized: true}));
 
 
+app.use(authMiddleWare);
 app.use('/products', productsRouter);
 app.use('/', usersRouter);
 app.use('/categories', categoriesRouter);
-app.use('/api', apisRouter)
+app.use('/api', apisRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
