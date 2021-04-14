@@ -1,11 +1,11 @@
 module.exports = (req, res, next) =>{
     if (req.session.usuario == null ) {
-        next()
+        res.redirect("/");
     }else{
-        if (req.session.usuario){
-            res.locals.usuario =req.session.usuario
-            next()
-        } 
-     }
-        
+        res.locals.usuario =req.session.usuario
+        if (req.session.usuario.id != req.params.id){ 
+            return res.redirect("/profile/" + req.session.usuario.id)
+        }   
+            next();
+        }    
 }

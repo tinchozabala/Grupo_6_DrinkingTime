@@ -24,18 +24,18 @@ var upload = multer ({ storage: storage });
 
 /* GET users listing. */
 // HOME INDEX
-router.get('/', userLoggedMidleware, usersController.index ) ;
+router.get('/', usersController.index ) ;
 
 // LOGIN 
 router.get('/login', usersController.login ) ;
-router.post('/login', loginValidations, userLoggedMidleware, usersController.processLogin)
+router.post('/login', loginValidations, usersController.processLogin)
 
 // REGISTER
 router.get('/register', usersController.register);
 router.post('/register',upload.any(), registerMiddleware, registerValidations, userLoggedMidleware, usersController.createUser)
 
 //BUSQUEDA
-router.get('/search',userLoggedMidleware, usersController.search);
+router.get('/search', usersController.search);
 
 //LISTADO DE PRODUCTOS
 router.get("/profile/productlist", userLoggedMidleware, usersController.productList)
