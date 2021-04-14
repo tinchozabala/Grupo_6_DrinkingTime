@@ -10,6 +10,10 @@
     overflow-y: auto;
 }
 
+.errores{
+    color: wheat;
+}
+
 
 
 .log-container {

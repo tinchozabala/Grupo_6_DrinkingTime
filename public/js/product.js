@@ -1,34 +1,41 @@
 window.addEventListener("load", function(){
-    const errorsfront = document.querySelector(".errorsfront")
-    
+
+    let formulario = document.querySelector ("form.createProduct")
+    formulario.addEventListener("submit", function(event){
+        event.preventDefault();
+        let errores = [];
+
     let name = document.querySelector("#name");
-    name.addEventListener("blur", ()=>{
-        if (name.value == ""){
-            errorsfront.innerHTML = "Este campo es obligatorio"
-        }else{
-            errorsfront.innerHTML = ""
-        }
-        
-    })
-
-    const errorsfrontDetails = document.querySelector(".errorsfrontDetails")
-    let details = document.querySelector("#product_detail")
-    details.addEventListener("blur", ()=>{
-        if (details.value == ""){
-            errorsfrontDetails.innerHTML = "Este campo es obligatorio"
-        }else{
-            errorsfrontpass.innerHTML = ""
-        }
-    })
-    const errorsfrontPrice = document.querySelector(".errorsfrontPrice")
-    let price = document.querySelector("#price")
-    price.addEventListener("blur", ()=>{
-        if (price.value == ""){
-            errorsfrontPrice.innerHTML = "Este campo es obligatorio"
-        }else{
-            errorsfrontpass.innerHTML = ""
-        }
-    })
     
+        if (name.value == ""){
+            errores.push ("Debe indicar el nombre del producto")
+        }
 
+    let product_detail = document.querySelector("#product_detail");
+        if (product_detail.value == ""){
+            errores.push ("Debe indicar la descripcion del producto")
+        }
+
+
+    let price = document.querySelector("#price");
+        if (price.value == ""){
+            errores.push ("Debe indicar el costo del producto")
+        }
+
+    let image = document.querySelector("#image");
+        if (image.value == ""){
+            errores.push ("Debe seleccionar una imagen")
+        }
+
+        if(errores.length > 0 ){
+            event.preventDefault();
+
+        let ulErrores = document.querySelector("div.errores ul");
+        for (let i = 0; i < errores.length; i++) {
+            ulErrores.innerHTML += "<li>" + errores[i] + "</li>" 
+        }
+    } else {
+        formulario.submit()
+    }
+})
 })
