@@ -14,12 +14,14 @@
             </nav>
         <div class="button-loggin-carrito">
             <% if (locals.usuario) { %>
-                <a href="/profile/<%=usuario.id%>"> <img src="/images/avatarUsuarios/<%=usuario.image%>" class="imageprofile" alt=""></a>
+                <a href="/profile/<%=usuario.id%>" class="iheaders">
+                     <img src="/images/avatarUsuarios/<%=usuario.image%>" class="imageprofile" alt="">Perfil</a>
             <% } else { %>
-                <a href="/login"> <i class="fas fa-sign-out-alt" ></i> </a>
+                <a href="/login" class="iheaders"> <i class="fas fa-sign-out-alt" ></i>Login</a>
             <% } %>
        
-            <a href="/products/cart"> <i class="fas fa-box-open"></i> </a>
+            <a href="/products/cart" class="iheaders"> <i class="fas fa-box-open"></i>Tu Box</a>
+            <a><i class="fas fa-bars"></i></button></a>
 
         </div>   
     </div>

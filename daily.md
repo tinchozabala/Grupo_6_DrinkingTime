@@ -72,3 +72,6 @@ Nos compartimos los avances de las vistas, queda pendiente reunirnos para revisa
 24/02
 Tenemos casi listo el CRUD para entrega, pendiente ver como mostrar asociaciones. 
 
+Ultimas dos semanas
+14/4 Estuvimos trabajando las ultimas fechas para resolver los problemas que teniamos pendientes con el proyecto, problemas que venian quedando de entregas anteriores. A la par trabajamos sobre el dash board y las apis. Aun, no esta del todo completo. Nuestro compromiso es tenerlos listo para mas tardar el jueves. 
+
