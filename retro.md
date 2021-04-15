@@ -74,3 +74,7 @@ Estamos trabajando los tres con el mismo ritmo, repartiendo tareas, ayudandonos 
 
 Vamos a aunmentar el compromiso, no porque sea bajo. Entramos en el ultimo mes de la cursada, esperamos que nuestro proyecto sea uno de los mejores. 
 
+
+# Retrospectiva Sprint-8
+Estuvimos trbajando por separado para resolver los problemas pendientes, en las ultimas semanas no nos hemos reunido tan segudo. Dado que nos hemos enfrentado a otras situacion mas complicadas para resolver y nos ha llevado mas tiempo. Seguimos manteniendo comunicacion. 
+Si miramos hacia atras, nos damos cuenta lo importante que es la comunicacion para el equipo, como hacer seguimiento a las tareas. En general estamos contentos, de todo lo que hemos hecho hasta el momento, teniendo siempre presente que no es poco. El camino es largo pero siempre por un lado se empieza. 
