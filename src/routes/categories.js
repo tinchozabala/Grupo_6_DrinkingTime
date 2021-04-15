@@ -6,18 +6,18 @@ const userLoggedMidleware = require('../middlewares/userLoggedMidleware.js');
 
 
 //PROMOCIONES
-router.get('/promociones', userLoggedMidleware, categoriesController.promociones);
+router.get('/promociones', categoriesController.promociones);
 
 //Cervezas
-router.get('/cervezas', userLoggedMidleware, categoriesController.cervezas);
+router.get('/cervezas', categoriesController.cervezas);
 
 //Vinos
-router.get('/vinos', userLoggedMidleware, categoriesController.vinos);
+router.get('/vinos', categoriesController.vinos);
 
 //Aperitivos
-router.get('/aperitivos', userLoggedMidleware, categoriesController.aperitivos);
+router.get('/aperitivos', categoriesController.aperitivos);
 
 //Aperitivos
-router.get('/espirituosas', userLoggedMidleware, categoriesController.espirituosas);
+router.get('/espirituosas', categoriesController.espirituosas);
 
 module.exports = router;
