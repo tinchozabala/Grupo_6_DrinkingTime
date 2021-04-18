@@ -44,7 +44,7 @@ router.get("/profile/productlist", userLoggedMidleware, usersController.productL
 router.get('/profile/:id', userLoggedMidleware, usersController.profile)
 
 //CERRAR SESION 
-router.get('/logout', userLoggedMidleware, usersController.logout)
+router.get('/logout', usersController.logout)
 
 //EDITAR PERFIL
 router.get('/profile/edit/:id', userLoggedMidleware, usersController.profileView);
