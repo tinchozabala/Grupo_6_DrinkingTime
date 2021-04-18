@@ -32,7 +32,7 @@ router.post('/login', loginValidations, usersController.processLogin)
 
 // REGISTER
 router.get('/register', usersController.register);
-router.post('/register',upload.any(), registerMiddleware, registerValidations, userLoggedMidleware, usersController.createUser)
+router.post('/register',upload.any(), registerMiddleware, registerValidations, usersController.createUser)
 
 //BUSQUEDA
 router.get('/search', usersController.search);

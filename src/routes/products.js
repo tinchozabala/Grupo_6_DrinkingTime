@@ -21,14 +21,14 @@ var upload = multer ({ storage: storage });
 
 
 // 1. /products (GET) Listado de productos
-router.get('/', userLoggedMidleware, productsController.catalog);
+router.get('/', productsController.catalog);
 
-router.get('/cart', userLoggedMidleware, productsController.cart);
+router.get('/cart', productsController.cart);
 
 // 2. /products/create (GET) Formulario de creación de productos
 router.get('/create', userLoggedMidleware, productsController.create);
 // 3. /products/ :id (GET) Detalle de un producto particular
-router.get('/:id',userLoggedMidleware, productsController.productDetail);
+router.get('/:id', productsController.productDetail);
 // 4. /products/create (POST) Acción de creación (a donde se envía el formulario) 
 router.post ("/", upload.any(), createEditValidations, userLoggedMidleware, productsController.productCreate);
 // 5. /products/ :id /edit (GET) Formulario de edición de productos
