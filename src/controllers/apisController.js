@@ -23,8 +23,11 @@ const apisController = {
             },
             include: ['category']
           })
-          .then((resultado)=> {
-            res.send(JSON.stringify(resultado))
+          .then((resultado)=>{
+            res.status(200).json({
+              url: `http://localhost:3000/images/${resultado.image}`,
+              resultado:resultado
+            })
           })
           .catch((e)=>{
             console.log(e);
