@@ -47,6 +47,7 @@ h2{
 
 .imageprofile{
     width: 38px;
+    height: 38px;
     border-radius: 60px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 40%);
     border: 2px solid #800020;
